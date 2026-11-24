@@ -2,6 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import Photo from '../../components/Photo.astro';
 import { u, PORTFOLIO_URL } from '../../lib/site';
+const PORTFOLIO_PDF = u('downloads/Alexander-Tiffert_Who-Owns-Reality_Portfolio-2026.pdf');
 ---
 <Base
   title="Künstlerische Fotografie"
@@ -15,6 +16,10 @@ import { u, PORTFOLIO_URL } from '../../lib/site';
       <div class="intro">
         <p>In der Organisationsentwicklung und in meiner künstlerischen Fotografie beschäftigt mich dieselbe Frage: Was geschieht zwischen Menschen? In der Beratung untersuche ich solche Dynamiken gemeinsam mit den Beteiligten. In der Fotografie arbeite ich mit dem, was sich im Bild zeigt und was offenbleibt.</p>
         <p>Diese Vielschichtigkeit des Blicks zeigt sich auch in meiner fotografischen Arbeit.</p>
+      </div>
+      <div class="cta-row portfolio-links">
+        <a class="btn btn--gold" href={PORTFOLIO_PDF} download>Portfolio 2026 als PDF <span class="arrow" aria-hidden="true">↓</span><span class="visually-hidden"> (Who Owns Reality?, 2,5 MB)</span></a>
+        <a class="btn btn--outline" href={PORTFOLIO_URL} rel="noopener">Online-Portfolio <span class="arrow" aria-hidden="true">↗</span><span class="visually-hidden"> (alextiffert.com)</span></a>
       </div>
     </div>
   </header>

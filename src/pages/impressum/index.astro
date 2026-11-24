@@ -1,0 +1,59 @@
+---
+import Base from '../../layouts/Base.astro';
+import { u, MAIL, PHONE_DISPLAY, PHONE_HREF } from '../../lib/site';
+---
+<Base
+  title="Impressum"
+  description="Impressum von Dr. Alexander Tiffert, Lübeck: Anbieterkennzeichnung nach § 5 DDG."
+>
+  <header class="page-hero dark legal-hero">
+    <div class="wrap">
+      <p class="eyebrow">Rechtliches</p>
+      <h1>Impressum</h1>
+    </div>
+  </header>
+
+  <section class="section legal">
+    <div class="wrap">
+      <h2>Angaben gemäß § 5 Digitale-Dienste-Gesetz (DDG)</h2>
+      <address>
+        Dr. Alexander Tiffert<br />
+        Engelsgrube 77 / 17<br />
+        23552 Lübeck<br />
+        Deutschland
+      </address>
+
+      <h2>Kontakt</h2>
+      <p>
+        E-Mail: <a href={`mailto:${MAIL}`}>{MAIL}</a><br />
+        Telefon: <a href={PHONE_HREF}>{PHONE_DISPLAY}</a>
+      </p>
+
+      <h2>Umsatzsteuer-Identifikationsnummer</h2>
+      <p>Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz: DE&nbsp;268459559</p>
+
+      <h2>Redaktionell verantwortlich</h2>
+      <p>Verantwortlich für journalistisch-redaktionelle Inhalte gemäß § 18 Abs. 2 Medienstaatsvertrag:</p>
+      <address>
+        Dr. Alexander Tiffert<br />
+        Engelsgrube 77 / 17<br />
+        23552 Lübeck
+      </address>
+
+      <h2>Verbraucherstreitbeilegung</h2>
+      <p>Ich bin nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+
+      <h2>Haftung und Urheberrecht</h2>
+      <p>Die Inhalte dieser Website wurden mit größtmöglicher Sorgfalt erstellt. Für Richtigkeit, Vollständigkeit und Aktualität kann dennoch keine Gewähr übernommen werden. Diese Website enthält Links zu externen Websites Dritter. Für deren Inhalte sind ausschließlich die jeweiligen Anbieter verantwortlich.</p>
+      <p>Die auf dieser Website veröffentlichten Inhalte und Werke unterliegen dem deutschen Urheberrecht. Jede Verwertung außerhalb der gesetzlichen Grenzen bedarf der vorherigen Zustimmung der jeweiligen Rechteinhaber.</p>
+
+      <h2>Bildnachweis</h2>
+      <p>
+        Porträtfotos: Albert Raven<br />
+        Künstlerische Fotografie und Fotobücher: Alexander Tiffert
+      </p>
+
+      <p class="legal-more">Hinweise zum Umgang mit personenbezogenen Daten finden Sie in der <a href={u('datenschutz/')}>Datenschutzerklärung</a>.</p>
+    </div>
+  </section>
+</Base>

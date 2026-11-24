@@ -1,14 +1,16 @@
 ---
 import Base from '../layouts/Base.astro';
 import Photo from '../components/Photo.astro';
+import Stimme from '../components/Stimme.astro';
 import { u, MAIL, PHONE_DISPLAY, PHONE_HREF } from '../lib/site';
+import { STIMMEN } from '../lib/stimmen';
 
 const FELDER = [
   { titel: 'Organisationsentwicklung', text: 'Heute liegt mein Schwerpunkt auf der Begleitung von Familienunternehmen in Nachfolgesituationen.', link: 'Zur Organisationsentwicklung', href: 'organisationsentwicklung/' },
   { titel: 'Executive Coaching', text: 'Entscheidungen, die Sie nicht delegieren können.', link: 'Zum Executive Coaching', href: 'organisationsentwicklung/#executive-coaching' },
   { titel: 'Supervision', text: 'Wenn sich Schwierigkeiten aus dem Kundensystem im Beratungsteam wiederholen, lohnt es sich, genauer hinzusehen. Ich unterstütze Teams bei der Reflexion laufender Mandate.', link: 'Zur Supervision', href: 'supervision/' },
   { titel: 'Künstlerische Fotografie', text: 'In meiner Straßenfotografie suche ich nach Momenten, in denen vertraute Situationen ihre Eindeutigkeit verlieren.', link: 'Zur künstlerischen Fotografie', href: 'fotografie/' },
-  { titel: 'Lehre', text: 'Ich unterrichte Organisationsberatung und künstlerische Fotografie.', link: 'Zur Lehre', href: 'lehre/' },
+  { titel: 'Lehre', text: 'Fast zehn Jahre habe ich Organisationsberatung an Hochschulen unterrichtet. Für 2027 ist ein Kurs in künstlerischer Fotografie geplant.', link: 'Zur Lehre', href: 'lehre/' },
   { titel: 'Publikationen', text: 'Fragen aus beiden Feldern vertiefe ich in meinen Texten.', link: 'Zu den Publikationen', href: 'publikationen/' },
 ];
 ---
@@ -112,6 +114,8 @@ const FELDER = [
       </ul>
     </div>
   </section>
+
+  <Stimme {...STIMMEN.meyer} />
 </Base>
 
 <style>

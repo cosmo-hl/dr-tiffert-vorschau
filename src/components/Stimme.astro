@@ -1,0 +1,13 @@
+---
+/* Abschließende Kundenstimme vor der Fußzeile: ruhig, mit viel Luft. */
+interface Props { text: string; name: string; role: string; }
+const { text, name, role } = Astro.props;
+---
+<section class="closing" aria-label="Stimme aus der Zusammenarbeit">
+  <div class="wrap">
+    <figure class="quote closing-quote reveal">
+      <blockquote><p>{text}</p></blockquote>
+      <figcaption>{name} <span>{role}</span></figcaption>
+    </figure>
+  </div>
+</section>

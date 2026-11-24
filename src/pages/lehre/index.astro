@@ -1,7 +1,9 @@
 ---
 import Base from '../../layouts/Base.astro';
 import PageFigure from '../../components/PageFigure.astro';
+import Stimme from '../../components/Stimme.astro';
 import { u } from '../../lib/site';
+import { STIMMEN } from '../../lib/stimmen';
 ---
 <Base
   title="Lehre"
@@ -13,7 +15,7 @@ import { u } from '../../lib/site';
       <p class="eyebrow">Lehre</p>
       <h1>Lehre in Organisationsberatung und künstlerischer Fotografie</h1>
       <div class="intro">
-        <p>In beiden Arbeitsfeldern interessiert mich, wie Menschen genauer beobachten und aus ihren Beobachtungen eigene Schlüsse ziehen. In der Organisationsberatung gehen wir von konkreten Fällen aus. In der Fotografie arbeiten wir mit Bildern, die die Teilnehmenden selbst machen.</p>
+        <p>In beiden Arbeitsfeldern interessiert mich, wie Menschen genauer beobachten und aus ihren Beobachtungen eigene Schlüsse ziehen. In der Organisationsberatung bin ich dabei von konkreten Fällen ausgegangen. In der Fotografie arbeiten wir mit Bildern, die die Teilnehmenden selbst machen.</p>
       </div>
     </div>
   </header>
@@ -24,28 +26,21 @@ import { u } from '../../lib/site';
   <section class="section" aria-labelledby="h-ob">
     <div class="wrap split">
       <div class="split-head reveal">
-        <p class="eyebrow"><span class="num">01</span> Hochschule</p>
+        <p class="eyebrow"><span class="num">01</span> Hochschule, abgeschlossen</p>
         <h2 id="h-ob">Methoden und Konzepte der Organisationsberatung</h2>
       </div>
       <div class="split-body measure reveal">
-        <p class="lead">An der Hochschule Fresenius in Hamburg habe ich im Studienschwerpunkt Organisationsmanagement das Fach „Methoden und Konzepte der Organisationsberatung“ unterrichtet. An konkreten Fällen lässt sich zeigen, wie stark die Wahl einer Methode davon abhängt, was wir tatsächlich beobachtet haben, welche Annahmen wir treffen und wer über den nächsten Schritt entscheidet.</p>
+        <p class="lead">An der Hochschule Fresenius in Hamburg habe ich fast zehn Jahre lang im Studienschwerpunkt Organisationsmanagement das Fach „Methoden und Konzepte der Organisationsberatung“ unterrichtet. An konkreten Fällen ließ sich zeigen, wie stark die Wahl einer Methode davon abhängt, was wir tatsächlich beobachtet haben, welche Annahmen wir treffen und wer über den nächsten Schritt entscheidet.</p>
         <p>Weitere Lehraufträge führten mich an die FOM in Hamburg, an die NORDAKADEMIE in Elmshorn und in ein Weiterbildungsprogramm der Universität Rostock.</p>
-        <ul class="places" aria-label="Lehrorte">
+        <p>Diese Lehraufträge sind abgeschlossen. Organisationsberatung unterrichte ich derzeit nicht.</p>
+        <p class="further-label">Frühere Lehraufträge</p>
+        <ul class="places" aria-label="Frühere Lehraufträge">
           <li>Hochschule Fresenius<span>Hamburg</span></li>
           <li>FOM<span>Hamburg</span></li>
           <li>NORDAKADEMIE<span>Elmshorn</span></li>
           <li>Universität Rostock<span>Weiterbildungsprogramm</span></li>
         </ul>
       </div>
-    </div>
-  </section>
-
-  <section class="section mist" aria-label="Stimme aus der Lehre">
-    <div class="wrap">
-      <figure class="quote center reveal" style="max-width:900px;margin-inline:auto">
-        <blockquote><p>Die Lehrveranstaltung von Herrn Dr. Tiffert zählt regelmäßig zu den durch die Studierenden am besten evaluierten Veranstaltungen im Masterstudiengang. Hierbei werden zumeist vor allem die hohe Praxisnähe und die anschauliche Didaktik hervorgehoben.</p></blockquote>
-        <figcaption>Prof. Dr. habil. Nicole Richter <span>Studiengangsleiterin Marketing und Salesmanagement, NORDAKADEMIE</span></figcaption>
-      </figure>
     </div>
   </section>
 
@@ -66,10 +61,12 @@ import { u } from '../../lib/site';
       </div>
     </div>
   </section>
+
+  <Stimme {...STIMMEN.richter} />
 </Base>
 
 <style>
-  .places { list-style: none; margin: var(--s4) 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2px; background: var(--rule); border: 1px solid var(--rule); }
+  .places { list-style: none; margin: 0.75rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2px; background: var(--rule); border: 1px solid var(--rule); }
   @media (max-width: 560px) { .places { grid-template-columns: minmax(0, 1fr); } }
   .places li { background: var(--white); padding: 1.1rem 1.25rem; font-family: var(--display); font-size: 1.45rem; font-weight: 600; line-height: 1.15; color: var(--navy); }
   .places span { display: block; font-family: var(--sans); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-ink); margin-top: 0.35rem; hyphens: auto; -webkit-hyphens: auto; }

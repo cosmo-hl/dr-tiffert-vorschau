@@ -2,6 +2,14 @@
 import Base from '../../layouts/Base.astro';
 import Photo from '../../components/Photo.astro';
 import { u, MAIL } from '../../lib/site';
+
+// Fotobücher wie auf alextiffert.com/books (Stand 24.11.2026); Jahre aus dem Portfolio 2026.
+const FOTOBUECHER = [
+  { titel: 'lettera d’amore', jahr: '2025', bild: 'fotobuch-lettera', href: 'https://www.alextiffert.com/books/work-6mayj' },
+  { titel: 'Urban Silence', jahr: '2025', bild: '', href: 'https://www.alextiffert.com/books/work-6mayj-jskzg' },
+  { titel: 'Dance with the White Rabbit', jahr: '2024', bild: 'fotobuch-dance', href: 'https://www.alextiffert.com/books/work-6mayj-75y2n' },
+  { titel: 'Listen to the White Rabbit', jahr: '2024', bild: 'fotobuch-listen', href: 'https://www.alextiffert.com/books/work-6mayj-75y2n-2kc7y' },
+];
 ---
 <Base
   title="Publikationen"
@@ -48,15 +56,31 @@ import { u, MAIL } from '../../lib/site';
   </section>
 
   <section class="section paper" aria-labelledby="h-foto">
-    <div class="wrap split">
-      <div class="split-head reveal">
+    <div class="wrap">
+      <div class="section-head reveal">
         <p class="eyebrow"><span class="num">02</span> Fotografie</p>
         <h2 id="h-foto">Fotobücher</h2>
+        <p class="lead measure">Zu meinen bisherigen Fotobüchern gehören <i>Urban Silence</i> und <i>lettera d’amore</i>. Alle Bände sind in kleiner Auflage erschienen und derzeit vergriffen.</p>
       </div>
-      <div class="split-body measure reveal">
-        <p class="lead">Zu meinen bisherigen Fotobüchern gehören <i>Urban Silence</i> und <i>lettera d’amore</i>.</p>
-        <p class="pending-link">Zur Übersicht meiner Fotobücher (Link wird vor Veröffentlichung ergänzt)</p>
-        <p>Mehr zum aktuellen Fotobuchprojekt <i>Spuren der Suche</i> auf der Seite <a href={u('fotografie/')}>Künstlerische Fotografie</a>.</p>
+      <ul class="photobooks">
+        {FOTOBUECHER.map((b, i) => (
+          <li class={`reveal reveal-d${i % 4}`}>
+            <a href={b.href} rel="noopener">
+              <div class="pb-img">
+                {b.bild
+                  ? <Photo name={b.bild} w={2048} h={1365} alt={`Fotobuch ${b.titel} von Alexander Tiffert`} sizes="(min-width: 1296px) 290px, (min-width: 900px) 23vw, (min-width: 560px) 46vw, 92vw" />
+                  : <span class="pb-title-only" aria-hidden="true"><i>{b.titel}</i></span>}
+              </div>
+              <h3><i>{b.titel}</i></h3>
+              <p class="meta">{b.jahr}</p>
+              <span class="more">Zum Buch auf alextiffert.com <span class="arrow" aria-hidden="true">↗</span></span>
+            </a>
+          </li>
+        ))}
+      </ul>
+      <div class="pb-links">
+        <a class="more" href="https://www.alextiffert.com/books" rel="noopener">Alle Fotobücher auf alextiffert.com <span class="arrow" aria-hidden="true">↗</span></a>
+        <a class="more" href={u('fotografie/')}>Zum aktuellen Fotobuchprojekt <i>Spuren der Suche</i> <span class="arrow" aria-hidden="true">→</span></a>
       </div>
     </div>
   </section>
@@ -107,4 +131,18 @@ import { u, MAIL } from '../../lib/site';
   .papers h3 i { font-weight: 600; }
   .papers p { margin: 0; color: var(--ink-2); }
   @media (min-width: 900px) { .papers { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+  .photobooks { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s3) clamp(1rem, 2vw, 1.75rem); grid-template-columns: minmax(0, 1fr); }
+  @media (min-width: 560px) { .photobooks { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (min-width: 900px) { .photobooks { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+  .photobooks a { display: flex; flex-direction: column; height: 100%; color: var(--ink); text-decoration: none; }
+  .pb-img { aspect-ratio: 3 / 2; overflow: hidden; background: #ecebe7; margin-bottom: var(--s2); display: grid; place-items: center; }
+  .pb-img :global(picture) { display: block; width: 100%; height: 100%; }
+  .pb-img :global(img) { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s var(--ease); }
+  .photobooks a:hover .pb-img :global(img) { transform: scale(1.03); }
+  .pb-title-only { font-family: var(--display); font-size: clamp(1.4rem, 1.2rem + 0.6vw, 1.8rem); color: var(--navy); padding: 0 1.5rem; text-align: center; }
+  .photobooks h3 { font-family: var(--display); font-size: clamp(1.3rem, 1.15rem + 0.45vw, 1.55rem); font-weight: 500; line-height: 1.2; margin-bottom: 0.2rem; }
+  .photobooks .meta { margin: 0 0 0.75rem; }
+  .photobooks .more { margin-top: auto; }
+  .pb-links { display: flex; flex-wrap: wrap; gap: 0.5rem 2.5rem; margin-top: var(--s4); }
 </style>

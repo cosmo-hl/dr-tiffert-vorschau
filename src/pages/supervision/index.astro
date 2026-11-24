@@ -1,7 +1,9 @@
 ---
 import Base from '../../layouts/Base.astro';
 import PageFigure from '../../components/PageFigure.astro';
+import Stimme from '../../components/Stimme.astro';
 import { u } from '../../lib/site';
+import { STIMMEN } from '../../lib/stimmen';
 ---
 <Base
   title="Supervision"
@@ -53,4 +55,6 @@ import { u } from '../../lib/site';
       </div>
     </div>
   </section>
+
+  <Stimme {...STIMMEN.menikheim} />
 </Base>
