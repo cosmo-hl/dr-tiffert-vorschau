@@ -86,11 +86,10 @@ const fullTitle = title === 'Startseite'
         var btn = document.querySelector('.menu-toggle');
         var nav = document.getElementById('hauptmenue');
         if (btn && nav) {
-          var label = btn.querySelector('.menu-toggle-label');
           var set = function (open) {
             btn.setAttribute('aria-expanded', String(open));
             nav.classList.toggle('is-open', open);
-            label.textContent = open ? 'Schließen' : 'Menü';
+            btn.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
             document.body.style.overflow = open ? 'hidden' : '';
             setH();
           };
