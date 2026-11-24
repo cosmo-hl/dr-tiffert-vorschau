@@ -1,6 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
-import PageFigure from '../../components/PageFigure.astro';
+import SubHero from '../../components/SubHero.astro';
 import Stimme from '../../components/Stimme.astro';
 import { u } from '../../lib/site';
 import { STIMMEN } from '../../lib/stimmen';
@@ -10,20 +10,19 @@ import { STIMMEN } from '../../lib/stimmen';
   active="organisationsentwicklung/"
   description="Organisationsentwicklung mit Dr. Alexander Tiffert: Executive Coaching für Führungskräfte und Managementteams sowie Nachfolgebegleitung für Familienunternehmen."
 >
-  <header class="page-hero dark has-figure">
-    <div class="wrap">
-      <p class="eyebrow">Organisationsentwicklung in der Nachfolge</p>
-      <h1>Organisationen verändern. Verantwortung klären.</h1>
-      <p class="lead hero-focus">Ein besonderer Fokus liegt auf der Begleitung von Nachfolgeprozessen in Familienunternehmen und auf dem Executive Coaching von Führungskräften.</p>
-      <div class="intro">
-        <p>Wenn ein Unternehmen sich verändert, geraten oft unterschiedliche Dinge gleichzeitig in Bewegung: Die Strategie verlangt neue Entscheidungen, gewohnte Zuständigkeiten passen nicht mehr, und Menschen übernehmen Aufgaben oder geben sie ab. Was wie Widerstand aussieht, kann eine verständliche Reaktion auf unklare Erwartungen oder widersprüchliche Vorgaben sein.</p>
-        <p>Ich betrachte das Handeln der Beteiligten und die Bedingungen, unter denen sie handeln: Rollen, Entscheidungsrechte, wirtschaftliche Anforderungen und die Beziehungen, in denen Verantwortung ausgehandelt wird. Gemeinsam klären wir, was sich gegenseitig beeinflusst, was Sie verändern können und welche Entscheidung als Nächstes ansteht.</p>
-      </div>
-    </div>
-  </header>
-
-  <PageFigure name="site-sessel" w={3543} h={2362} pos="50% 22%" posM="42% 30%"
+  <SubHero
+    eyebrow="Organisationsentwicklung in der Nachfolge"
+    title="Organisationen verändern. Verantwortung klären."
+    lead="Ein besonderer Fokus liegt auf der Begleitung von Nachfolgeprozessen in Familienunternehmen und auf dem Executive Coaching von Führungskräften."
+    name="site-sessel" w={3543} h={2362} pos="40% 30%" posM="42% 30%"
     alt="Dr. Alexander Tiffert sitzt entspannt in einem Sessel vor einem Bücherregal." />
+
+  <section class="page-intro" aria-label="Einführung">
+    <div class="wrap page-intro-text reveal">
+      <p>Wenn ein Unternehmen sich verändert, geraten oft unterschiedliche Dinge gleichzeitig in Bewegung: Die Strategie verlangt neue Entscheidungen, gewohnte Zuständigkeiten passen nicht mehr, und Menschen übernehmen Aufgaben oder geben sie ab. Was wie Widerstand aussieht, kann eine verständliche Reaktion auf unklare Erwartungen oder widersprüchliche Vorgaben sein.</p>
+      <p>Ich betrachte das Handeln der Beteiligten und die Bedingungen, unter denen sie handeln: Rollen, Entscheidungsrechte, wirtschaftliche Anforderungen und die Beziehungen, in denen Verantwortung ausgehandelt wird. Gemeinsam klären wir, was sich gegenseitig beeinflusst, was Sie verändern können und welche Entscheidung als Nächstes ansteht.</p>
+    </div>
+  </section>
 
   <nav class="subnav" aria-label="Angebote auf dieser Seite">
     <div class="wrap">

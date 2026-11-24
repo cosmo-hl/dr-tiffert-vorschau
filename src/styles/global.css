@@ -383,3 +383,36 @@ main > section:last-child:not(.closing):not(.contact) { padding-bottom: calc(var
 .legal a { overflow-wrap: anywhere; }
 .legal .stand { color: var(--ink-2); font-size: 0.92rem; margin-bottom: var(--s3); }
 .legal-more { margin-top: var(--s4); padding-top: var(--s3); border-top: 1px solid var(--rule); color: var(--ink-2); }
+
+/* ============================================================
+   Seitenkopf mit Foto (Unterseiten), angelehnt an die Startseite
+   ============================================================ */
+.sub-hero { position: relative; overflow: hidden; display: flex; flex-direction: column; }
+.sub-hero-inner { padding-block: clamp(2.75rem, 6vw, 4rem) var(--s4); }
+.sub-hero h1 { font-size: clamp(2.1rem, 1rem + 2.4vw, 3.3rem); max-width: 22ch; margin-bottom: var(--s3); }
+.sub-hero .lead { color: #fff; max-width: 36ch; margin: 0; }
+.sub-hero-media { order: 2; }
+.sub-hero-media picture { display: block; }
+.sub-hero-media img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: var(--pos-m, 50% 50%); }
+@media (min-width: 640px) and (max-width: 1199px) { .sub-hero-media img { aspect-ratio: 16 / 9; object-position: var(--pos, 50% 50%); } }
+@media (min-width: 1200px) {
+  .sub-hero { min-height: min(66vh, 600px); justify-content: center; }
+  .sub-hero-media { position: absolute; top: 0; bottom: 0; right: 0; left: 44%; }
+  .sub-hero-media picture { height: 100%; }
+  .sub-hero-media img { height: 100%; aspect-ratio: auto; object-position: var(--pos, 50% 50%); }
+  .sub-hero-media::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(90deg, var(--navy) 0%, rgba(31, 56, 50, 0.82) 10%, rgba(31, 56, 50, 0.35) 22%, rgba(31, 56, 50, 0) 34%);
+  }
+  .sub-hero-inner { position: relative; z-index: 1; padding-block: clamp(3.5rem, 6vw, 5rem); }
+  .sub-hero-inner > * { max-width: 600px; }
+  .sub-hero .lead { max-width: 30em; }
+}
+
+/* Einstiegstext unter dem Seitenkopf */
+.page-intro { padding-block: var(--s5) 0; }
+.page-intro-text { font-size: clamp(1.15rem, 1.05rem + 0.45vw, 1.35rem); line-height: 1.6; color: var(--ink); }
+.page-intro-text p { margin: 0 0 1.1em; max-width: var(--measure); }
+.page-intro-text p:last-child { margin-bottom: 0; }
+.page-intro + .section, .page-intro + .subnav + .section { padding-top: var(--s4); }
+.page-intro + .subnav { margin-top: var(--s4); }

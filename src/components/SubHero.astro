@@ -1,0 +1,25 @@
+---
+// Seitenkopf der Unterseiten wie auf der Startseite: Überschrift und ein Satz auf Dunkelgrün,
+// das Foto läuft rechts aus dem Grün heraus (ab 1200 px). Darunter gestapelt, Foto randlos.
+import Photo from './Photo.astro';
+interface Props {
+  eyebrow: string;
+  title: string;
+  lead?: string;
+  name: string; w: number; h: number; alt: string;
+  pos?: string;  // Bildausschnitt breit
+  posM?: string; // Bildausschnitt schmal
+}
+const { eyebrow, title, lead, name, w, h, alt, pos = '50% 50%', posM = '50% 50%' } = Astro.props;
+---
+<header class="sub-hero dark" style={`--pos:${pos};--pos-m:${posM}`}>
+  <div class="sub-hero-media">
+    <Photo name={name} w={w} h={h} alt={alt} eager sizes="(min-width: 1200px) 60vw, 100vw" />
+  </div>
+  <div class="wrap sub-hero-inner">
+    <p class="eyebrow">{eyebrow}</p>
+    <h1>{title}</h1>
+    {lead && <p class="lead">{lead}</p>}
+    <slot />
+  </div>
+</header>

@@ -1,6 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
-import PageFigure from '../../components/PageFigure.astro';
+import SubHero from '../../components/SubHero.astro';
 import Stimme from '../../components/Stimme.astro';
 import { u } from '../../lib/site';
 import { STIMMEN } from '../../lib/stimmen';
@@ -10,18 +10,18 @@ import { STIMMEN } from '../../lib/stimmen';
   active="lehre/"
   description="Lehre von Dr. Alexander Tiffert in Organisationsberatung und künstlerischer Fotografie: Hochschulfach Methoden und Konzepte der Organisationsberatung und ein Kurs an der Kunstschule Lübeck."
 >
-  <header class="page-hero dark has-figure">
-    <div class="wrap">
-      <p class="eyebrow">Lehre</p>
-      <h1>Lehre in Organisationsberatung und künstlerischer Fotografie</h1>
-      <div class="intro">
-        <p>In beiden Arbeitsfeldern interessiert mich, wie Menschen genauer beobachten und aus ihren Beobachtungen eigene Schlüsse ziehen. In der Organisationsberatung bin ich dabei von konkreten Fällen ausgegangen. In der Fotografie arbeiten wir mit Bildern, die die Teilnehmenden selbst machen.</p>
-      </div>
-    </div>
-  </header>
-
-  <PageFigure name="site-lehre" w={3543} h={1949} pos="50% 70%" posM="62% 80%"
+  <SubHero
+    eyebrow="Lehre"
+    title="Lehre in Organisationsberatung und künstlerischer Fotografie"
+    lead="In beiden Arbeitsfeldern interessiert mich, wie Menschen genauer beobachten und aus ihren Beobachtungen eigene Schlüsse ziehen."
+    name="site-lehre" w={3543} h={1949} pos="62% 70%" posM="62% 80%"
     alt="Dr. Alexander Tiffert steht an einem Pult unter einer großen Projektionsfläche." />
+
+  <section class="page-intro" aria-label="Einführung">
+    <div class="wrap page-intro-text reveal">
+      <p>In der Organisationsberatung bin ich dabei von konkreten Fällen ausgegangen. In der Fotografie arbeiten wir mit Bildern, die die Teilnehmenden selbst machen.</p>
+    </div>
+  </section>
 
   <section class="section" aria-labelledby="h-ob">
     <div class="wrap split">
