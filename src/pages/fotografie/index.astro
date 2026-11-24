@@ -2,7 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import SubHero from '../../components/SubHero.astro';
 import Photo from '../../components/Photo.astro';
-import { u, PORTFOLIO_URL } from '../../lib/site';
+import { u } from '../../lib/site';
 const PORTFOLIO_PDF = u('downloads/Alexander-Tiffert_Who-Owns-Reality_Portfolio-2026.pdf');
 ---
 <Base
@@ -18,7 +18,6 @@ const PORTFOLIO_PDF = u('downloads/Alexander-Tiffert_Who-Owns-Reality_Portfolio-
     alt="Alexander Tiffert fotografiert nachts auf der Straße, die Kamera vor dem Gesicht.">
     <div class="cta-row portfolio-links">
       <a class="btn btn--gold" href={PORTFOLIO_PDF} download>Portfolio 2026 als PDF <span class="arrow" aria-hidden="true">↓</span><span class="visually-hidden"> (Who Owns Reality?, 2,5 MB)</span></a>
-      <a class="btn btn--outline" href={PORTFOLIO_URL} rel="noopener">Online-Portfolio <span class="arrow" aria-hidden="true">↗</span><span class="visually-hidden"> (alextiffert.com)</span></a>
     </div>
   </SubHero>
 
@@ -106,9 +105,6 @@ const PORTFOLIO_PDF = u('downloads/Alexander-Tiffert_Who-Owns-Reality_Portfolio-
       </div>
       <div class="split-body measure reveal">
         <p class="lead">In meinem Fotobuchprojekt <i>Spuren der Suche</i> bringe ich solche Momente in eine Folge. Mich interessiert, was ein Bild offenlässt und wie ein anderes den Blick darauf verändert. Im Zusammenspiel der Bilder kann etwas sichtbar werden, das keines für sich allein erzählt.</p>
-        <div class="cta-row">
-          <a class="btn btn--gold" href={PORTFOLIO_URL} rel="noopener">Zum fotografischen Portfolio <span class="arrow" aria-hidden="true">↗</span><span class="visually-hidden"> (externe Website alextiffert.com)</span></a>
-        </div>
       </div>
     </div>
   </section>

@@ -51,7 +51,7 @@ Bildlogik der Unterseiten: Überschrift und Einstieg zuerst, dann das Bild in vo
 | `buch-cx`, `buch-coaching`, `buch-vertrieb` (AT-Buch-*.png) | Publikationen | Cover unbeschnitten, gleiche Höhe und Abstände |
 | `7Y5A3906-2` | Fotografie | Werkbild, ungeschnitten, gleiche linke Kante, mit Bildnotiz |
 | `7Y5A0358`, `7Y5A4542`, `7Y5A2602` | Fotografie | Galerie, ungeschnitten, höchstens 86 % der Bildschirmhöhe |
-| `fotobuch-lettera`, `fotobuch-dance`, `fotobuch-listen` (7Y5A6918, 7Y5A6910, 7Y5A6897) | Publikationen | Fotobuch-Aufnahmen 3:2, verlinkt auf die Buchseiten von alextiffert.com; *Urban Silence* noch ohne Foto |
+| `fotobuch-lettera`, `fotobuch-dance`, `fotobuch-listen` (7Y5A6918, 7Y5A6910, 7Y5A6897) | Publikationen | Fotobuch-Aufnahmen 3:2, ohne Links zur Fotografie-Website (auf Wunsch von Alexander); *Urban Silence* noch ohne Foto |
 
 Portfolio 2026 „Who Owns Reality?“ als PDF unter `public/downloads/`. Je Seite steht vor der Fußzeile ein Kundenzitat von der alten Seite (`src/lib/stimmen.ts`, `Stimme.astro`); Fotografie, Publikationen und Kontakt haben keins.
 
