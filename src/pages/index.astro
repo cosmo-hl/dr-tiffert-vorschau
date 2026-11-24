@@ -1,7 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import Photo from '../components/Photo.astro';
-import { u } from '../lib/site';
+import { u, MAIL, PHONE_DISPLAY, PHONE_HREF } from '../lib/site';
 
 const FELDER = [
   { titel: 'Organisationsentwicklung', text: 'Heute liegt mein Schwerpunkt auf der Begleitung von Familienunternehmen in Nachfolgesituationen.', link: 'Zur Organisationsentwicklung', href: 'organisationsentwicklung/' },
@@ -34,15 +34,24 @@ const FELDER = [
     </div>
   </section>
 
-  <!-- EINSTIEG: neuer Absatz direkt nach dem freigegebenen Einstieg -->
+  <!-- EINSTIEG: freigegebener Absatz, in drei Absätze gegliedert (Wortlaut unverändert); rechts das Kontaktangebot -->
   <section class="section intro" aria-labelledby="h-einstieg">
     <div class="wrap intro-grid">
       <h2 id="h-einstieg" class="visually-hidden">Schwerpunkt und Erfahrung</h2>
-      <p class="intro-main reveal">Seit fast 20 Jahren begleite ich komplexe Organisationsentwicklungsprojekte, auch im internationalen Kontext. Heute liegt mein Schwerpunkt auf der Begleitung von Familienunternehmen in Nachfolgesituationen. Gleichzeitig bringe ich meine Erfahrung aus diesen Projekten in die Supervision von Organisationsberatungen und ihren Teams ein. Gemeinsam reflektieren wir die Dynamiken im Kundenunternehmen und im Beratungsteam, damit die Beratenden den Prozess klarer einschätzen und ihre nächsten Schritte bewusst gestalten können. Allen diesen Situationen ist eine Frage gemeinsam: Wie gehen wir mit Unsicherheit um und wie bleiben wir entscheidungsfähig?</p>
-      <div class="intro-side reveal reveal-d1">
-        <p>In der Organisationsentwicklung und in meiner künstlerischen Fotografie beschäftigt mich dieselbe Frage: Was geschieht zwischen Menschen?</p>
-        <p>Meine Praxiserfahrung vertiefe ich durch Forschung und gebe sie in Lehrveranstaltungen und eigenen Publikationen weiter.</p>
+      <div class="intro-main reveal">
+        <p>Seit fast 20 Jahren begleite ich komplexe Organisationsentwicklungsprojekte, auch im internationalen Kontext. Heute liegt mein Schwerpunkt auf der Begleitung von Familienunternehmen in Nachfolgesituationen.</p>
+        <p>Gleichzeitig bringe ich meine Erfahrung aus diesen Projekten in die Supervision von Organisationsberatungen und ihren Teams ein. Gemeinsam reflektieren wir die Dynamiken im Kundenunternehmen und im Beratungsteam, damit die Beratenden den Prozess klarer einschätzen und ihre nächsten Schritte bewusst gestalten können.</p>
+        <p class="intro-question">Allen diesen Situationen ist eine Frage gemeinsam: Wie gehen wir mit Unsicherheit um und wie bleiben wir entscheidungsfähig?</p>
       </div>
+      <aside class="intro-contact reveal reveal-d1" aria-labelledby="h-kontaktangebot">
+        <h3 id="h-kontaktangebot">Vor welcher Entscheidung stehen Sie gerade?</h3>
+        <p>Wenn Sie sich ein unabhängiges Gegenüber wünschen, lade ich Sie zu einem persönlichen Gespräch ein.</p>
+        <ul class="contact-lines" aria-label="Direkte Kontaktwege">
+          <li><span>E-Mail</span><a href={`mailto:${MAIL}`}>{MAIL}</a></li>
+          <li><span>Telefon</span><a href={PHONE_HREF}>{PHONE_DISPLAY}</a></li>
+        </ul>
+        <p class="signature">Ihr Dr. Alexander Tiffert</p>
+      </aside>
     </div>
   </section>
 
@@ -103,11 +112,6 @@ const FELDER = [
       </ul>
     </div>
   </section>
-
-  <Fragment slot="invite">
-    <p class="invite-copy">Vor welcher Entscheidung stehen Sie gerade? Wenn Sie sich ein unabhängiges Gegenüber wünschen, lade ich Sie zu einem persönlichen Gespräch ein.</p>
-    <p class="signature">Ihr Dr. Alexander Tiffert</p>
-  </Fragment>
 </Base>
 
 <style>
@@ -141,10 +145,19 @@ const FELDER = [
   }
 
   /* Einstieg */
-  .intro-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--s3) var(--s4); }
-  .intro-main { font-size: clamp(1.15rem, 1.05rem + 0.45vw, 1.35rem); line-height: 1.6; margin: 0; color: var(--ink); }
-  .intro-side { border-top: 2px solid var(--gold-ink); padding-top: var(--s2); color: var(--ink-2); }
-  .intro-side p:last-child { margin: 0; }
+  .intro-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--s4); }
+  .intro-main { font-size: clamp(1.15rem, 1.05rem + 0.45vw, 1.35rem); line-height: 1.6; color: var(--ink); }
+  .intro-main p { margin: 0 0 1.1em; }
+  .intro-main .intro-question { margin: 1.4em 0 0; font-family: var(--display); font-size: clamp(1.6rem, 1.3rem + 1.1vw, 2.2rem); line-height: 1.22; color: var(--navy); }
+  .intro-contact { background: var(--paper); border-top: 2px solid var(--gold-ink); padding: clamp(1.5rem, 2.6vw, 2.25rem); }
+  .intro-contact h3 { font-family: var(--display); font-size: clamp(1.6rem, 1.35rem + 0.8vw, 2rem); font-weight: 500; line-height: 1.12; color: var(--navy); margin-bottom: 0.75rem; }
+  .intro-contact p { color: var(--ink-2); }
+  .contact-lines { list-style: none; margin: var(--s2) 0; padding: 0; }
+  .contact-lines li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 0.9rem; }
+  .contact-lines span { font-size: 0.74rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-ink); min-width: 4.6rem; }
+  .contact-lines a { display: inline-flex; align-items: center; min-height: 44px; font-size: 1.08rem; color: var(--navy); text-decoration: none; border-bottom: 1px solid var(--gold); white-space: nowrap; }
+  .contact-lines a:hover { border-bottom-color: var(--navy); }
+  .intro-contact .signature { font-family: var(--display); font-style: italic; font-size: 1.35rem; color: var(--gold-ink); margin: 0; }
   @media (min-width: 1024px) {
     .intro-grid { grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); gap: clamp(3rem, 6vw, 6rem); align-items: start; }
   }

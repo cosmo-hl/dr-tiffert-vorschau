@@ -21,17 +21,17 @@ Deployment: Inhalt von `dist/` liegt im Branch `gh-pages` (GitHub Pages, Quelle 
 
 | URL | Inhalt |
 | --- | --- |
-| `/` | Startseite: Claim und Einstieg, Schwerpunkt-Absatz, drei Gesprächsanlässe, sechs Felder, Einladung mit Kontakt |
-| `/organisationsentwicklung/` | Einstieg, `#nachfolge` mit IHK-Fallbox, `#executive-coaching` |
+| `/` | Startseite: Claim und Einstieg, Schwerpunkt-Text in drei Absätzen mit Kontaktangebot daneben, drei Gesprächsanlässe, sechs Felder |
+| `/organisationsentwicklung/` | Einstieg, `#nachfolge` (gekürzt) mit Fall aus der Praxis ohne Quellenzeile, `#executive-coaching` |
 | `/supervision/` | Supervision für Organisationsberatungen |
-| `/fotografie/` | Künstlerische Fotografie, Bildnotiz, kleine Auswahl, Link zum Portfolio |
+| `/fotografie/` | Künstlerische Fotografie als Galerie auf dunklem Grund (ein Bild pro Bildschirm), Bildnotiz, Link zum Portfolio |
 | `/lehre/` | Lehre |
 | `/publikationen/` | Fachbücher, Fotobücher, Whitepaper (getrennt) |
 | `/kontakt/` | Kontaktwege (kein Formular) |
 
 ## Gestaltung
 
-Dunkelgrün (#1F3832 / Markengrün #30534A), Sand (#C8BB9E) und Papier (#F6F4EF) aus dem Logo C3 „Bildformat“; Cormorant Garamond für Überschriften, Inter für Text (beide selbst gehostet). Aufbau und Rhythmus orientieren sich an osb international: Bildbühne, zentrierter Einstieg, nummerierte Abschnitte, kräftige Farbkacheln, Stimmen. Bewegung nur beim Scrollen und Überfahren, abgeschaltet bei `prefers-reduced-motion`.
+Dunkelgrün (#1F3832 / Markengrün #30534A), Sand (#C8BB9E) und Papier (#F6F4EF) aus dem Logo C3 „Bildformat“; Cormorant Garamond für Überschriften, Inter für Text (beide selbst gehostet). Aufbau und Rhythmus orientieren sich an osb international: Bildbühne, zentrierter Einstieg, nummerierte Abschnitte, kräftige Farbkacheln, Stimmen. Bewegung nur beim Scrollen und Überfahren, abgeschaltet bei `prefers-reduced-motion`. Seit der Rückmeldung vom 24.11.2026 gibt es keinen wiederholten Schlussblock „Über Ihre Situation sprechen“ mehr; die Fußzeile ist auf Logo, Claim, Kontaktzeile und Rechtliches reduziert.
 
 ## Bildliste
 
@@ -43,12 +43,12 @@ Bildlogik der Unterseiten: Überschrift und Einstieg zuerst, dann das Bild in vo
 | --- | --- | --- |
 | `site-terrasse` (Alexander-1357.jpg, 3543 px) | Startseite | Desktop vollflächig hinter dem Einstieg, Fokus rechts; mobil eigener 4:3-Ausschnitt `site-terrasse-mobil` nach Claim und Button |
 | `site-sessel-sw` (Alex_9327_sw.jpg) | Organisationsentwicklung | 2:1, Fokus 50 % / 22 %; mobil 4:3 |
-| `site-spiegelung` (Alex_9163.jpg) | Supervision | 2:1, Fokus oben, beide Figuren mit Kopf vollständig; mobil 4:3 |
+| `site-gespraech` (Alexander-1975.jpg) | Supervision | Gesprächsrunde von der Seite; 2:1, Fokus 50 % / 30 %; mobil 4:3 mittig. Abgebildete Personen: Einwilligung prüfen |
 | `site-lehre` (Alexander-1626.jpg) | Lehre | 2:1, Fokus unten (Pult und Projektionsfläche); mobil 4:3 |
 | `site-kontakt` (Alex_8864.jpg) | Kontakt | Hochformat 4:5 rechts; mobil 1:1 |
 | `buch-cx`, `buch-coaching`, `buch-vertrieb` (AT-Buch-*.png) | Publikationen | Cover unbeschnitten, gleiche Höhe und Abstände |
 | `7Y5A3906-2` | Fotografie | Werkbild, ungeschnitten, gleiche linke Kante, mit Bildnotiz |
-| `7Y5A0358`, `7Y5A4542`, `7Y5A2602` | Fotografie | Auswahl im versetzten Raster |
+| `7Y5A0358`, `7Y5A4542`, `7Y5A2602` | Fotografie | Galerie, ungeschnitten, höchstens 86 % der Bildschirmhöhe |
 
 Vorher/Nachher der ersten Bildschirmansicht (1440, 390, 320 px) liegt im Projektordner unter `website-vorschau/`.
 
