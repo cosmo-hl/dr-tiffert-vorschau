@@ -1,6 +1,6 @@
 import type { APIRoute } from 'astro';
 
-const SEITEN = ['', 'executive-coaching/', 'nachfolge/', 'supervision/', 'kunstanaloges-coaching/', 'qualifikation/', 'kontakt/', 'impressum/', 'datenschutz/'];
+const SEITEN = ['', 'executive-coaching/', 'nachfolge/', 'supervision/', 'kunstanaloges-coaching/', 'hintergrund/', 'kontakt/', 'impressum/', 'datenschutz/'];
 
 export const GET: APIRoute = ({ site }) => {
   const urls = SEITEN.map((p) => `  <url><loc>${new URL(p, site).href}</loc></url>`).join('\n');

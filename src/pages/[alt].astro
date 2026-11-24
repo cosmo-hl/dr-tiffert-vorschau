@@ -8,14 +8,15 @@ export function getStaticPaths() {
     organisationsentwicklung: 'executive-coaching/',
     praxis: 'executive-coaching/',
     team: 'supervision/',
-    weiterbildung: 'qualifikation/',
-    'weiterbildung-1': 'qualifikation/',
-    forschung: 'qualifikation/',
-    'aus-der-praxis-1': 'qualifikation/',
+    weiterbildung: 'hintergrund/',
+    'weiterbildung-1': 'hintergrund/',
+    forschung: 'hintergrund/',
+    'aus-der-praxis-1': 'hintergrund/',
     ablagen: '',
     fotografie: 'kunstanaloges-coaching/',
-    lehre: 'qualifikation/',
-    publikationen: 'qualifikation/',
+    lehre: 'hintergrund/',
+    publikationen: 'hintergrund/',
+    qualifikation: 'hintergrund/',
   };
   return Object.entries(ALT).map(([alt, ziel]) => ({ params: { alt }, props: { ziel } }));
 }
