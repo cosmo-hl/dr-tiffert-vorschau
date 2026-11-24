@@ -26,23 +26,12 @@ const PORTFOLIO_PDF = u('downloads/Alexander-Tiffert_Who-Owns-Reality_Portfolio-
       <div class="split-body reveal">
         <p class="lead measure">Fotografie schult die Wahrnehmung. Sie macht erfahrbar, dass dieselbe Situation ganz verschiedene Wirklichkeiten enthält, je nachdem, wie wir hinschauen. Das macht den eigenen Blick beweglicher und öffnet neue Einsichten.</p>
         <p class="measure">Im kunstanalogen Coaching nutzen wir das ganz konkret: Wir arbeiten an Ihrer Frage und finden Lösungen auch jenseits rationaler Erklärungen.</p>
-        <figure class="zyklus">
-          <svg class="zyklus-svg" viewBox="0 0 340 340" role="img" aria-labelledby="zyklus-t">
-            <title id="zyklus-t">Kreislauf in vier Schritten: Frage klären, Fotografieren, Bilder betrachten, Übertragen. Aus dem Übertragen entsteht oft die nächste Frage.</title>
-            <defs><marker id="pfeil" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1 L8 5 L1 9" class="pfeilspitze" /></marker></defs>
-            <circle cx="170" cy="170" r="118" class="ring" />
-            <path d="M204.5 57.2 A118 118 0 0 1 281.6 131.6" class="arc" marker-end="url(#pfeil)" /><path d="M282.8 204.5 A118 118 0 0 1 208.4 281.6" class="arc" marker-end="url(#pfeil)" /><path d="M135.5 282.8 A118 118 0 0 1 58.4 208.4" class="arc" marker-end="url(#pfeil)" /><path d="M57.2 135.5 A118 118 0 0 1 131.6 58.4" class="arc" marker-end="url(#pfeil)" />
-            <g class="node"><circle cx="170.0" cy="52.0" r="22" /><text x="170.0" y="59.0" text-anchor="middle">I</text></g><g class="node"><circle cx="288.0" cy="170.0" r="22" /><text x="288.0" y="177.0" text-anchor="middle">II</text></g><g class="node"><circle cx="170.0" cy="288.0" r="22" /><text x="170.0" y="295.0" text-anchor="middle">III</text></g><g class="node"><circle cx="52.0" cy="170.0" r="22" /><text x="52.0" y="177.0" text-anchor="middle">IV</text></g>
-            <text x="170" y="166" text-anchor="middle" class="mitte">Ihre</text>
-            <text x="170" y="192" text-anchor="middle" class="mitte">Frage</text>
-          </svg>
-          <ol class="zyklus-liste">
-            <li><span aria-hidden="true">I</span><div><strong>Frage klären</strong>Wir legen gemeinsam fest, worum es Ihnen geht.</div></li>
-            <li><span aria-hidden="true">II</span><div><strong>Fotografieren</strong>Mit dieser Frage im Kopf fotografieren Sie, in der Sitzung oder dazwischen.</div></li>
-            <li><span aria-hidden="true">III</span><div><strong>Bilder betrachten</strong>Wir schauen, was die Bilder zeigen und was sie in Ihnen auslösen.</div></li>
-            <li><span aria-hidden="true">IV</span><div><strong>Übertragen</strong>Aus dem Gesehenen werden konkrete Schritte für Ihre Führung. Oft entsteht daraus die nächste Frage.</div></li>
-          </ol>
-        </figure>
+        <ul class="tiles method-steps" aria-label="Ablauf in vier Schritten">
+          <li><span class="tile-num" aria-hidden="true">I</span><strong>Frage klären</strong>Wir legen gemeinsam fest, worum es Ihnen geht.</li>
+          <li><span class="tile-num" aria-hidden="true">II</span><strong>Fotografieren</strong>Mit dieser Frage im Kopf fotografieren Sie, in der Sitzung oder dazwischen.</li>
+          <li><span class="tile-num" aria-hidden="true">III</span><strong>Bilder betrachten</strong>Wir schauen, was die Bilder zeigen und was sie in Ihnen auslösen.</li>
+          <li><span class="tile-num" aria-hidden="true">IV</span><strong>Übertragen</strong>Aus dem Gesehenen werden konkrete Schritte für Ihre Führung.</li>
+        </ul>
         <p class="measure">Einzeln oder im Managementteam. Fotografische Vorkenntnisse brauchen Sie nicht, es geht nicht um schöne Bilder, sondern um ihre Wirkung.</p>
         <h3 class="ebenen-h">Ebenen auseinanderhalten</h3>
         <p class="measure">In der Fotografie lernt man, Ebenen auseinanderzuhalten: Vordergrund und Hintergrund, Licht und Motiv, das Sichtbare und das, was es auslöst. Und man lernt, Wirkungen erst einmal wahrzunehmen, bevor man sie deutet. Das habe ich selbst so gelernt, und genau das hilft auch in Organisationen. In Familienunternehmen etwa lassen sich Familie, Eigentum und Unternehmen getrennt betrachten und die Wechselwirkungen zwischen ihnen sichtbar machen.</p>
@@ -152,23 +141,13 @@ const PORTFOLIO_PDF = u('downloads/Alexander-Tiffert_Who-Owns-Reality_Portfolio-
   .room { background: #0f1312; }
   .room .page-intro-text p:not(.eyebrow) { color: #d6ded9; }
   .praxis-h { color: #fff; font-size: clamp(2rem, 1.5rem + 1.6vw, 2.8rem); margin-bottom: var(--s2); }
+  .method-steps { margin: var(--s3) 0; }
+  @media (min-width: 700px) { .method-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (min-width: 1100px) { .method-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
   .books-line { color: #d6ded9; font-size: 0.98rem; }
   .spuren { background: #0f1312; }
   .buch { margin: var(--s3) 0 0; max-width: 240px; }
   .buch :global(img) { width: 100%; height: auto; }
-  .zyklus { margin: var(--s4) 0; display: grid; gap: var(--s3); align-items: center; }
-  @media (min-width: 640px) { .zyklus { grid-template-columns: minmax(0, 260px) minmax(0, 1fr); gap: var(--s4); } }
-  .zyklus-svg { width: 100%; max-width: 240px; height: auto; display: block; margin-inline: auto; overflow: visible; }
-  .zyklus-svg .ring { fill: none; stroke: var(--rule); stroke-width: 1; }
-  .zyklus-svg .arc { fill: none; stroke: var(--gold); stroke-width: 2; }
-  .zyklus-svg .pfeilspitze { fill: none; stroke: var(--gold); stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
-  .zyklus-svg .node circle { fill: var(--white); stroke: var(--gold); stroke-width: 2; }
-  .zyklus-svg .node text { font-family: var(--display); font-size: 20px; fill: var(--navy); }
-  .zyklus-svg .mitte { font-family: var(--display); font-style: italic; font-size: 24px; fill: var(--navy); }
-  .zyklus-liste { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem; }
-  .zyklus-liste li { display: grid; grid-template-columns: 2.2rem 1fr; gap: 0.75rem; align-items: baseline; color: var(--ink-2); }
-  .zyklus-liste span { font-family: var(--display); font-size: 1.5rem; line-height: 1; color: var(--gold-ink); }
-  .zyklus-liste strong { display: block; color: var(--navy); font-size: 1.02rem; margin-bottom: 0.15rem; }
   .ebenen-h { font-family: var(--display); font-size: clamp(1.5rem, 1.3rem + 0.7vw, 1.9rem); font-weight: 500; color: var(--navy); margin: var(--s3) 0 0.5rem; }
   .artist-link { margin: var(--s3) 0 0; }
   .artist-link .more { color: #fff; }
