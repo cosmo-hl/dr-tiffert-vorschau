@@ -1,11 +1,11 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Photo from '../../components/Photo.astro';
-import { MAIL, PHONE_DISPLAY, PHONE_HREF } from '../../lib/site';
+import { MAIL } from '../../lib/site';
 ---
 <Base
   title="Kontakt"
-  description="Kontakt zu Dr. Alexander Tiffert in Lübeck: per E-Mail an kontakt@dr-tiffert.de oder telefonisch."
+  description="Kontakt zu Dr. Alexander Tiffert in Lübeck: per E-Mail an kontakt@dr-tiffert.de."
 >
   <section class="contact dark">
     <div class="wrap contact-grid">
@@ -19,11 +19,9 @@ import { MAIL, PHONE_DISPLAY, PHONE_HREF } from '../../lib/site';
         <p class="who">Dr. Alexander Tiffert · Lübeck</p>
         <div class="cta-row" style="margin-top:var(--s3)">
           <a class="btn btn--gold" href={`mailto:${MAIL}`}>E-Mail schreiben <span class="arrow" aria-hidden="true">→</span></a>
-          <a class="btn btn--outline" href={PHONE_HREF}>Anrufen</a>
         </div>
         <dl class="lines">
           <div><dt>E-Mail</dt><dd><a href={`mailto:${MAIL}`}>{MAIL}</a></dd></div>
-          <div><dt>Telefon</dt><dd><a href={PHONE_HREF}>{PHONE_DISPLAY}</a></dd></div>
         </dl>
       </div>
       <figure class="contact-photo">

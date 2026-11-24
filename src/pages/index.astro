@@ -2,7 +2,7 @@
 import Base from '../layouts/Base.astro';
 import Photo from '../components/Photo.astro';
 import Stimme from '../components/Stimme.astro';
-import { u, MAIL, PHONE_DISPLAY, PHONE_HREF } from '../lib/site';
+import { u, MAIL } from '../lib/site';
 import { STIMMEN } from '../lib/stimmen';
 
 const FELDER = [
@@ -50,7 +50,6 @@ const FELDER = [
         <p>Wenn Sie sich ein unabhängiges Gegenüber wünschen, lade ich Sie zu einem persönlichen Gespräch ein.</p>
         <ul class="contact-lines" aria-label="Direkte Kontaktwege">
           <li><span>E-Mail</span><a href={`mailto:${MAIL}`}>{MAIL}</a></li>
-          <li><span>Telefon</span><a href={PHONE_HREF}>{PHONE_DISPLAY}</a></li>
         </ul>
         <p class="signature">Ihr Dr. Alexander Tiffert</p>
       </aside>

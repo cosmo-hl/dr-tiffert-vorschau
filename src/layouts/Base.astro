@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css';
-import { u, NAV, MAIL, PHONE_DISPLAY, PHONE_HREF } from '../lib/site';
+import { u, NAV, MAIL } from '../lib/site';
 
 interface Props {
   title: string;
@@ -65,7 +65,6 @@ const fullTitle = title === 'Startseite'
           <ul class="footer-contact" aria-label="Kontakt">
             <li><a href={u('kontakt/')}>Kontakt</a></li>
             <li><a href={`mailto:${MAIL}`}>{MAIL}</a></li>
-            <li><a href={PHONE_HREF}>{PHONE_DISPLAY}</a></li>
           </ul>
         </div>
         <div class="footer-bottom">
