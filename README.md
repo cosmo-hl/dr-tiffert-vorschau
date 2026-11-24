@@ -47,7 +47,7 @@ Bildlogik der Unterseiten: Überschrift und Einstieg zuerst, dann das Bild in vo
 | `site-sessel` (Alex_9327.jpg, Farbe) | Organisationsentwicklung | 2:1, Fokus 50 % / 22 %; mobil 4:3 |
 | `site-gespraech` (Alexander-1975.jpg) | Supervision | Gesprächsrunde von der Seite; 2:1, Fokus 50 % / 30 %; mobil 4:3 mittig. |
 | `site-lehre` (Alexander-1626.jpg) | Lehre | 2:1, Fokus unten (Pult und Projektionsfläche); mobil 4:3 |
-| `site-kontakt` (Alex_8864.jpg) | Kontakt | Hochformat 4:5 rechts; mobil 1:1 |
+| `site-espresso` (Alex_9300.jpg) | Kontakt | Querformat 4:3 rechts; mobil 3:2 |
 | `buch-cx`, `buch-coaching`, `buch-vertrieb` (AT-Buch-*.png) | Publikationen | Cover unbeschnitten, gleiche Höhe und Abstände |
 | `7Y5A3906-2` | Fotografie | Werkbild, ungeschnitten, gleiche linke Kante, mit Bildnotiz |
 | `7Y5A0358`, `7Y5A4542`, `7Y5A2602` | Fotografie | Galerie, ungeschnitten, höchstens 86 % der Bildschirmhöhe |
