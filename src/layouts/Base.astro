@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css';
-import { u, NAV, MAIL } from '../lib/site';
+import { u, NAV } from '../lib/site';
 
 interface Props {
   title: string;
@@ -58,18 +58,8 @@ const fullTitle = title === 'Startseite'
 
     <footer class="site-footer">
       <div class="wrap">
-        <div class="footer-slim">
-          <div>
-            <p class="footer-brand"><img src={u('wortmarke_dunkel.svg')} width="409" height="52" alt="Dr. Alexander Tiffert" /></p>
-            <p class="footer-claim">Komplexität bewältigen. Unsicherheit aushalten. Verantwortlich entscheiden.</p>
-          </div>
-          <ul class="footer-contact" aria-label="Kontakt">
-            <li><a href={u('kontakt/')}>Kontakt</a></li>
-            <li><a href={`mailto:${MAIL}`}>{MAIL}</a></li>
-          </ul>
-        </div>
         <div class="footer-bottom">
-          <span>© Dr. Alexander Tiffert · Lübeck</span>
+          <span>© {new Date().getFullYear()} Dr. Alexander Tiffert · Lübeck</span>
           <span class="footer-legal"><a href={u('impressum/')}>Impressum</a> · <a href={u('datenschutz/')}>Datenschutz</a></span>
         </div>
       </div>

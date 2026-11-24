@@ -325,7 +325,7 @@ a:hover { text-decoration-thickness: 2px; }
    Einladung + Fuß
    ============================================================ */
 
-.site-footer { background: var(--navy-3); color: #cbd3cc; padding-block: var(--s4) var(--s2); font-size: 0.92rem; }
+.site-footer { background: var(--navy-3); color: #cbd3cc; padding-block: var(--s3); font-size: 0.92rem; }
 .site-footer a { color: var(--white); text-decoration: none; }
 .site-footer a:hover { text-decoration: underline; }
 .footer-slim { display: grid; gap: var(--s2) var(--s4); align-items: center; }
@@ -336,7 +336,7 @@ a:hover { text-decoration-thickness: 2px; }
 .footer-brand img { height: 34px; width: auto; }
 .footer-brand { margin: 0 0 0.5rem; }
 .footer-claim { font-family: var(--display); font-style: italic; font-size: 1.2rem; color: #e3e9e4; margin: 0; }
-.footer-bottom { margin-top: var(--s3); padding-top: var(--s2); border-top: 1px solid var(--rule-dark); font-size: 0.8rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem 2rem; }
+.footer-bottom { font-size: 0.85rem; align-items: center; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem 2rem; }
 .pending { color: #a3b0a8; }
 
 /* ============================================================
@@ -445,3 +445,4 @@ main > section:last-child:not(.closing):not(.contact) { padding-bottom: calc(var
 .page-intro + .subnav { margin-top: var(--s4); }
 .sub-hero .cta-row { margin-top: var(--s3); }
 .dark .page-intro-text { color: #d6ded9; }
+.footer-legal a { display: inline-flex; align-items: center; min-height: 44px; }
