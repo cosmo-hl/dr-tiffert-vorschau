@@ -9,12 +9,13 @@ interface Props {
   name: string; w: number; h: number; alt: string;
   pos?: string;  // Bildausschnitt breit
   posM?: string; // Bildausschnitt schmal
+  shift?: string; // ab 1024 px: Foto beginnt erst hier (für Motive, die links im Bild stehen)
 }
-const { eyebrow, title, lead, name, w, h, alt, pos = '50% 50%', posM = '50% 50%' } = Astro.props;
+const { eyebrow, title, lead, name, w, h, alt, pos = '50% 50%', posM = '50% 50%', shift } = Astro.props;
 ---
-<header class="sub-hero dark" style={`--pos:${pos};--pos-m:${posM}`}>
+<header class={shift ? 'sub-hero sub-hero--shift dark' : 'sub-hero dark'} style={`--pos:${pos};--pos-m:${posM}${shift ? `;--shift:${shift}` : ''}`}>
   <div class="sub-hero-media">
-    <Photo name={name} w={w} h={h} alt={alt} eager sizes="(min-width: 1200px) 60vw, 100vw" />
+    <Photo name={name} w={w} h={h} alt={alt} eager sizes="100vw" />
   </div>
   <div class="wrap sub-hero-inner">
     <p class="eyebrow">{eyebrow}</p>

@@ -405,19 +405,22 @@ main > section:last-child:not(.closing):not(.contact) { padding-bottom: calc(var
 .sub-hero-media { order: 2; }
 .sub-hero-media picture { display: block; }
 .sub-hero-media img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: var(--pos-m, 50% 50%); }
-@media (min-width: 640px) and (max-width: 1199px) { .sub-hero-media img { aspect-ratio: 16 / 9; object-position: var(--pos, 50% 50%); } }
-@media (min-width: 1200px) {
-  .sub-hero { min-height: min(66vh, 600px); justify-content: center; }
-  .sub-hero-media { position: absolute; top: 0; bottom: 0; right: 0; left: 44%; }
+@media (min-width: 640px) and (max-width: 1023px) { .sub-hero-media img { aspect-ratio: 16 / 9; object-position: var(--pos, 50% 50%); } }
+/* Ab 1024 px wie die Startseite: Foto über die ganze Breite, Text links im Grün */
+@media (min-width: 1024px) {
+  .sub-hero { min-height: min(68vh, 620px); justify-content: center; }
+  .sub-hero-media { position: absolute; inset: 0; }
   .sub-hero-media picture { height: 100%; }
   .sub-hero-media img { height: 100%; aspect-ratio: auto; object-position: var(--pos, 50% 50%); }
   .sub-hero-media::after {
     content: ''; position: absolute; inset: 0;
-    background: linear-gradient(90deg, var(--navy) 0%, rgba(31, 56, 50, 0.82) 10%, rgba(31, 56, 50, 0.35) 22%, rgba(31, 56, 50, 0) 34%);
+    background: linear-gradient(90deg, rgba(21, 38, 31, 0.97) 0%, rgba(31, 56, 50, 0.92) 36%, rgba(31, 56, 50, 0.55) 54%, rgba(31, 56, 50, 0) 70%);
   }
   .sub-hero-inner { position: relative; z-index: 1; padding-block: clamp(3.5rem, 6vw, 5rem); }
-  .sub-hero-inner > * { max-width: 600px; }
-  .sub-hero .lead { max-width: 30em; }
+  .sub-hero-inner > * { max-width: 640px; }
+  .sub-hero .lead { max-width: 520px; }
+  .sub-hero--shift .sub-hero-media { left: var(--shift); }
+  .sub-hero--shift .sub-hero-media::after { background: linear-gradient(90deg, var(--navy) 0%, rgba(31, 56, 50, 0.82) 12%, rgba(31, 56, 50, 0.35) 26%, rgba(31, 56, 50, 0) 40%); }
 }
 
 /* Einstiegstext unter dem Seitenkopf */

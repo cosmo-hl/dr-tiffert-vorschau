@@ -33,6 +33,7 @@ import { STIMMEN } from '../lib/stimmen';
       <div class="intro-main reveal">
         <h2 id="h-einstieg" class="visually-hidden">Mein Mehrwert</h2>
         <p class="statement">Darin liegt meine Kraft: mit Ihnen auszuhalten, was noch offen ist, und trotzdem handlungs- und entscheidungsfähig zu bleiben.</p>
+        <p class="statement-sub">Wie sich Unsicherheit und Nichtwissen anfühlen, weiß ich aus eigener Erfahrung.</p>
       </div>
       <aside class="intro-contact reveal reveal-d1" aria-labelledby="h-kontaktangebot">
         <h3 id="h-kontaktangebot">Vor welcher Entscheidung stehen Sie gerade?</h3>
@@ -42,6 +43,14 @@ import { STIMMEN } from '../lib/stimmen';
         </ul>
         <p class="signature">Ihr Dr. Alexander Tiffert</p>
       </aside>
+    </div>
+  </section>
+
+  <!-- CLAIM FOTOGRAFIE UND BERATUNG -->
+  <section class="section claim dark" aria-labelledby="h-claim">
+    <div class="wrap claim-inner reveal">
+      <h2 id="h-claim">Ungewöhnlich und ungewöhnlich wirksam: <span>die Verbindung von Fotografie und Beratung.</span></h2>
+      <p>Fotografie ist für mich Sehen lernen: zu erkennen, wie wir Wirklichkeit konstruieren. Das wirkt auch ohne Kamera, in der Beratung wie im Coaching.</p>
     </div>
   </section>
 
@@ -78,19 +87,6 @@ import { STIMMEN } from '../lib/stimmen';
           </a>
         </li>
       </ol>
-    </div>
-  </section>
-
-  <!-- HALTUNG -->
-  <section class="section haltung-start" aria-labelledby="h-haltung">
-    <div class="wrap split">
-      <div class="split-head reveal">
-        <p class="eyebrow"><span class="num">02</span> Haltung</p>
-        <h2 id="h-haltung">Wirklichkeit als Konstruktion</h2>
-      </div>
-      <div class="split-body measure reveal">
-        <p class="lead">Ob in der Beratung, im Coaching oder in der Fotografie: Ich verstehe Wirklichkeit als Konstruktion. Dieselbe Situation sieht je nach Blickwinkel anders aus. Wer das erfährt, sieht beweglicher, nimmt genauer wahr und findet neue Möglichkeiten.</p>
-      </div>
     </div>
   </section>
 
@@ -174,6 +170,12 @@ import { STIMMEN } from '../lib/stimmen';
   .occasions a:hover .more .arrow { transform: translateX(5px); }
   @media (min-width: 900px) { .occasions { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 
+  /* Claim */
+  .claim-inner > * { max-width: 920px; }
+  .claim h2 { font-size: clamp(1.9rem, 1.3rem + 2vw, 3rem); line-height: 1.15; color: #fff; margin-bottom: var(--s3); }
+  .claim h2 span { color: var(--gold); }
+  .claim p { color: #d6ded9; font-size: clamp(1.1rem, 1rem + 0.4vw, 1.3rem); max-width: 46ch; margin: 0; }
+  .statement-sub { margin: var(--s3) 0 0; color: var(--ink-2); font-size: clamp(1.05rem, 1rem + 0.3vw, 1.2rem); max-width: 40ch; }
   /* Mehrwert */
   .statement { font-family: var(--display); font-size: clamp(1.9rem, 1.3rem + 1.9vw, 2.9rem); line-height: 1.2; color: var(--navy); margin: 0; max-width: 22ch; }
   /* Fotografie */
