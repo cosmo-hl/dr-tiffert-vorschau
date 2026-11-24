@@ -24,7 +24,6 @@ import { STIMMEN } from '../lib/stimmen';
       <figure class="hero-photo-mobile">
         <Photo name="site-terrasse-mobil" w={2306} h={1730} alt="Dr. Alexander Tiffert steht an einer geöffneten Glastür einer Dachterrasse und blickt über die Stadt." sizes="100vw" eager />
       </figure>
-      <p class="hero-p1">Ich helfe Führungskräften und Managementteams in Verantwortung auch in schwierigen Situationen und unter hoher Unsicherheit entscheidungsfähig zu sein. Das ist besonders relevant, wenn keine Option wirklich gut ist und einfache Lösungen nicht erkennbar sind.</p>
     </div>
   </section>
 
@@ -32,14 +31,8 @@ import { STIMMEN } from '../lib/stimmen';
   <section class="section intro" aria-labelledby="h-einstieg">
     <div class="wrap intro-grid">
       <div class="intro-main reveal">
-        <p class="eyebrow"><span class="num">01</span> Mein Mehrwert</p>
-        <h2 id="h-einstieg" class="value-h">Komplexität aushalten. Entscheidungsfähigkeit schaffen.</h2>
-        <ul class="value">
-          <li><strong>Komplexität aushalten.</strong> Ich reduziere schwierige Lagen nicht vorschnell auf eine Ursache oder eine einfache Lösung.</li>
-          <li><strong>Komplexität bewältigbar machen.</strong> Ich übersetze sie in relevante Ebenen, Widersprüche und Entscheidungspunkte.</li>
-          <li><strong>Unsicherheit aushalten.</strong> Ich bleibe ruhig, wenn Gewissheit nicht erreichbar ist, und halte den Raum für Lösungen offen.</li>
-          <li><strong>Entscheidungsfähigkeit schaffen.</strong> Am Ende steht ein nächster Schritt, den Sie bewusst verantworten können.</li>
-        </ul>
+        <h2 id="h-einstieg" class="visually-hidden">Mein Mehrwert</h2>
+        <p class="statement">Ich kann Komplexität aushalten und sie bewältigbar machen. Auch wenn Unsicherheit bleibt, entsteht so Entscheidungsfähigkeit.</p>
       </div>
       <aside class="intro-contact reveal reveal-d1" aria-labelledby="h-kontaktangebot">
         <h3 id="h-kontaktangebot">Vor welcher Entscheidung stehen Sie gerade?</h3>
@@ -56,7 +49,7 @@ import { STIMMEN } from '../lib/stimmen';
   <section class="section paper" id="felder" aria-labelledby="h-felder">
     <div class="wrap">
       <div class="section-head reveal">
-        <p class="eyebrow"><span class="num">02</span> Themenfelder</p>
+        <p class="eyebrow"><span class="num">01</span> Themenfelder</p>
         <h2 id="h-felder">Wobei ich begleite</h2>
       </div>
       <ol class="occasions">
@@ -92,21 +85,16 @@ import { STIMMEN } from '../lib/stimmen';
   <section class="section" aria-labelledby="h-hintergrund">
     <div class="wrap">
       <div class="section-head reveal">
-        <p class="eyebrow"><span class="num">03</span> Hintergrund</p>
+        <p class="eyebrow"><span class="num">02</span> Hintergrund</p>
         <h2 id="h-hintergrund">Was mich qualifiziert</h2>
       </div>
       <ul class="bg-grid">
-        <li class="reveal"><strong>20+</strong><span>Jahre Managementberatung. Zahlreiche Topmanagementteams beraten, große Organisations- und Veränderungsprozesse begleitet, eigenes Beratungsunternehmen.</span></li>
-        <li class="reveal reveal-d1"><strong>Dr.</strong><span>Diplom-Wirtschaftsingenieur mit Schwerpunkt Vertriebsführung und Verkaufspsychologie, Promotion an der Universität Rostock.</span></li>
-        <li class="reveal reveal-d2"><strong>4</strong><span>Mehrjährige Ausbildungen: Gruppendynamik, Familien- und Organisationsaufstellung, Coaching, systemische Organisationsentwicklung.</span></li>
-        <li class="reveal"><strong>10</strong><span>Jahre Lehre als Honorardozent, u. a. an der Hochschule Fresenius, der FOM, der NORDAKADEMIE und der Universität Rostock.</span></li>
-        <li class="reveal reveal-d1"><strong>4</strong><span>Bücher, darunter drei Fachbücher bei Springer Gabler zu Vertriebsführung, Coaching und Customer Experience Management.</span></li>
-        <li class="reveal reveal-d2"><strong>6</strong><span>Perspektiven in einer Urteilskraft: Wirtschaft, Organisation, Führung, Psychologie, Familienunternehmen, Wissenschaft.</span></li>
+        <li class="reveal"><strong>20+</strong><span>Jahre Managementberatung mit Topmanagementteams</span></li>
+        <li class="reveal reveal-d1"><strong>Dr.</strong><span>Wirtschaftsingenieur, Coach und systemischer Organisationsentwickler</span></li>
+        <li class="reveal reveal-d2"><strong>10</strong><span>Jahre Lehre an Hochschulen, drei Fachbücher</span></li>
       </ul>
     </div>
   </section>
-
-  <Stimme {...STIMMEN.meyer} />
 
   <!-- FOTOGRAFIE IM COACHING -->
   <section class="section art dark" aria-labelledby="h-foto">
@@ -115,14 +103,16 @@ import { STIMMEN } from '../lib/stimmen';
         <Photo name="7Y5A0358" w={5359} h={3573} alt="Straßenfotografie von Alexander Tiffert." sizes="(min-width: 1024px) 58vw, 100vw" />
       </figure>
       <div class="art-text reveal reveal-d1">
-        <p class="eyebrow"><span class="num">04</span> Kunstanaloges Coaching</p>
+        <p class="eyebrow">Kunstanaloges Coaching</p>
         <h2 id="h-foto">Bilder als Spiegel</h2>
-        <p>Wenn Sprache und Analyse an Grenzen stoßen, arbeite ich mit Fotografie. Sie fotografieren zu Ihrer Frage, wir betrachten die Bilder gemeinsam, und oft wird sichtbar, was vorher diffus war: Muster, Haltungen, neue Perspektiven. Die Bilder bleiben als Anker für den nächsten Schritt.</p>
-        <p class="small">Für Einzelne und Führungsteams. Ohne fotografische Vorkenntnisse.</p>
+        <p>Wenn Worte nicht weiterkommen, arbeite ich mit Fotografie. Ihre eigenen Bilder machen sichtbar, was vorher diffus war.</p>
         <a class="more" href={u('fotografie/')}>Zu meiner Fotografie <span class="arrow" aria-hidden="true">→</span></a>
       </div>
     </div>
   </section>
+
+  <Stimme {...STIMMEN.meyer} />
+
 </Base>
 
 <style>
@@ -187,6 +177,7 @@ import { STIMMEN } from '../lib/stimmen';
   @media (min-width: 900px) { .occasions { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 
   /* Mehrwert */
+  .statement { font-family: var(--display); font-size: clamp(1.9rem, 1.3rem + 1.9vw, 2.9rem); line-height: 1.2; color: var(--navy); margin: 0; max-width: 22ch; }
   .value-h { font-size: clamp(1.9rem, 1.3rem + 1.8vw, 2.8rem); color: var(--navy); }
   .value { list-style: none; margin: var(--s3) 0 0; padding: 0; border-top: 1px solid var(--rule); font-size: 1.05rem; }
   .value li { padding: 1rem 0; border-bottom: 1px solid var(--rule); color: var(--ink-2); }
@@ -196,8 +187,8 @@ import { STIMMEN } from '../lib/stimmen';
   .bg-grid li { border-top: 1px solid var(--navy); padding-top: var(--s2); }
   .bg-grid strong { display: block; font-family: var(--display); font-size: clamp(2.6rem, 2rem + 2vw, 3.6rem); font-weight: 500; line-height: 1; color: var(--gold-ink); margin-bottom: 0.6rem; }
   .bg-grid span { color: var(--ink-2); }
-  @media (min-width: 700px) { .bg-grid { grid-template-columns: repeat(2, 1fr); } }
-  @media (min-width: 1024px) { .bg-grid { grid-template-columns: repeat(3, 1fr); gap: var(--s4); } }
+  
+  @media (min-width: 900px) { .bg-grid { grid-template-columns: repeat(3, 1fr); gap: var(--s4); } }
   /* Fotografie */
   .art-grid { display: grid; gap: var(--s4); align-items: center; }
   .art-img { margin: 0; }
