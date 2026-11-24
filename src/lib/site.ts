@@ -3,7 +3,7 @@ const BASE = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 export const u = (path = '') => BASE + path.replace(/^\//, '');
 export const MAIL = 'kontakt@dr-tiffert.de';
 export const NAV = [
-  { href: 'entscheidungsbegleitung/', label: 'Entscheidungsbegleitung' },
+  { href: 'executive-coaching/', label: 'Executive Coaching' },
   { href: 'nachfolge/', label: 'Nachfolge' },
   { href: 'supervision/', label: 'Supervision' },
   { href: 'fotografie/', label: 'Fotografie' },

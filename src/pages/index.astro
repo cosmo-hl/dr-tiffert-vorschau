@@ -2,7 +2,7 @@
 import Base from '../layouts/Base.astro';
 import Photo from '../components/Photo.astro';
 import Stimme from '../components/Stimme.astro';
-import { u, MAIL } from '../lib/site';
+import { u } from '../lib/site';
 import { STIMMEN } from '../lib/stimmen';
 
 ---
@@ -16,78 +16,63 @@ import { STIMMEN } from '../lib/stimmen';
       <Photo name="site-terrasse" w={3543} h={1730} alt="" sizes="100vw" position="70% 30%" />
     </div>
     <div class="wrap hero-inner">
-      <p class="eyebrow hero-kicker">Entscheidungsbegleitung für Menschen in Verantwortung</p>
       <h1 id="claim">Komplexität klären. <span>Verantwortlich entscheiden.</span></h1>
-      <p class="lead">Ich begleite Unternehmer, Geschäftsführer und Führungskräfte, wenn eine Entscheidung nicht delegiert werden kann, Interessen sich widersprechen und Gewissheit nicht erreichbar ist.</p>
+      <p class="lead">Ich begleite Führungskräfte und Managementteams in schwierigen Entscheidungssituationen.</p>
       <div class="hero-cta">
-        <a class="btn btn--gold" href={u('kontakt/')}>Vertrauliches Erstgespräch anfragen <span class="arrow" aria-hidden="true">→</span></a>
+        <a class="btn btn--gold" href={u('kontakt/')}>Erstgespräch anfragen <span class="arrow" aria-hidden="true">→</span></a>
       </div>
       <figure class="hero-photo-mobile">
         <Photo name="site-terrasse-mobil" w={2306} h={1730} alt="Dr. Alexander Tiffert steht an einer geöffneten Glastür einer Dachterrasse und blickt über die Stadt." sizes="100vw" eager />
       </figure>
-      <p class="hero-p1">Als unabhängiges Gegenüber verbinde ich fast 20 Jahre Erfahrung in Organisationsentwicklung und Führung mit einem genauen Blick auf Rollen, Beziehungen und verdeckte Dynamiken.</p>
     </div>
   </section>
 
-  <!-- ANLÄSSE: drei Angebote -->
-  <section class="section paper" id="anlaesse" aria-labelledby="h-anlaesse">
+  <!-- THEMENFELDER -->
+  <section class="section paper" aria-labelledby="h-felder">
     <div class="wrap">
       <div class="section-head reveal">
-        <p class="eyebrow"><span class="num">01</span> Anlässe</p>
-        <h2 id="h-anlaesse">Wann ein Gespräch sinnvoll ist</h2>
+        <p class="eyebrow"><span class="num">01</span> Themenfelder</p>
+        <h2 id="h-felder">Wobei ich begleite</h2>
       </div>
-      <ol class="occasions">
-        <li class="reveal">
-          <a href={u('entscheidungsbegleitung/')}>
-            <span class="roman" aria-hidden="true">I</span>
-            <h3>Eine Entscheidung lässt sich nicht delegieren.</h3>
-            <p>Interessen widersprechen sich, Informationen bleiben unvollständig, und die Folgen reichen über die eigene Rolle hinaus.</p>
-            <span class="more">Zur Entscheidungsbegleitung <span class="arrow" aria-hidden="true">→</span></span>
-          </a>
-        </li>
-        <li class="reveal reveal-d1">
-          <a href={u('nachfolge/')}>
-            <span class="roman" aria-hidden="true">II</span>
-            <h3>Eine Nachfolge verändert mehrere Systeme zugleich.</h3>
-            <p>Familie, Eigentum und Unternehmen brauchen unterschiedliche Gespräche und klare Entscheidungsrechte.</p>
-            <span class="more">Zur Nachfolgebegleitung <span class="arrow" aria-hidden="true">→</span></span>
-          </a>
-        </li>
-        <li class="reveal reveal-d2">
-          <a href={u('supervision/')}>
-            <span class="roman" aria-hidden="true">III</span>
-            <h3>Ein Beratungsmandat ist festgefahren.</h3>
-            <p>Ungeklärte Dynamiken beim Kunden zeigen sich möglicherweise auch im Beratungsteam.</p>
-            <span class="more">Zur Supervision <span class="arrow" aria-hidden="true">→</span></span>
-          </a>
-        </li>
+      <ol class="occasions four">
+        {[
+          ['I', 'Executive Coaching', 'Für Führungskräfte, die eine Entscheidung allein verantworten.', 'executive-coaching/'],
+          ['II', 'Managementteams', 'Für Teams, die gemeinsam entscheiden müssen.', 'executive-coaching/'],
+          ['III', 'Nachfolge', 'Für Familienunternehmen im Übergang.', 'nachfolge/'],
+          ['IV', 'Supervision', 'Für interne und externe Beratungsteams.', 'supervision/'],
+        ].map(([n, t, x, h], i) => (
+          <li class={`reveal reveal-d${i % 3}`}>
+            <a href={u(h)}>
+              <span class="roman" aria-hidden="true">{n}</span>
+              <h3>{t}</h3>
+              <p>{x}</p>
+              <span class="more">Mehr <span class="arrow" aria-hidden="true">→</span></span>
+            </a>
+          </li>
+        ))}
       </ol>
     </div>
   </section>
 
-  <!-- ARBEITSWEISE -->
-  <section class="section" aria-labelledby="h-arbeitsweise">
-    <div class="wrap split">
-      <div class="split-head reveal">
-        <p class="eyebrow"><span class="num">02</span> Arbeitsweise</p>
-        <h2 id="h-arbeitsweise">Wie wir arbeiten</h2>
+  <!-- HINTERGRUND -->
+  <section class="section" aria-labelledby="h-hintergrund">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow"><span class="num">02</span> Hintergrund</p>
+        <h2 id="h-hintergrund">Was mich qualifiziert</h2>
       </div>
-      <div class="split-body measure reveal">
-        <p class="lead">Wir arbeiten an einer konkreten Situation. Wir unterscheiden Beobachtungen von Deutungen, prüfen Annahmen und machen sichtbar, welche Rollen, Interessen und Erwartungen auf Ihre Entscheidung wirken.</p>
-        <p>Daraus entwickeln Sie Kriterien, mit denen Sie die Folgen abwägen und den nächsten Schritt bewusst vertreten können. Ich bringe Erfahrung, Hypothesen und Widerspruch ein. Die Verantwortung für die Entscheidung bleibt bei Ihnen.</p>
-        <ul class="proof" aria-label="Erfahrung">
-          <li><strong>fast 20</strong> Jahre Beratung in Organisations- und Führungsfragen</li>
-          <li><strong>fast 10</strong> Jahre Lehre an Hochschulen</li>
-          <li><strong>3</strong> Fachbücher zu Führung, Coaching und Kundenorientierung</li>
-        </ul>
-        <a class="more" href={u('profil/')}>Zum Profil <span class="arrow" aria-hidden="true">→</span></a>
-      </div>
+      <ul class="proof reveal">
+        <li><strong>20</strong> Jahre Beratung in Organisations- und Führungsfragen</li>
+        <li><strong>Dr.</strong> Diplom-Wirtschaftsingenieur, Promotion an der Universität Rostock</li>
+        <li><strong>10</strong> Jahre Lehre an Hochschulen und drei Fachbücher</li>
+      </ul>
+      <a class="more" href={u('profil/')}>Zum Profil <span class="arrow" aria-hidden="true">→</span></a>
     </div>
   </section>
 
   <Stimme {...STIMMEN.meyer} />
 
-  <!-- FOTOGRAFIE: eigenständig -->
+  <!-- FOTOGRAFIE -->
   <section class="section art dark" aria-labelledby="h-foto">
     <div class="wrap art-grid">
       <figure class="art-img reveal">
@@ -95,21 +80,8 @@ import { STIMMEN } from '../lib/stimmen';
       </figure>
       <div class="art-text reveal reveal-d1">
         <p class="eyebrow">Künstlerische Fotografie</p>
-        <h2 id="h-foto">Eine eigene Praxis</h2>
-        <p>In meiner Fotografie beschäftige ich mich mit Situationen, in denen eine vertraute Ordnung mehrdeutig wird. Mit meiner Beratung verbindet sie eine Haltung: genau hinsehen, vorschnelle Erklärungen vermeiden und Widersprüche aushalten.</p>
+        <h2 id="h-foto">Genau hinsehen</h2>
         <a class="more" href={u('fotografie/')}>Zur Fotografie <span class="arrow" aria-hidden="true">→</span></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABSCHLUSS -->
-  <section class="section finale" aria-labelledby="h-abschluss">
-    <div class="wrap finale-inner reveal">
-      <h2 id="h-abschluss">Vor welcher Entscheidung stehen Sie gerade?</h2>
-      <p>Wenn Sie sich ein unabhängiges Gegenüber wünschen, klären wir in einem ersten vertraulichen Gespräch, worum es geht und ob eine Zusammenarbeit sinnvoll ist.</p>
-      <div class="cta-row">
-        <a class="btn" href={u('kontakt/')}>Erstgespräch anfragen <span class="arrow" aria-hidden="true">→</span></a>
-        <a class="mail" href={`mailto:${MAIL}`}>{MAIL}</a>
       </div>
     </div>
   </section>
@@ -161,9 +133,12 @@ import { STIMMEN } from '../lib/stimmen';
   .hero-kicker { color: var(--gold); margin-bottom: var(--s2); }
 
   /* Belege */
-  .proof { list-style: none; margin: var(--s4) 0 var(--s3); padding: 0; display: grid; gap: 0; border-top: 1px solid var(--rule); }
-  .proof li { padding: 0.9rem 0; border-bottom: 1px solid var(--rule); color: var(--ink-2); }
-  .proof strong { display: inline-block; min-width: 5.5rem; font-family: var(--display); font-size: 1.6rem; font-weight: 600; color: var(--navy); margin-right: 0.5rem; }
+  .proof { list-style: none; margin: 0 0 var(--s3); padding: 0; display: grid; gap: var(--s3); }
+  .proof li { color: var(--ink-2); max-width: 30ch; }
+  .proof strong { display: block; font-family: var(--display); font-size: clamp(2.6rem, 2rem + 2vw, 3.6rem); font-weight: 500; line-height: 1; color: var(--navy); margin-bottom: 0.4rem; }
+  @media (min-width: 900px) { .proof { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s4); } }
+  @media (min-width: 900px) { .occasions.four { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+  @media (min-width: 600px) and (max-width: 899px) { .occasions.four { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 
   /* Fotografie */
   .art-grid { display: grid; gap: var(--s4); align-items: center; }
@@ -173,11 +148,4 @@ import { STIMMEN } from '../lib/stimmen';
   .art-text .more { color: #fff; }
   @media (min-width: 1024px) { .art-grid { grid-template-columns: 7fr 5fr; gap: clamp(3rem, 5vw, 5rem); } }
 
-  /* Abschluss */
-  .finale { background: var(--paper); }
-  .finale-inner { max-width: 760px; text-align: center; }
-  .finale h2 { font-size: clamp(2rem, 1.3rem + 2.2vw, 3rem); }
-  .finale p { color: var(--ink-2); }
-  .finale .cta-row { justify-content: center; display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 2rem; margin-top: var(--s3); }
-  .finale .mail { color: var(--navy); }
 </style>

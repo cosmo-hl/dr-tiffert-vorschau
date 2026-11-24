@@ -1,0 +1,51 @@
+---
+import Base from '../../layouts/Base.astro';
+import SubHero from '../../components/SubHero.astro';
+import Stimme from '../../components/Stimme.astro';
+import { u } from '../../lib/site';
+import { STIMMEN } from '../../lib/stimmen';
+---
+<Base
+  title="Executive Coaching"
+  active="executive-coaching/"
+  description="Executive Coaching mit Dr. Alexander Tiffert: Begleitung von Führungskräften und Managementteams in schwierigen Entscheidungssituationen."
+>
+  <SubHero
+    eyebrow="Executive Coaching"
+    title="Klar bleiben, wenn es schwierig wird"
+    lead="Ich begleite Führungskräfte und Managementteams in Situationen, in denen keine Option einfach ist."
+    name="site-fenster" w={3543} h={2372} pos="80% 50%" posM="78% 50%"
+    alt="Dr. Alexander Tiffert sitzt in einem Sessel an einer großen Fensterfront und blickt über die Stadt."
+  >
+    <div class="cta-row">
+      <a class="btn btn--gold" href={u('kontakt/')}>Erstgespräch anfragen <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+  </SubHero>
+
+  <section class="section" aria-label="Zwei Formen">
+    <div class="wrap">
+      <ul class="duo">
+        <li class="reveal">
+          <p class="eyebrow"><span class="num">01</span> Einzeln</p>
+          <h2>Für Führungskräfte</h2>
+          <p>Eine Entscheidung, die Sie nicht delegieren können. Wir sortieren, was Sie wissen, was Sie annehmen und was auf dem Spiel steht. Die Entscheidung bleibt bei Ihnen.</p>
+        </li>
+        <li class="reveal reveal-d1">
+          <p class="eyebrow"><span class="num">02</span> Im Team</p>
+          <h2>Für Managementteams</h2>
+          <p>Eine Frage, die Sie gemeinsam entscheiden müssen. Wir klären Rollen, Interessen und Zielkonflikte, damit das Team handlungsfähig bleibt.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <Stimme {...STIMMEN.simonis} />
+</Base>
+
+<style>
+  .duo { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s4); }
+  .duo li { border-top: 2px solid var(--gold-ink); padding-top: var(--s3); }
+  .duo h2 { font-size: clamp(1.8rem, 1.3rem + 1.4vw, 2.5rem); }
+  .duo p:not(.eyebrow) { max-width: 46ch; color: var(--ink-2); }
+  @media (min-width: 900px) { .duo { grid-template-columns: 1fr 1fr; gap: clamp(3rem, 6vw, 6rem); } }
+</style>
