@@ -8,4 +8,5 @@ export const NAV = [
   { href: 'supervision/', label: 'Supervision' },
   { href: 'kunstanaloges-coaching/', label: 'Kunstanaloges Coaching' },
   { href: 'qualifikation/', label: 'Qualifikation' },
+  { href: 'kontakt/', label: 'Kontakt' },
 ];
