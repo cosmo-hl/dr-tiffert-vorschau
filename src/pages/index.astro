@@ -79,14 +79,14 @@ import { STIMMEN } from '../lib/stimmen';
   </section>
 
   <!-- HALTUNG -->
-  <section class="section" aria-labelledby="h-haltung">
+  <section class="section haltung" aria-labelledby="h-haltung">
     <div class="wrap split">
       <div class="split-head reveal">
         <p class="eyebrow"><span class="num">02</span> Haltung</p>
         <h2 id="h-haltung">Ungewöhnlich und ungewöhnlich wirksam: die Verbindung von Fotografie und Beratung</h2>
       </div>
       <div class="split-body measure reveal">
-        <p class="lead">Ob in der Beratung, im Coaching oder in der Fotografie: Ich verstehe Wirklichkeit als Konstruktion. Dieselbe Situation sieht je nach Blickwinkel anders aus. Fotografie ist für mich Sehen lernen, und das wirkt auch ohne Kamera. Wer das erfährt, sieht beweglicher, nimmt genauer wahr und findet neue Möglichkeiten.</p>
+        <p>Ob in der Beratung, im Coaching oder in der Fotografie: Ich verstehe Wirklichkeit als Konstruktion. Dieselbe Situation sieht je nach Blickwinkel anders aus. Fotografie ist für mich Sehen lernen, und das wirkt auch ohne Kamera. Wer das erfährt, sieht beweglicher, nimmt genauer wahr und findet neue Möglichkeiten.</p>
       </div>
     </div>
   </section>
@@ -172,6 +172,10 @@ import { STIMMEN } from '../lib/stimmen';
   @media (min-width: 900px) { .occasions { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 
   .statement-sub { margin: var(--s3) 0 0; color: var(--ink-2); font-size: clamp(1.05rem, 1rem + 0.3vw, 1.2rem); max-width: 40ch; }
+  /* Haltung */
+  .haltung h2 { font-size: clamp(1.7rem, 1.2rem + 1.3vw, 2.25rem); line-height: 1.2; }
+  .haltung .split-body p { font-size: 1.1rem; }
+  @media (min-width: 1024px) { .haltung .split-body { padding-top: calc(2.1rem + var(--s3)); } }
   /* Mehrwert */
   .statement { font-family: var(--display); font-size: clamp(1.9rem, 1.3rem + 1.9vw, 2.9rem); line-height: 1.2; color: var(--navy); margin: 0; max-width: 22ch; }
   /* Fotografie */
