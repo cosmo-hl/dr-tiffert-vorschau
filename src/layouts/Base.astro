@@ -44,7 +44,7 @@ const fullTitle = title === 'Startseite'
         <nav class="main-nav" id="hauptmenue" aria-label="Hauptmenü">
           <ul>
             {NAV.map((item) => (
-              <li><a href={u(item.href)} aria-current={active === item.href ? 'page' : undefined}>{item.label}</a></li>
+              <li class={item.cta ? 'nav-cta' : undefined}><a href={u(item.href)} aria-current={active === item.href ? 'page' : undefined}>{item.label}</a></li>
             ))}
           </ul>
         </nav>
