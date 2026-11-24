@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import SubHero from '../../components/SubHero.astro';
 import Photo from '../../components/Photo.astro';
 import { u, MAIL } from '../../lib/site';
 
@@ -16,12 +17,12 @@ const FOTOBUECHER = [
   active="publikationen/"
   description="Publikationen von Dr. Alexander Tiffert: Fachbücher bei Springer Gabler, Fotobücher und fotografische Whitepaper."
 >
-  <header class="page-hero dark">
-    <div class="wrap">
-      <p class="eyebrow">Publikationen</p>
-      <h1>Fachbücher, Fotobücher und fotografische Whitepaper</h1>
-    </div>
-  </header>
+  <SubHero
+    eyebrow="Publikationen"
+    title="Fachbücher, Fotobücher und fotografische Whitepaper"
+    lead="Fragen aus beiden Feldern vertiefe ich in meinen Texten."
+    name="site-buecher" w={3543} h={1949} pos="55% 50%" posM="62% 50%"
+    alt="Dr. Alexander Tiffert sitzt mit einem Laptop auf einem roten Sofa, durch ein Regal mit Büchern und Vasen gesehen." />
 
   <section class="section" aria-labelledby="h-fach">
     <div class="wrap">

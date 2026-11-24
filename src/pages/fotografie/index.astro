@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import SubHero from '../../components/SubHero.astro';
 import Photo from '../../components/Photo.astro';
 import { u, PORTFOLIO_URL } from '../../lib/site';
 const PORTFOLIO_PDF = u('downloads/Alexander-Tiffert_Who-Owns-Reality_Portfolio-2026.pdf');
@@ -9,23 +10,25 @@ const PORTFOLIO_PDF = u('downloads/Alexander-Tiffert_Who-Owns-Reality_Portfolio-
   active="fotografie/"
   description="Künstlerische Straßenfotografie von Alexander Tiffert: flüchtige Konstellationen zwischen Klarheit und Andeutung und das Fotobuchprojekt Spuren der Suche."
 >
-  <header class="page-hero dark has-figure">
-    <div class="wrap">
-      <p class="eyebrow">Künstlerische Fotografie</p>
-      <h1>Was geschieht zwischen Menschen?</h1>
-      <div class="intro">
-        <p>In der Organisationsentwicklung und in meiner künstlerischen Fotografie beschäftigt mich dieselbe Frage: Was geschieht zwischen Menschen? In der Beratung untersuche ich solche Dynamiken gemeinsam mit den Beteiligten. In der Fotografie arbeite ich mit dem, was sich im Bild zeigt und was offenbleibt.</p>
-        <p>Diese Vielschichtigkeit des Blicks zeigt sich auch in meiner fotografischen Arbeit.</p>
-      </div>
-      <div class="cta-row portfolio-links">
-        <a class="btn btn--gold" href={PORTFOLIO_PDF} download>Portfolio 2026 als PDF <span class="arrow" aria-hidden="true">↓</span><span class="visually-hidden"> (Who Owns Reality?, 2,5 MB)</span></a>
-        <a class="btn btn--outline" href={PORTFOLIO_URL} rel="noopener">Online-Portfolio <span class="arrow" aria-hidden="true">↗</span><span class="visually-hidden"> (alextiffert.com)</span></a>
-      </div>
+  <SubHero
+    eyebrow="Künstlerische Fotografie"
+    title="Was geschieht zwischen Menschen?"
+    lead="In der Fotografie arbeite ich mit dem, was sich im Bild zeigt und was offenbleibt."
+    name="site-fotograf" w={768} h={512} pos="100% 40%" posM="78% 30%"
+    alt="Alexander Tiffert fotografiert nachts auf der Straße, die Kamera vor dem Gesicht.">
+    <div class="cta-row portfolio-links">
+      <a class="btn btn--gold" href={PORTFOLIO_PDF} download>Portfolio 2026 als PDF <span class="arrow" aria-hidden="true">↓</span><span class="visually-hidden"> (Who Owns Reality?, 2,5 MB)</span></a>
+      <a class="btn btn--outline" href={PORTFOLIO_URL} rel="noopener">Online-Portfolio <span class="arrow" aria-hidden="true">↗</span><span class="visually-hidden"> (alextiffert.com)</span></a>
     </div>
-  </header>
+  </SubHero>
 
   <!-- GALERIE: dunkler Raum, ein Bild pro Bildschirm, unbeschnitten -->
   <div class="room dark">
+    <section class="page-intro" aria-label="Einführung">
+      <div class="wrap page-intro-text reveal">
+        <p>In der Organisationsentwicklung und in meiner künstlerischen Fotografie beschäftigt mich dieselbe Frage: Was geschieht zwischen Menschen? In der Beratung untersuche ich solche Dynamiken gemeinsam mit den Beteiligten. Diese Vielschichtigkeit des Blicks zeigt sich auch in meiner fotografischen Arbeit.</p>
+      </div>
+    </section>
     <section class="feature wrap" aria-labelledby="h-bildnotiz">
       <figure>
         <div class="feature-img">
@@ -114,7 +117,7 @@ const PORTFOLIO_PDF = u('downloads/Alexander-Tiffert_Who-Owns-Reality_Portfolio-
 <style>
   /* Ein eigener Raum: neutrales Fast-Schwarz, damit die Farben der Bilder nicht eingefärbt wirken */
   .room { background: #0f1312; }
-  .feature figure { margin: calc(-1 * clamp(5rem, 12vw, 10rem)) 0 0; position: relative; z-index: 1; }
+  .feature figure { margin: var(--s4) 0 0; }
   .feature-img { background: #0a0d0c; }
   .feature-img :global(img) { width: 100%; }
   .note { max-width: 680px; padding: var(--s3) 0 0; color: #d6ded9; }

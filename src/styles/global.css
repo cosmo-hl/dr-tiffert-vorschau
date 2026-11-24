@@ -416,3 +416,5 @@ main > section:last-child:not(.closing):not(.contact) { padding-bottom: calc(var
 .page-intro-text p:last-child { margin-bottom: 0; }
 .page-intro + .section, .page-intro + .subnav + .section { padding-top: var(--s4); }
 .page-intro + .subnav { margin-top: var(--s4); }
+.sub-hero .cta-row { margin-top: var(--s3); }
+.dark .page-intro-text { color: #d6ded9; }
