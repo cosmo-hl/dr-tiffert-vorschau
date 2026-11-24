@@ -21,8 +21,8 @@ Deployment: Inhalt von `dist/` liegt im Branch `gh-pages` (GitHub Pages, Quelle 
 
 | URL | Inhalt |
 | --- | --- |
-| `/` | Startseite: Claim, Porträt, Einstiegstext mit Gruß, drei Gesprächsanlässe, drei Zugänge, Lehre & Publikationen |
-| `/organisationsentwicklung/` | Einstieg, `#executive-coaching`, `#nachfolge` mit IHK-Fallbox |
+| `/` | Startseite: Claim und Einstieg, Schwerpunkt-Absatz, drei Gesprächsanlässe, sechs Felder, Einladung mit Kontakt |
+| `/organisationsentwicklung/` | Einstieg, `#nachfolge` mit IHK-Fallbox, `#executive-coaching` |
 | `/supervision/` | Supervision für Organisationsberatungen |
 | `/fotografie/` | Künstlerische Fotografie, Bildnotiz, kleine Auswahl, Link zum Portfolio |
 | `/lehre/` | Lehre |
@@ -35,26 +35,29 @@ Dunkelgrün (#1F3832 / Markengrün #30534A), Sand (#C8BB9E) und Papier (#F6F4EF)
 
 ## Bildliste
 
-Originale liegen nicht im Repository; `scripts/prepare_images.py` erzeugt aus `originals/` responsive Größen (JPEG + WebP, Metadaten entfernt).
+Originale liegen nicht im Repository (`originals/` ist ausgeschlossen); `scripts/prepare_images.py` erzeugt responsive Größen (JPEG + WebP, Metadaten entfernt). Quelle der Originale: Marketing-Ordner von Alexander (Serien Albert Raven 2017 und 2019). Alle Website-Fotos sind **Kandidaten**, Nutzungsfreigabe offen.
 
-| Datei | Seite | Einsatz |
+Bildlogik der Unterseiten: Überschrift und Einstieg zuerst, dann das Bild in voller Inhaltsbreite an der linken Textkante, Desktop 2:1, mobil 4:3 mit eigenem Ausschnitt (`pos` / `posM` in `PageFigure`). Ausnahmen: Werkbilder der Fotografie (ungeschnitten 3:2) und Buchcover.
+
+| Datei (Original) | Seite | Zuschnitt |
 | --- | --- | --- |
-| `site-terrasse` (dr-tiffert.de, Alexander-1357) | Startseite | Hero, vollflächig, Fokus rechts |
-| `site-workshop` | Organisationsentwicklung | Bildband unter dem Seitenkopf |
-| `site-spiegelung` | Supervision | Bild, das in den Seitenkopf ragt |
-| `site-portraet-sw` | Kontakt | Hochformat rechts |
-| `buch-cx`, `buch-coaching`, `buch-vertrieb` | Publikationen | Buchcover |
-| `7Y5A3906-2` | Fotografie | Einzelbild groß, ungeschnitten, mit Bildnotiz |
+| `site-terrasse` (Alexander-1357.jpg, 3543 px) | Startseite | Desktop vollflächig hinter dem Einstieg, Fokus rechts; mobil eigener 4:3-Ausschnitt `site-terrasse-mobil` nach Claim und Button |
+| `site-sessel-sw` (Alex_9327_sw.jpg) | Organisationsentwicklung | 2:1, Fokus 50 % / 22 %; mobil 4:3 |
+| `site-spiegelung` (Alex_9163.jpg) | Supervision | 2:1, Fokus oben, beide Figuren mit Kopf vollständig; mobil 4:3 |
+| `site-lehre` (Alexander-1626.jpg) | Lehre | 2:1, Fokus unten (Pult und Projektionsfläche); mobil 4:3 |
+| `site-kontakt` (Alex_8864.jpg) | Kontakt | Hochformat 4:5 rechts; mobil 1:1 |
+| `buch-cx`, `buch-coaching`, `buch-vertrieb` (AT-Buch-*.png) | Publikationen | Cover unbeschnitten, gleiche Höhe und Abstände |
+| `7Y5A3906-2` | Fotografie | Werkbild, ungeschnitten, gleiche linke Kante, mit Bildnotiz |
 | `7Y5A0358`, `7Y5A4542`, `7Y5A2602` | Fotografie | Auswahl im versetzten Raster |
-| `7Y5A4474-Enhanced-NR` | – | Reserve, nicht verwendet |
 
-Die Fotos von dr-tiffert.de stammen vorerst aus dem Design-PDF (max. 1600 px); Fotografie laut Impressum: Albert Raven.
+Vorher/Nachher der ersten Bildschirmansicht (1440, 390, 320 px) liegt im Projektordner unter `website-vorschau/`.
 
 ## Offene Freigaben
 
-- Website-Fotos in voller Auflösung nachliefern (Hero wirkt auf großen Monitoren sonst weich); Nutzungsrechte Albert Raven für die neue Seite klären.
-- Kundenstimmen und Auftraggeberliste von dr-tiffert.de übernommen (`src/lib/stimmen.ts`, Seiten); Freigabe der Zitierten für die neue Positionierung prüfen.
-- Telefonnummer: Briefing nennt 0172 7235888, die Live-Seite +49 451 305 00 71-80.
+- Nutzungsrechte der Fotos von Albert Raven (2017, 2019) für die neue Seite; Aktualität der Porträts.
+- Kurztexte der sechs Felder auf der Startseite: Organisationsentwicklung, Executive Coaching, Lehre und Publikationen sind aus freigegebenen Sätzen abgeleitet und brauchen eine Freigabe; ebenso die Abschnittsüberschrift „Zugänge zu meiner Arbeit“ (vorher „Drei Zugänge …“).
+- Kundenstimmen: je eine auf Organisationsentwicklung (Nachfolge) und Lehre, von dr-tiffert.de übernommen; Freigabe prüfen.
+- Porträt mit Kamera für die Fotografie-Seite: kein passendes Original gefunden.
 - Verlagslinks „Zum Buch“ und Link „Zur Übersicht meiner Fotobücher“ noch nicht verifiziert, daher nicht verlinkt.
 - Portfolio-Adresse bestätigen (Vorschau nutzt `https://www.alextiffert.com/portfolio`).
 - Impressum und Datenschutz vor Veröffentlichung freigeben.

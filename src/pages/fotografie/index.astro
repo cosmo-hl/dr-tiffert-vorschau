@@ -8,7 +8,7 @@ import { u, PORTFOLIO_URL } from '../../lib/site';
   active="fotografie/"
   description="Künstlerische Straßenfotografie von Alexander Tiffert: flüchtige Konstellationen zwischen Klarheit und Andeutung und das Fotobuchprojekt Spuren der Suche."
 >
-  <header class="page-hero dark">
+  <header class="page-hero dark has-figure">
     <div class="wrap">
       <p class="eyebrow">Künstlerische Fotografie</p>
       <h1>Was geschieht zwischen Menschen?</h1>
@@ -19,16 +19,16 @@ import { u, PORTFOLIO_URL } from '../../lib/site';
     </div>
   </header>
 
-  <section class="feature" aria-labelledby="h-bildnotiz">
+  <section class="feature wrap" aria-labelledby="h-bildnotiz">
     <figure>
       <div class="feature-img">
         <Photo
           name="7Y5A3906-2" w={5305} h={3537}
           alt="Spiegelung auf einem Platz: Eine Person steht, andere sitzen auf Steinbänken; dahinter ein historisches Gebäude, überlagert von Glasflächen und Bewegungsunschärfe."
-          sizes="100vw"
+          sizes="(min-width: 1296px) 1200px, calc(100vw - 2 * clamp(16px, 4.5vw, 48px))" eager
         />
       </div>
-      <figcaption class="wrap">
+      <figcaption>
         <div class="note reveal">
           <h2 id="h-bildnotiz" class="note-title">Was gleichzeitig sichtbar wird</h2>
           <p>Eine Person steht, andere sitzen. In der Spiegelung treffen unterschiedliche Abstände, Haltungen und Blickrichtungen auf die Architektur des Platzes. Was gleichzeitig sichtbar ist, gehört nicht zwangsläufig zur selben Geschichte.</p>
@@ -93,8 +93,8 @@ import { u, PORTFOLIO_URL } from '../../lib/site';
 </Base>
 
 <style>
-  .feature figure { margin: 0; }
-  .feature-img { background: var(--navy); }
+  .feature figure { margin: calc(-1 * clamp(5rem, 12vw, 10rem)) 0 0; position: relative; z-index: 1; }
+  .feature-img { background: var(--navy-3); box-shadow: 0 30px 60px -34px rgba(21, 38, 31, 0.6); }
   .feature-img :global(img) { width: 100%; }
   .note { max-width: 680px; padding: var(--s3) 0 0; }
   .note-title { font-size: clamp(1.6rem, 1.3rem + 1vw, 2.2rem); margin-bottom: 0.5rem; }

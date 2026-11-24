@@ -60,16 +60,19 @@ const fullTitle = title === 'Startseite'
 
     {invite && (
       <section class="invite dark" aria-labelledby="einladung">
-        <div class="wrap">
-          <p class="eyebrow reveal">Persönlicher Austausch</p>
-          <h2 id="einladung" class="reveal">Über Ihre Situation sprechen</h2>
-          <div class="cta-row reveal" style="justify-content:center">
-            <a class="btn btn--gold" href={u('kontakt/')}>Persönliches Gespräch anfragen <span class="arrow" aria-hidden="true">→</span></a>
+        <div class="wrap invite-grid">
+          <div>
+            <p class="eyebrow">Persönlicher Austausch</p>
+            <h2 id="einladung">Über Ihre Situation sprechen</h2>
+            <slot name="invite" />
           </div>
-          <ul class="contact-lines reveal" aria-label="Direkte Kontaktwege">
-            <li><span>E-Mail</span><a href={`mailto:${MAIL}`}>{MAIL}</a></li>
-            <li><span>Telefon</span><a href={PHONE_HREF}>{PHONE_DISPLAY}</a></li>
-          </ul>
+          <div class="invite-actions">
+            <a class="btn btn--gold" href={u('kontakt/')}>Persönliches Gespräch anfragen <span class="arrow" aria-hidden="true">→</span></a>
+            <ul class="contact-lines" aria-label="Direkte Kontaktwege">
+              <li><span>E-Mail</span><a href={`mailto:${MAIL}`}>{MAIL}</a></li>
+              <li><span>Telefon</span><a href={PHONE_HREF}>{PHONE_DISPLAY}</a></li>
+            </ul>
+          </div>
         </div>
       </section>
     )}

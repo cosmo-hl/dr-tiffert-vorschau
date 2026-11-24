@@ -28,14 +28,14 @@ import { MAIL, PHONE_DISPLAY, PHONE_HREF } from '../../lib/site';
         </dl>
       </div>
       <figure class="contact-photo">
-        <Photo name="site-portraet-sw" w={733} h={1102} eager alt="Schwarzweißporträt von Dr. Alexander Tiffert, entspannt in einem Sessel sitzend." sizes="(min-width: 1024px) 460px, 100vw" />
+        <Photo name="site-kontakt" w={2362} h={3543} eager alt="Dr. Alexander Tiffert lacht in die Kamera, im Sakko und mit einer weißen Schale in den Händen." sizes="(min-width: 1024px) 460px, 100vw" />
       </figure>
     </div>
   </section>
 </Base>
 
 <style>
-  .contact { padding-block: clamp(3.5rem, 8vw, 7rem); }
+  .contact { padding-block: clamp(2.5rem, 5vw, 4.5rem); }
   .contact-grid { display: grid; gap: var(--s4); align-items: center; }
   @media (min-width: 1024px) { .contact-grid { grid-template-columns: 7fr 5fr; gap: clamp(3rem, 6vw, 6rem); } }
   .contact h1 { max-width: 12ch; margin-bottom: var(--s4); }
@@ -48,6 +48,6 @@ import { MAIL, PHONE_DISPLAY, PHONE_HREF } from '../../lib/site';
   .lines dd { margin: 0; }
   .lines a { display: inline-flex; align-items: center; min-height: 44px; white-space: nowrap; font-size: 1.15rem; }
   .contact-photo { margin: 0; }
-  .contact-photo :global(img) { width: 100%; max-height: 78vh; object-fit: cover; }
-  @media (max-width: 1023px) { .contact-photo :global(img) { max-height: 520px; object-position: 50% 30%; } }
+  .contact-photo :global(img) { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 12%; }
+  @media (max-width: 1023px) { .contact-photo :global(img) { aspect-ratio: 1 / 1; object-position: 50% 8%; } }
 </style>

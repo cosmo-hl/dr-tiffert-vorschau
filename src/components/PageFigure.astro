@@ -1,0 +1,10 @@
+---
+import Photo from './Photo.astro';
+interface Props { name: string; w: number; h: number; alt: string; pos?: string; posM?: string; }
+const { name, w, h, alt, pos = '50% 50%', posM = '50% 50%' } = Astro.props;
+---
+<div class="wrap figure-wrap">
+  <figure class="page-figure" style={`--pos:${pos};--pos-m:${posM}`}>
+    <Photo name={name} w={w} h={h} alt={alt} eager sizes="(min-width: 1296px) 1200px, calc(100vw - 2 * clamp(16px, 4.5vw, 48px))" />
+  </figure>
+</div>

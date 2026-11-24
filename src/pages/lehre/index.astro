@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import PageFigure from '../../components/PageFigure.astro';
 import { u } from '../../lib/site';
 ---
 <Base
@@ -7,7 +8,7 @@ import { u } from '../../lib/site';
   active="lehre/"
   description="Lehre von Dr. Alexander Tiffert in Organisationsberatung und künstlerischer Fotografie: Hochschulfach Methoden und Konzepte der Organisationsberatung und ein Kurs an der Kunstschule Lübeck."
 >
-  <header class="page-hero dark">
+  <header class="page-hero dark has-figure">
     <div class="wrap">
       <p class="eyebrow">Lehre</p>
       <h1>Lehre in Organisationsberatung und künstlerischer Fotografie</h1>
@@ -16,6 +17,9 @@ import { u } from '../../lib/site';
       </div>
     </div>
   </header>
+
+  <PageFigure name="site-lehre" w={3543} h={1949} pos="50% 70%" posM="62% 80%"
+    alt="Dr. Alexander Tiffert steht an einem Pult unter einer großen Projektionsfläche." />
 
   <section class="section" aria-labelledby="h-ob">
     <div class="wrap split">

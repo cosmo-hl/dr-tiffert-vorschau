@@ -1,6 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
-import Photo from '../../components/Photo.astro';
+import PageFigure from '../../components/PageFigure.astro';
 import { u } from '../../lib/site';
 ---
 <Base
@@ -8,7 +8,7 @@ import { u } from '../../lib/site';
   active="supervision/"
   description="Supervision für Organisationsberatungen und ihre Teams: Dynamiken im Kundenunternehmen und im Beratungsteam reflektieren und nächste Schritte im Mandat bewusst gestalten."
 >
-  <header class="page-hero dark">
+  <header class="page-hero dark has-figure">
     <div class="wrap">
       <p class="eyebrow">Supervision</p>
       <h1>Supervision für Organisationsberatungen und ihre Teams</h1>
@@ -18,13 +18,8 @@ import { u } from '../../lib/site';
     </div>
   </header>
 
-  <div class="overlap">
-    <div class="wrap">
-      <figure class="overlap-fig reveal">
-        <Photo name="site-spiegelung" w={900} h={332} alt="Dr. Alexander Tiffert im Anzug neben einer Glasscheibe, in der sich sein Spiegelbild zeigt." sizes="(min-width: 960px) 900px, 100vw" />
-      </figure>
-    </div>
-  </div>
+  <PageFigure name="site-spiegelung" w={3543} h={2362} pos="50% 8%" posM="50% 20%"
+    alt="Dr. Alexander Tiffert im Anzug neben einer Glaswand, in der sich seine Gestalt spiegelt." />
 
   <section class="section" aria-labelledby="h-wiederholung">
     <div class="wrap split">

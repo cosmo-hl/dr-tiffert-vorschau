@@ -23,21 +23,21 @@ import { u, MAIL } from '../../lib/site';
       </div>
       <ul class="books">
         <li class="reveal">
-          <div class="cover"><Photo name="buch-cx" w={559} h={607} alt="Buchcover: Customer Experience Management in der Praxis" sizes="(min-width: 900px) 360px, 80vw" /></div>
+          <div class="cover"><Photo name="buch-cx" w={563} h={768} alt="Buchcover: Customer Experience Management in der Praxis" sizes="(min-width: 900px) 360px, 80vw" /></div>
           <h3><i>Customer Experience Management in der Praxis.</i> Grundlagen – Zusammenhänge – Umsetzung.</h3>
           <p class="meta">Alexander Tiffert, Springer Gabler, 2019.</p>
           <p>Eine Einführung mit Fallbeispielen zur Gestaltung von Kundenerlebnissen über einzelne Kontaktpunkte hinweg.</p>
           <p class="pending-link">Zum Buch (Verlagslink wird vor Veröffentlichung ergänzt)</p>
         </li>
         <li class="reveal reveal-d1">
-          <div class="cover"><Photo name="buch-coaching" w={559} h={609} alt="Buchcover: Coaching von Mitarbeitern im persönlichen Verkauf, 2. Auflage" sizes="(min-width: 900px) 360px, 80vw" /></div>
+          <div class="cover"><Photo name="buch-coaching" w={563} h={768} alt="Buchcover: Coaching von Mitarbeitern im persönlichen Verkauf, 2. Auflage" sizes="(min-width: 900px) 360px, 80vw" /></div>
           <h3><i>Coaching von Mitarbeitern im persönlichen Verkauf.</i> Nachhaltige Kompetenzentwicklung für den Face-to-Face-Kontakt mit Kunden.</h3>
           <p class="meta">Alexander Tiffert, 2. Auflage, Springer Gabler, 2021.</p>
           <p>Ein Buch für Führungskräfte, die Mitarbeitende im Verkauf durch Coaching in ihrer Entwicklung unterstützen möchten.</p>
           <p class="pending-link">Zum Buch (Verlagslink wird vor Veröffentlichung ergänzt)</p>
         </li>
         <li class="reveal reveal-d2">
-          <div class="cover"><Photo name="buch-vertrieb" w={559} h={764} alt="Buchcover: Führung von Vertriebsorganisationen, 2. Auflage" sizes="(min-width: 900px) 360px, 80vw" /></div>
+          <div class="cover"><Photo name="buch-vertrieb" w={563} h={768} alt="Buchcover: Führung von Vertriebsorganisationen, 2. Auflage" sizes="(min-width: 900px) 360px, 80vw" /></div>
           <h3><i>Führung von Vertriebsorganisationen.</i> Strategie – Koordination – Umsetzung.</h3>
           <p class="meta">Herausgegeben von Lars Binckebanck, Ann-Kristin Hölter und Alexander Tiffert, 2. Auflage, Springer Gabler, 2020.</p>
           <p>Beiträge aus Forschung, Beratung und Unternehmenspraxis.</p>
@@ -91,7 +91,7 @@ import { u, MAIL } from '../../lib/site';
 <style>
   .books { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s4); }
   @media (min-width: 900px) { .books { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-  .cover { background: linear-gradient(160deg, #e9ece9, #d6ddd8); aspect-ratio: 4 / 4.4; display: grid; place-items: center; padding: 10%; margin-bottom: var(--s3); overflow: hidden; }
+  .cover { background: linear-gradient(160deg, #e9ece9, #d6ddd8); aspect-ratio: 1 / 1; display: grid; place-items: center; padding: 9% 0; margin-bottom: var(--s3); overflow: hidden; }
   .cover :global(picture) { display: contents; }
   .cover :global(img) { min-height: 0; height: 100%; width: auto; max-width: 100%; object-fit: contain; box-shadow: 0 18px 30px -16px rgba(21, 38, 31, 0.55); transition: transform 0.5s var(--ease); }
   .books li:hover .cover :global(img) { transform: translateY(-6px) rotate(-1deg); }

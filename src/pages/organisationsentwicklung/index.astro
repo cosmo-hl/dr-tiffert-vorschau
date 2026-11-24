@@ -1,6 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
-import Photo from '../../components/Photo.astro';
+import PageFigure from '../../components/PageFigure.astro';
 import { u } from '../../lib/site';
 ---
 <Base
@@ -8,9 +8,9 @@ import { u } from '../../lib/site';
   active="organisationsentwicklung/"
   description="Organisationsentwicklung mit Dr. Alexander Tiffert: Executive Coaching für Führungskräfte und Managementteams sowie Nachfolgebegleitung für Familienunternehmen."
 >
-  <header class="page-hero dark">
+  <header class="page-hero dark has-figure">
     <div class="wrap">
-      <p class="eyebrow">Organisationsentwicklung</p>
+      <p class="eyebrow">Organisationsentwicklung in der Nachfolge</p>
       <h1>Organisationen verändern. Verantwortung klären.</h1>
       <div class="intro">
         <p>Wenn ein Unternehmen sich verändert, geraten oft unterschiedliche Dinge gleichzeitig in Bewegung: Die Strategie verlangt neue Entscheidungen, gewohnte Zuständigkeiten passen nicht mehr, und Menschen übernehmen Aufgaben oder geben sie ab. Was wie Widerstand aussieht, kann eine verständliche Reaktion auf unklare Erwartungen oder widersprüchliche Vorgaben sein.</p>
@@ -19,53 +19,22 @@ import { u } from '../../lib/site';
     </div>
   </header>
 
-  <figure class="bleed" style="margin:0">
-    <Photo name="site-workshop" w={1600} h={716} alt="Dr. Alexander Tiffert im Gespräch mit Führungskräften an einem Workshoptisch." sizes="100vw" position="50% 35%" />
-  </figure>
+  <PageFigure name="site-sessel-sw" w={3543} h={2362} pos="50% 22%" posM="42% 30%"
+    alt="Schwarzweißfoto: Dr. Alexander Tiffert sitzt entspannt in einem Sessel vor einem Bücherregal." />
 
   <nav class="subnav" aria-label="Angebote auf dieser Seite">
     <div class="wrap">
       <ul>
-        <li><a href="#executive-coaching"><span>01</span> Executive Coaching</a></li>
-        <li><a href="#nachfolge"><span>02</span> Nachfolgebegleitung</a></li>
+        <li><a href="#nachfolge"><span>01</span> Nachfolgebegleitung</a></li>
+        <li><a href="#executive-coaching"><span>02</span> Executive Coaching</a></li>
       </ul>
     </div>
   </nav>
 
-  <section class="section" id="executive-coaching" aria-labelledby="h-ec">
-    <div class="wrap split">
-      <div class="split-head reveal">
-        <p class="eyebrow"><span class="num">01</span> Angebot</p>
-        <h2 id="h-ec">Executive Coaching</h2>
-        <p class="kicker">Entscheidungen, die Sie nicht delegieren können</p>
-      </div>
-      <div class="split-body measure reveal">
-        <p class="lead">Wenn die Marktlage schwer einzuschätzen ist und wichtige Kunden wegbrechen, müssen Führungskräfte oft mehrere Entwicklungen zugleich bewältigen. Das kann sie auch persönlich an Grenzen bringen. Ich begleite sie dabei, dem Druck standzuhalten, handlungsfähig zu bleiben und ihrem Team Orientierung zu geben, auch wenn sie selbst noch nicht klar sehen, wohin die Reise geht.</p>
-        <p>Wenn diese Belastung anhält, können auch persönliche Fragen in die Führungsrolle hineinwirken. Im Coaching klären wir, was die Situation verlangt und wo Sie für sich eine Grenze ziehen müssen.</p>
-        <p>Eine Richtung kann wirtschaftlich sinnvoll sein und zugleich Ihr Team überfordern. Eine Entscheidung kann fachlich naheliegen und dennoch die eigene Rolle infrage stellen. Im Executive Coaching arbeiten wir an einer konkreten Situation. Wir klären, welche Erwartungen an Sie herangetragen werden, nach welchen Maßstäben Sie urteilen und welche Folgen Sie in Kauf nehmen können.</p>
-        <p>Ich bin ein vertrauliches Gegenüber, das auch Unbequemes anspricht. Die Entscheidung bleibt bei Ihnen. Das Gespräch kann einzeln oder, wenn die Frage gemeinsam entschieden werden muss, im Managementteam stattfinden.</p>
-        <div class="cta-row"><a class="btn" href={u('kontakt/')}>Executive Coaching anfragen <span class="arrow" aria-hidden="true">→</span></a></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section mist" aria-label="Stimmen zum Executive Coaching">
-    <div class="wrap quotes-grid">
-      <figure class="quote quote--small reveal">
-        <blockquote><p>Man merkt die Erfahrung in der Effizienz der Prozesse. Gleichfalls gibt es in den Workshops aber immer den Raum, dass wir unsere eigenen Lösungen finden können. Dadurch sind wir nachher in der Umsetzung viel schneller und die Ansätze passen wirklich zu uns.</p></blockquote>
-        <figcaption>Johannes Tröger <span>Country Sales Manager D-A-CH, Armstrong Building Products</span></figcaption>
-      </figure>
-      <figure class="quote quote--small reveal reveal-d1">
-        <blockquote><p>… mit Empathie, Erfahrung, Weitblick und psychologischem Feingefühl dabei unterstützt, wichtige Personalentscheidungen fundiert zu treffen.</p></blockquote>
-        <figcaption>Hermann-J. Simonis <span>Sprecher des Vorstandes, LAUREUS AG PRIVAT FINANZ</span></figcaption>
-      </figure>
-    </div>
-  </section>
-
   <section class="section" id="nachfolge" aria-labelledby="h-nf">
     <div class="wrap split">
       <div class="split-head reveal">
-        <p class="eyebrow"><span class="num">02</span> Angebot · Nachfolge</p>
+        <p class="eyebrow"><span class="num">01</span> Organisationsentwicklung in der Nachfolge</p>
         <h2 id="h-nf">Nachfolgebegleitung für Familienunternehmen</h2>
       </div>
       <div class="split-body reveal">
@@ -94,21 +63,31 @@ import { u } from '../../lib/site';
           <p class="source">Quelle: Klemens Vogel, „Das Spannende ist die Wechselbeziehung“, Interview mit Dr. Alexander Tiffert, IHK zu Lübeck, Die Wirtschaft, Ausgabe 11/2019, S. 30. Anonymisierte, sinngemäße Wiedergabe.</p>
         </aside>
 
+        <figure class="quote quote--small" style="margin-top:var(--s4)">
+          <blockquote><p>Durch die Zusammenarbeit mit Dr. Tiffert haben mein Bruder und ich endlich wieder zueinander gefunden. Heute führen wir das Unternehmen als Team!</p></blockquote>
+          <figcaption>Geschäftsführerin <span>eines Maschinenbauunternehmens, Lübeck</span></figcaption>
+        </figure>
+
         <div class="cta-row"><a class="btn" href={u('kontakt/')}>Über Ihre Nachfolge sprechen <span class="arrow" aria-hidden="true">→</span></a></div>
       </div>
     </div>
   </section>
 
-  <section class="section paper" aria-label="Stimmen zur Nachfolgebegleitung">
-    <div class="wrap quotes-grid">
-      <figure class="quote quote--small reveal">
-        <blockquote><p>Durch die Zusammenarbeit mit Dr. Tiffert haben mein Bruder und ich endlich wieder zueinander gefunden. Heute führen wir das Unternehmen als Team!</p></blockquote>
-        <figcaption>Geschäftsführerin <span>eines Maschinenbauunternehmens, Lübeck</span></figcaption>
-      </figure>
-      <figure class="quote quote--small reveal reveal-d1">
-        <blockquote><p>Die Zusammenarbeit mit Herrn Dr. Tiffert hat mir deutlich gemacht, dass auch ich als Vater an mir arbeiten muss. Vor allem ging es darum loszulassen, damit meine Tochter das Unternehmen auch wirklich eigenverantwortlich weiterführen kann.</p></blockquote>
-        <figcaption>Ehemaliger Vorstand <span>einer mittelständischen Unternehmensgruppe, Köln</span></figcaption>
-      </figure>
+  <section class="section paper" id="executive-coaching" aria-labelledby="h-ec">
+    <div class="wrap split">
+      <div class="split-head reveal">
+        <p class="eyebrow"><span class="num">02</span> Angebot</p>
+        <h2 id="h-ec">Executive Coaching</h2>
+        <p class="kicker">Entscheidungen, die Sie nicht delegieren können</p>
+      </div>
+      <div class="split-body measure reveal">
+        <p class="lead">Wenn die Marktlage schwer einzuschätzen ist und wichtige Kunden wegbrechen, müssen Führungskräfte oft mehrere Entwicklungen zugleich bewältigen. Das kann sie auch persönlich an Grenzen bringen. Ich begleite sie dabei, dem Druck standzuhalten, handlungsfähig zu bleiben und ihrem Team Orientierung zu geben, auch wenn sie selbst noch nicht klar sehen, wohin die Reise geht.</p>
+        <p>Wenn diese Belastung anhält, können auch persönliche Fragen in die Führungsrolle hineinwirken. Im Coaching klären wir, was die Situation verlangt und wo Sie für sich eine Grenze ziehen müssen.</p>
+        <p>Eine Richtung kann wirtschaftlich sinnvoll sein und zugleich Ihr Team überfordern. Eine Entscheidung kann fachlich naheliegen und dennoch die eigene Rolle infrage stellen. Im Executive Coaching arbeiten wir an einer konkreten Situation. Wir klären, welche Erwartungen an Sie herangetragen werden, nach welchen Maßstäben Sie urteilen und welche Folgen Sie in Kauf nehmen können.</p>
+        <p>Ich bin ein vertrauliches Gegenüber, das auch Unbequemes anspricht. Die Entscheidung bleibt bei Ihnen. Das Gespräch kann einzeln oder, wenn die Frage gemeinsam entschieden werden muss, im Managementteam stattfinden.</p>
+        <div class="cta-row"><a class="btn" href={u('kontakt/')}>Executive Coaching anfragen <span class="arrow" aria-hidden="true">→</span></a></div>
+      </div>
     </div>
   </section>
+
 </Base>
