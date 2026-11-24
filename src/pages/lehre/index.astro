@@ -7,40 +7,67 @@ import { u } from '../../lib/site';
   active="lehre/"
   description="Lehre von Dr. Alexander Tiffert in Organisationsberatung und künstlerischer Fotografie: Hochschulfach Methoden und Konzepte der Organisationsberatung und ein Kurs an der Kunstschule Lübeck."
 >
-  <div class="wrap page-intro">
-    <p class="eyebrow">Lehre</p>
-    <h1>Lehre in Organisationsberatung und künstlerischer Fotografie</h1>
-    <div class="measure">
-      <p>In beiden Arbeitsfeldern interessiert mich, wie Menschen genauer beobachten und aus ihren Beobachtungen eigene Schlüsse ziehen. In der Organisationsberatung gehen wir von konkreten Fällen aus. In der Fotografie arbeiten wir mit Bildern, die die Teilnehmenden selbst machen.</p>
+  <header class="page-hero dark">
+    <div class="wrap">
+      <p class="eyebrow">Lehre</p>
+      <h1>Lehre in Organisationsberatung und künstlerischer Fotografie</h1>
+      <div class="intro">
+        <p>In beiden Arbeitsfeldern interessiert mich, wie Menschen genauer beobachten und aus ihren Beobachtungen eigene Schlüsse ziehen. In der Organisationsberatung gehen wir von konkreten Fällen aus. In der Fotografie arbeiten wir mit Bildern, die die Teilnehmenden selbst machen.</p>
+      </div>
     </div>
-  </div>
+  </header>
 
   <section class="section" aria-labelledby="h-ob">
-    <div class="wrap content-grid">
-      <div class="col-head"><h2 id="h-ob">Methoden und Konzepte der Organisationsberatung</h2></div>
-      <div class="col-body measure">
-        <p>An der Hochschule Fresenius in Hamburg habe ich im Studienschwerpunkt Organisationsmanagement das Fach „Methoden und Konzepte der Organisationsberatung“ unterrichtet. An konkreten Fällen lässt sich zeigen, wie stark die Wahl einer Methode davon abhängt, was wir tatsächlich beobachtet haben, welche Annahmen wir treffen und wer über den nächsten Schritt entscheidet.</p>
+    <div class="wrap split">
+      <div class="split-head reveal">
+        <p class="eyebrow"><span class="num">01</span> Hochschule</p>
+        <h2 id="h-ob">Methoden und Konzepte der Organisationsberatung</h2>
+      </div>
+      <div class="split-body measure reveal">
+        <p class="lead">An der Hochschule Fresenius in Hamburg habe ich im Studienschwerpunkt Organisationsmanagement das Fach „Methoden und Konzepte der Organisationsberatung“ unterrichtet. An konkreten Fällen lässt sich zeigen, wie stark die Wahl einer Methode davon abhängt, was wir tatsächlich beobachtet haben, welche Annahmen wir treffen und wer über den nächsten Schritt entscheidet.</p>
         <p>Weitere Lehraufträge führten mich an die FOM in Hamburg, an die NORDAKADEMIE in Elmshorn und in ein Weiterbildungsprogramm der Universität Rostock.</p>
+        <ul class="places" aria-label="Lehrorte">
+          <li>Hochschule Fresenius<span>Hamburg</span></li>
+          <li>FOM<span>Hamburg</span></li>
+          <li>NORDAKADEMIE<span>Elmshorn</span></li>
+          <li>Universität Rostock<span>Weiterbildungsprogramm</span></li>
+        </ul>
       </div>
     </div>
   </section>
 
+  <section class="section mist" aria-label="Stimme aus der Lehre">
+    <div class="wrap">
+      <figure class="quote center reveal" style="max-width:900px;margin-inline:auto">
+        <blockquote><p>Die Lehrveranstaltung von Herrn Dr. Tiffert zählt regelmäßig zu den durch die Studierenden am besten evaluierten Veranstaltungen im Masterstudiengang. Hierbei werden zumeist vor allem die hohe Praxisnähe und die anschauliche Didaktik hervorgehoben.</p></blockquote>
+        <figcaption>Prof. Dr. habil. Nicole Richter <span>Studiengangsleiterin Marketing und Salesmanagement, NORDAKADEMIE</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
   <section class="section" aria-labelledby="h-kf">
-    <div class="wrap content-grid">
-      <div class="col-head"><h2 id="h-kf">Künstlerische Fotografie an der Kunstschule Lübeck</h2></div>
-      <div class="col-body measure">
-        <p>Für das Frühjahr 2027 ist an der Kunstschule Lübeck der Kurs „Künstlerische Fotografie – den eigenen Blick entwickeln“ geplant. Er richtet sich an Erwachsene mit und ohne fotografische Vorerfahrung. Zwischen den Treffen ist Zeit zum Fotografieren. Wir besprechen die entstandenen Bilder gemeinsam: Was trägt ein Bild? Was verändert der Ausschnitt? Und wie wirkt das Bild neben einem anderen? Im Laufe des Kurses entwickeln die Teilnehmenden eine eigene kleine Serie.</p>
-        <p class="further">
-          <span>Weiterführend:</span>
-          <a class="arrow-link" href={u('publikationen/')}>Zu den Publikationen</a>
-          <a class="arrow-link" href={u('fotografie/')}>Zu meiner fotografischen Arbeit</a>
-        </p>
+    <div class="wrap split">
+      <div class="split-head reveal">
+        <p class="eyebrow"><span class="num">02</span> Kunstschule</p>
+        <h2 id="h-kf">Künstlerische Fotografie an der Kunstschule Lübeck</h2>
+      </div>
+      <div class="split-body measure reveal">
+        <p class="lead">Für das Frühjahr 2027 ist an der Kunstschule Lübeck der Kurs „Künstlerische Fotografie – den eigenen Blick entwickeln“ geplant. Er richtet sich an Erwachsene mit und ohne fotografische Vorerfahrung.</p>
+        <p>Zwischen den Treffen ist Zeit zum Fotografieren. Wir besprechen die entstandenen Bilder gemeinsam: Was trägt ein Bild? Was verändert der Ausschnitt? Und wie wirkt das Bild neben einem anderen? Im Laufe des Kurses entwickeln die Teilnehmenden eine eigene kleine Serie.</p>
+        <p class="further-label">Weiterführend</p>
+        <div class="further">
+          <a class="more" href={u('publikationen/')}>Zu den Publikationen <span class="arrow" aria-hidden="true">→</span></a>
+          <a class="more" href={u('fotografie/')}>Zu meiner fotografischen Arbeit <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
       </div>
     </div>
   </section>
 </Base>
 
 <style>
-  .further { display: flex; flex-wrap: wrap; align-items: center; gap: 0 1.5rem; margin-top: var(--space-3); }
-  .further a { display: inline-flex; align-items: center; min-height: 44px; }
+  .places { list-style: none; margin: var(--s4) 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2px; background: var(--rule); border: 1px solid var(--rule); }
+  .places li { background: var(--white); padding: 1.1rem 1.25rem; font-family: var(--display); font-size: 1.45rem; font-weight: 600; line-height: 1.15; color: var(--navy); }
+  .places span { display: block; font-family: var(--sans); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold-ink); margin-top: 0.35rem; }
+  .further-label { margin: var(--s4) 0 0; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-2); }
+  .further { display: flex; flex-wrap: wrap; gap: 0 2rem; }
 </style>

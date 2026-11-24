@@ -13,9 +13,10 @@ for src in sorted(SRC.glob("*.jpg")):
     im = ImageOps.exif_transpose(Image.open(src)).convert("RGB")
     icc = im.info.get("icc_profile")
     stem = src.stem
-    for w in WIDTHS:
-        if w > im.width:
-            continue
+    widths = [w for w in WIDTHS if w <= im.width]
+    if im.width < WIDTHS[-1] and im.width not in widths:
+        widths.append(im.width)
+    for w in widths:
         h = round(im.height * w / im.width)
         r = im.resize((w, h), Image.LANCZOS)
         r.save(OUT / f"{stem}-{w}.jpg", "JPEG", quality=82, optimize=True, progressive=True, icc_profile=icc)

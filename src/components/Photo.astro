@@ -6,10 +6,13 @@ interface Props {
   alt: string;
   sizes: string;
   eager?: boolean;
+  class?: string;
+  position?: string; // object-position
   maxWidth?: number;
 }
-const { name, w, h, alt, sizes, eager = false, maxWidth = 2200 } = Astro.props;
+const { name, w, h, alt, sizes, eager = false, maxWidth = 2200, class: cls, position } = Astro.props;
 const widths = [640, 1024, 1600, 2200].filter((x) => x <= Math.min(w, maxWidth));
+if (w < 2200 && w <= maxWidth && !widths.includes(w)) widths.push(w);
 const set = (ext: string) => widths.map((x) => `${u(`bilder/${name}-${x}.${ext}`)} ${x}w`).join(', ');
 const fallbackW = widths.includes(1600) ? 1600 : widths[widths.length - 1];
 ---
@@ -22,6 +25,8 @@ const fallbackW = widths.includes(1600) ? 1600 : widths[widths.length - 1];
     width={w}
     height={h}
     alt={alt}
+    class={cls}
+    style={position ? `object-position:${position}` : undefined}
     loading={eager ? 'eager' : 'lazy'}
     decoding="async"
     fetchpriority={eager ? 'high' : undefined}

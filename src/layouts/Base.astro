@@ -5,13 +5,10 @@ import { u, NAV, MAIL, PHONE_DISPLAY, PHONE_HREF } from '../lib/site';
 interface Props {
   title: string;
   description: string;
-  /** aktiver Hauptmenüpunkt, z. B. 'supervision/' */
   active?: string;
-  /** Abschluss-Band mit Gesprächseinladung anzeigen */
   invite?: boolean;
-  preloadImage?: { href: string; srcset?: string; sizes?: string };
 }
-const { title, description, active, invite = true, preloadImage } = Astro.props;
+const { title, description, active, invite = true } = Astro.props;
 const fullTitle = title === 'Startseite'
   ? 'Dr. Alexander Tiffert · Komplexität klären. Verantwortlich entscheiden.'
   : `${title} · Dr. Alexander Tiffert`;
@@ -24,10 +21,10 @@ const fullTitle = title === 'Startseite'
     <meta name="robots" content="noindex" />
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
-    <meta name="theme-color" content="#f6f4ef" />
-    {preloadImage && (
-      <link rel="preload" as="image" href={preloadImage.href} imagesrcset={preloadImage.srcset} imagesizes={preloadImage.sizes} fetchpriority="high" />
-    )}
+    <meta name="theme-color" content="#1f3832" />
+    <link rel="icon" type="image/svg+xml" href={u('favicon.svg')} />
+    <link rel="icon" type="image/png" sizes="32x32" href={u('favicon-32.png')} />
+    <link rel="apple-touch-icon" href={u('apple-touch-icon-180.png')} />
     <script is:inline>document.documentElement.classList.add('js');</script>
   </head>
   <body>
@@ -39,17 +36,18 @@ const fullTitle = title === 'Startseite'
 
     <header class="site-header">
       <div class="wrap">
-        <a class="wordmark" href={u()} aria-label="Dr. Alexander Tiffert, zur Startseite">Dr. Alexander Tiffert</a>
+        <a class="brand" href={u()}>
+          <img src={u('wortmarke_hell.svg')} width="409" height="52" alt="Dr. Alexander Tiffert" />
+          <span class="visually-hidden">, zur Startseite</span>
+        </a>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="hauptmenue">
-          <span class="bars" aria-hidden="true"><span></span></span>
           <span class="menu-toggle-label">Menü</span>
+          <span class="bars" aria-hidden="true"></span>
         </button>
         <nav class="main-nav" id="hauptmenue" aria-label="Hauptmenü">
           <ul>
             {NAV.map((item) => (
-              <li>
-                <a href={u(item.href)} aria-current={active === item.href ? 'page' : undefined}>{item.label}</a>
-              </li>
+              <li><a href={u(item.href)} aria-current={active === item.href ? 'page' : undefined}>{item.label}</a></li>
             ))}
           </ul>
         </nav>
@@ -61,61 +59,93 @@ const fullTitle = title === 'Startseite'
     </main>
 
     {invite && (
-      <section class="invite" aria-labelledby="einladung">
-        <div class="wrap invite-grid">
-          <div>
-            <h2 id="einladung">Über Ihre Situation sprechen</h2>
-            <p class="cta-row" style="margin-top:0">
-              <a class="btn" href={u('kontakt/')}>Persönliches Gespräch anfragen</a>
-            </p>
+      <section class="invite dark" aria-labelledby="einladung">
+        <div class="wrap">
+          <p class="eyebrow reveal">Persönlicher Austausch</p>
+          <h2 id="einladung" class="reveal">Über Ihre Situation sprechen</h2>
+          <div class="cta-row reveal" style="justify-content:center">
+            <a class="btn btn--gold" href={u('kontakt/')}>Persönliches Gespräch anfragen <span class="arrow" aria-hidden="true">→</span></a>
           </div>
-          <ul class="contact-lines" aria-label="Direkte Kontaktwege">
-            <li>E-Mail schreiben: <a href={`mailto:${MAIL}`}>{MAIL}</a></li>
-            <li>Anrufen: <a href={PHONE_HREF}>{PHONE_DISPLAY}</a></li>
+          <ul class="contact-lines reveal" aria-label="Direkte Kontaktwege">
+            <li><span>E-Mail</span><a href={`mailto:${MAIL}`}>{MAIL}</a></li>
+            <li><span>Telefon</span><a href={PHONE_HREF}>{PHONE_DISPLAY}</a></li>
           </ul>
         </div>
       </section>
     )}
 
     <footer class="site-footer">
-      <div class="wrap footer-grid">
-        <div>
-          <p class="footer-name">Dr. Alexander Tiffert</p>
-          <p>Lübeck</p>
+      <div class="wrap">
+        <div class="footer-grid">
+          <div>
+            <p class="footer-brand"><img src={u('wortmarke_dunkel.svg')} width="409" height="52" alt="Dr. Alexander Tiffert" /></p>
+            <p class="footer-claim">Komplexität klären. Verantwortlich entscheiden.</p>
+          </div>
+          <div>
+            <h2>Arbeitsfelder</h2>
+            <ul>
+              {NAV.map((item) => (<li><a href={u(item.href)}>{item.label}</a></li>))}
+            </ul>
+          </div>
+          <div>
+            <h2>Kontakt</h2>
+            <ul>
+              <li><a href={u('kontakt/')}>Kontaktseite</a></li>
+              <li><a href={`mailto:${MAIL}`}>{MAIL}</a></li>
+              <li><a href={PHONE_HREF}>{PHONE_DISPLAY}</a></li>
+            </ul>
+            <p style="margin-top:0.5rem">Lübeck</p>
+          </div>
+          <div>
+            <h2>Rechtliches</h2>
+            <ul>
+              <li class="pending">Impressum (vor Veröffentlichung freizugeben)</li>
+              <li class="pending">Datenschutz (vor Veröffentlichung freizugeben)</li>
+            </ul>
+          </div>
         </div>
-        <div>
-          <h2>Kontakt</h2>
-          <ul>
-            <li><a href={u('kontakt/')}>Kontaktseite</a></li>
-            <li><a href={`mailto:${MAIL}`}>{MAIL}</a></li>
-            <li><a href={PHONE_HREF}>{PHONE_DISPLAY}</a></li>
-          </ul>
-        </div>
-        <div>
-          <h2>Rechtliches</h2>
-          <ul>
-            <li class="pending">Impressum (vor Veröffentlichung freizugeben)</li>
-            <li class="pending">Datenschutz (vor Veröffentlichung freizugeben)</li>
-          </ul>
+        <div class="footer-bottom">
+          <span>© Dr. Alexander Tiffert</span>
+          <span>Vorschau, nicht indexiert</span>
         </div>
       </div>
     </footer>
 
     <script is:inline>
       (function () {
+        var root = document.documentElement;
+        var header = document.querySelector('.site-header');
+        function setH() { if (header) root.style.setProperty('--header-h', header.offsetHeight + 'px'); }
+        setH(); window.addEventListener('resize', setH);
+        function onScroll() { if (header) header.classList.toggle('is-scrolled', window.scrollY > 8); }
+        onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+
         var btn = document.querySelector('.menu-toggle');
         var nav = document.getElementById('hauptmenue');
-        if (!btn || !nav) return;
-        var label = btn.querySelector('.menu-toggle-label');
-        function set(open) {
-          btn.setAttribute('aria-expanded', String(open));
-          nav.classList.toggle('is-open', open);
-          label.textContent = open ? 'Menü schließen' : 'Menü';
+        if (btn && nav) {
+          var label = btn.querySelector('.menu-toggle-label');
+          var set = function (open) {
+            btn.setAttribute('aria-expanded', String(open));
+            nav.classList.toggle('is-open', open);
+            label.textContent = open ? 'Schließen' : 'Menü';
+            document.body.style.overflow = open ? 'hidden' : '';
+            setH();
+          };
+          btn.addEventListener('click', function () { set(btn.getAttribute('aria-expanded') !== 'true'); });
+          document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && btn.getAttribute('aria-expanded') === 'true') { set(false); btn.focus(); }
+          });
         }
-        btn.addEventListener('click', function () { set(btn.getAttribute('aria-expanded') !== 'true'); });
-        document.addEventListener('keydown', function (e) {
-          if (e.key === 'Escape' && btn.getAttribute('aria-expanded') === 'true') { set(false); btn.focus(); }
-        });
+
+        var items = document.querySelectorAll('.reveal');
+        if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          items.forEach(function (el) { el.classList.add('is-in'); });
+        } else {
+          var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('is-in'); io.unobserve(en.target); } });
+          }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+          items.forEach(function (el) { io.observe(el); });
+        }
       })();
     </script>
   </body>

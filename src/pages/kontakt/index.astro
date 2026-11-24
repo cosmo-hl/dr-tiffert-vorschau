@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import Photo from '../../components/Photo.astro';
 import { MAIL, PHONE_DISPLAY, PHONE_HREF } from '../../lib/site';
 ---
 <Base
@@ -7,40 +8,46 @@ import { MAIL, PHONE_DISPLAY, PHONE_HREF } from '../../lib/site';
   invite={false}
   description="Kontakt zu Dr. Alexander Tiffert in Lübeck: per E-Mail an kontakt@dr-tiffert.de oder telefonisch."
 >
-  <div class="wrap page-intro">
-    <p class="eyebrow">Kontakt</p>
-    <h1>Über Ihre Situation sprechen</h1>
-    <div class="measure">
-      <p>Vor welcher Entscheidung stehen Sie? Woran merken Sie, dass Ihr Unternehmen, Ihre Familie oder Ihr Beratungsteam an einem Punkt ist, an dem ein unabhängiger Blick helfen könnte?</p>
-      <p>Schreiben Sie mir gern ein paar Sätze zu Ihrem Anliegen. In einem ersten Gespräch klären wir, worum es geht, was Sie von mir brauchen und ob eine Zusammenarbeit sinnvoll ist. Auch für Anfragen zu Lehre, Publikationen oder meiner künstlerischen Arbeit erreichen Sie mich auf diesem Weg.</p>
-    </div>
-  </div>
+  <section class="contact dark">
+    <div class="wrap contact-grid">
+      <div class="contact-text">
+        <p class="eyebrow">Kontakt</p>
+        <h1>Über Ihre Situation sprechen</h1>
+        <p class="lead">Vor welcher Entscheidung stehen Sie? Woran merken Sie, dass Ihr Unternehmen, Ihre Familie oder Ihr Beratungsteam an einem Punkt ist, an dem ein unabhängiger Blick helfen könnte?</p>
+        <p>Schreiben Sie mir gern ein paar Sätze zu Ihrem Anliegen. In einem ersten Gespräch klären wir, worum es geht, was Sie von mir brauchen und ob eine Zusammenarbeit sinnvoll ist. Auch für Anfragen zu Lehre, Publikationen oder meiner künstlerischen Arbeit erreichen Sie mich auf diesem Weg.</p>
 
-  <section class="section" aria-labelledby="h-wege">
-    <div class="wrap">
-      <h2 id="h-wege" class="visually-hidden">Kontaktwege</h2>
-      <div class="contact-card">
+        <h2 class="visually-hidden">Kontaktwege</h2>
         <p class="who">Dr. Alexander Tiffert · Lübeck</p>
-        <div class="actions">
-          <a class="btn" href={`mailto:${MAIL}`}>E-Mail schreiben</a>
-          <a class="btn btn--ghost" href={PHONE_HREF}>Anrufen</a>
+        <div class="cta-row" style="margin-top:var(--s3)">
+          <a class="btn btn--gold" href={`mailto:${MAIL}`}>E-Mail schreiben <span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn--outline" href={PHONE_HREF}>Anrufen</a>
         </div>
-        <dl>
+        <dl class="lines">
           <div><dt>E-Mail</dt><dd><a href={`mailto:${MAIL}`}>{MAIL}</a></dd></div>
           <div><dt>Telefon</dt><dd><a href={PHONE_HREF}>{PHONE_DISPLAY}</a></dd></div>
         </dl>
       </div>
+      <figure class="contact-photo">
+        <Photo name="site-portraet-sw" w={733} h={1102} eager alt="Schwarzweißporträt von Dr. Alexander Tiffert, entspannt in einem Sessel sitzend." sizes="(min-width: 1024px) 460px, 100vw" />
+      </figure>
     </div>
   </section>
 </Base>
 
 <style>
-  .contact-card { background: #fff; border: 1px solid var(--rule); border-left: 4px solid var(--accent); padding: clamp(1.25rem, 3vw, 2.25rem); max-width: 720px; }
-  .who { font-family: var(--serif); font-size: 1.35rem; margin-bottom: var(--space-3); }
-  .actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: var(--space-3); }
-  dl { margin: 0; display: grid; gap: 0.25rem; }
-  dl div { display: flex; flex-wrap: wrap; gap: 0 1rem; align-items: center; }
-  dt { font-weight: 600; min-width: 5rem; }
-  dd { margin: 0; }
-  dd a { display: inline-flex; align-items: center; min-height: 44px; white-space: nowrap; }
+  .contact { padding-block: clamp(3.5rem, 8vw, 7rem); }
+  .contact-grid { display: grid; gap: var(--s4); align-items: center; }
+  @media (min-width: 1024px) { .contact-grid { grid-template-columns: 7fr 5fr; gap: clamp(3rem, 6vw, 6rem); } }
+  .contact h1 { max-width: 12ch; margin-bottom: var(--s4); }
+  .contact .lead { color: #fff; }
+  .contact-text > p:not(.lead):not(.eyebrow):not(.who) { color: #d6ded9; max-width: 60ch; }
+  .who { font-family: var(--display); font-size: 1.6rem; color: #fff; margin-top: var(--s4); margin-bottom: 0; }
+  .lines { margin: var(--s4) 0 0; padding-top: var(--s3); border-top: 1px solid var(--rule-dark); display: grid; gap: 0.25rem; }
+  .lines div { display: flex; flex-wrap: wrap; align-items: center; gap: 0 1.25rem; }
+  .lines dt { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); min-width: 5.5rem; }
+  .lines dd { margin: 0; }
+  .lines a { display: inline-flex; align-items: center; min-height: 44px; white-space: nowrap; font-size: 1.15rem; }
+  .contact-photo { margin: 0; }
+  .contact-photo :global(img) { width: 100%; max-height: 78vh; object-fit: cover; }
+  @media (max-width: 1023px) { .contact-photo :global(img) { max-height: 520px; object-position: 50% 30%; } }
 </style>

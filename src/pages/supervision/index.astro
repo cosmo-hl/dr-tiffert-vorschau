@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import Photo from '../../components/Photo.astro';
 import { u } from '../../lib/site';
 ---
 <Base
@@ -7,21 +8,32 @@ import { u } from '../../lib/site';
   active="supervision/"
   description="Supervision für Organisationsberatungen und ihre Teams: Dynamiken im Kundenunternehmen und im Beratungsteam reflektieren und nächste Schritte im Mandat bewusst gestalten."
 >
-  <div class="wrap page-intro">
-    <p class="eyebrow">Supervision</p>
-    <h1>Supervision für Organisationsberatungen und ihre Teams</h1>
-    <div class="measure">
-      <p>Seit fast 20 Jahren begleite ich komplexe Organisationsentwicklungsprojekte, auch im internationalen Kontext. Diese Erfahrung bringe ich in die Supervision von Organisationsberatungen und ihren Teams ein. Gemeinsam reflektieren wir die Dynamiken im Kundenunternehmen und im Beratungsteam, damit die Beratenden den Prozess klarer einschätzen und ihre nächsten Schritte bewusst gestalten können.</p>
+  <header class="page-hero dark">
+    <div class="wrap">
+      <p class="eyebrow">Supervision</p>
+      <h1>Supervision für Organisationsberatungen und ihre Teams</h1>
+      <div class="intro">
+        <p>Seit fast 20 Jahren begleite ich komplexe Organisationsentwicklungsprojekte, auch im internationalen Kontext. Diese Erfahrung bringe ich in die Supervision von Organisationsberatungen und ihren Teams ein. Gemeinsam reflektieren wir die Dynamiken im Kundenunternehmen und im Beratungsteam, damit die Beratenden den Prozess klarer einschätzen und ihre nächsten Schritte bewusst gestalten können.</p>
+      </div>
+    </div>
+  </header>
+
+  <div class="overlap">
+    <div class="wrap">
+      <figure class="overlap-fig reveal">
+        <Photo name="site-spiegelung" w={900} h={332} alt="Dr. Alexander Tiffert im Anzug neben einer Glasscheibe, in der sich sein Spiegelbild zeigt." sizes="(min-width: 960px) 900px, 100vw" />
+      </figure>
     </div>
   </div>
 
   <section class="section" aria-labelledby="h-wiederholung">
-    <div class="wrap content-grid">
-      <div class="col-head">
+    <div class="wrap split">
+      <div class="split-head reveal">
+        <p class="eyebrow"><span class="num">01</span> Ausgangslage</p>
         <h2 id="h-wiederholung">Wenn sich im Team wiederholt, was den Kunden beschäftigt</h2>
       </div>
-      <div class="col-body measure">
-        <p>Ein Mandat kann fachlich klar beginnen und trotzdem ins Stocken geraten. Im Kundenunternehmen sind Zuständigkeiten ungeklärt, Führungskräfte verfolgen widersprüchliche Ziele oder im Projekt entsteht Druck, vorschnell Ergebnisse zu liefern. Mitunter zeigt sich etwas Ähnliches im Beratungsteam: Es bilden sich Lager, Zuständigkeiten werden strittig oder alle versuchen, gleichzeitig die Führung zu übernehmen.</p>
+      <div class="split-body measure reveal">
+        <p class="lead">Ein Mandat kann fachlich klar beginnen und trotzdem ins Stocken geraten. Im Kundenunternehmen sind Zuständigkeiten ungeklärt, Führungskräfte verfolgen widersprüchliche Ziele oder im Projekt entsteht Druck, vorschnell Ergebnisse zu liefern. Mitunter zeigt sich etwas Ähnliches im Beratungsteam: Es bilden sich Lager, Zuständigkeiten werden strittig oder alle versuchen, gleichzeitig die Führung zu übernehmen.</p>
         <p>Solche Beobachtungen sind Hinweise. Sie beweisen nicht, dass das Kundensystem die Ursache ist. In der Supervision fragen wir:</p>
         <ol class="steps">
           <li>Was trägt das Beratungsteam selbst zur Situation bei?</li>
@@ -32,16 +44,17 @@ import { u } from '../../lib/site';
     </div>
   </section>
 
-  <section class="section" aria-labelledby="h-arbeit">
-    <div class="wrap content-grid">
-      <div class="col-head">
+  <section class="section paper" aria-labelledby="h-arbeit">
+    <div class="wrap split">
+      <div class="split-head reveal">
+        <p class="eyebrow"><span class="num">02</span> Vorgehen</p>
         <h2 id="h-arbeit">Wie wir arbeiten</h2>
       </div>
-      <div class="col-body measure">
+      <div class="split-body measure reveal">
         <p>Wir beginnen mit einer konkreten Situation aus einem laufenden Mandat. Wir unterscheiden Beobachtungen von Deutungen, prüfen unsere Annahmen und klären, welche Rollen, Erwartungen und Vorgaben auf beiden Seiten wirksam sind. Daraus entwickeln wir eine Frage oder einen nächsten Schritt. Das kann heißen, einen Auftrag neu zu klären, mit dem Kunden über widersprüchliche Erwartungen zu sprechen oder bewusst noch nicht einzugreifen.</p>
         <p class="pull">Mitschwingen, ohne ins System zu fallen.</p>
         <p>Darin liegt für mich eine wichtige Fähigkeit professioneller Beratung: beteiligt zu sein und die eigene Beteiligung weiter beobachten zu können.</p>
-        <p class="cta-row"><a class="btn" href={u('kontakt/')}>Supervision anfragen</a></p>
+        <div class="cta-row"><a class="btn" href={u('kontakt/')}>Supervision anfragen <span class="arrow" aria-hidden="true">→</span></a></div>
       </div>
     </div>
   </section>
