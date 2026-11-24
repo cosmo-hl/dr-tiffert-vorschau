@@ -1,0 +1,46 @@
+---
+import Base from '../../layouts/Base.astro';
+import { MAIL, PHONE_DISPLAY, PHONE_HREF } from '../../lib/site';
+---
+<Base
+  title="Kontakt"
+  invite={false}
+  description="Kontakt zu Dr. Alexander Tiffert in Lübeck: per E-Mail an kontakt@dr-tiffert.de oder telefonisch."
+>
+  <div class="wrap page-intro">
+    <p class="eyebrow">Kontakt</p>
+    <h1>Über Ihre Situation sprechen</h1>
+    <div class="measure">
+      <p>Vor welcher Entscheidung stehen Sie? Woran merken Sie, dass Ihr Unternehmen, Ihre Familie oder Ihr Beratungsteam an einem Punkt ist, an dem ein unabhängiger Blick helfen könnte?</p>
+      <p>Schreiben Sie mir gern ein paar Sätze zu Ihrem Anliegen. In einem ersten Gespräch klären wir, worum es geht, was Sie von mir brauchen und ob eine Zusammenarbeit sinnvoll ist. Auch für Anfragen zu Lehre, Publikationen oder meiner künstlerischen Arbeit erreichen Sie mich auf diesem Weg.</p>
+    </div>
+  </div>
+
+  <section class="section" aria-labelledby="h-wege">
+    <div class="wrap">
+      <h2 id="h-wege" class="visually-hidden">Kontaktwege</h2>
+      <div class="contact-card">
+        <p class="who">Dr. Alexander Tiffert · Lübeck</p>
+        <div class="actions">
+          <a class="btn" href={`mailto:${MAIL}`}>E-Mail schreiben</a>
+          <a class="btn btn--ghost" href={PHONE_HREF}>Anrufen</a>
+        </div>
+        <dl>
+          <div><dt>E-Mail</dt><dd><a href={`mailto:${MAIL}`}>{MAIL}</a></dd></div>
+          <div><dt>Telefon</dt><dd><a href={PHONE_HREF}>{PHONE_DISPLAY}</a></dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .contact-card { background: #fff; border: 1px solid var(--rule); border-left: 4px solid var(--accent); padding: clamp(1.25rem, 3vw, 2.25rem); max-width: 720px; }
+  .who { font-family: var(--serif); font-size: 1.35rem; margin-bottom: var(--space-3); }
+  .actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: var(--space-3); }
+  dl { margin: 0; display: grid; gap: 0.25rem; }
+  dl div { display: flex; flex-wrap: wrap; gap: 0 1rem; align-items: center; }
+  dt { font-weight: 600; min-width: 5rem; }
+  dd { margin: 0; }
+  dd a { display: inline-flex; align-items: center; min-height: 44px; white-space: nowrap; }
+</style>

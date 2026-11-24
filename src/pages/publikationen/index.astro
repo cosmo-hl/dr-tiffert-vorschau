@@ -1,0 +1,89 @@
+---
+import Base from '../../layouts/Base.astro';
+import { u, MAIL } from '../../lib/site';
+---
+<Base
+  title="Publikationen"
+  active="publikationen/"
+  description="Publikationen von Dr. Alexander Tiffert: Fachbücher bei Springer Gabler, Fotobücher und fotografische Whitepaper."
+>
+  <div class="wrap page-intro">
+    <p class="eyebrow">Publikationen</p>
+    <h1>Fachbücher, Fotobücher und fotografische Whitepaper</h1>
+  </div>
+
+  <section class="section" aria-labelledby="h-fach">
+    <div class="wrap content-grid">
+      <div class="col-head"><h2 id="h-fach">Fachbücher</h2></div>
+      <div class="col-body">
+        <ul class="pubs">
+          <li>
+            <h3><i>Customer Experience Management in der Praxis.</i> Grundlagen – Zusammenhänge – Umsetzung.</h3>
+            <p class="meta">Alexander Tiffert, Springer Gabler, 2019.</p>
+            <p>Eine Einführung mit Fallbeispielen zur Gestaltung von Kundenerlebnissen über einzelne Kontaktpunkte hinweg.</p>
+            <p class="pending-link">Zum Buch (Verlagslink wird vor Veröffentlichung ergänzt)</p>
+          </li>
+          <li>
+            <h3><i>Coaching von Mitarbeitern im persönlichen Verkauf.</i> Nachhaltige Kompetenzentwicklung für den Face-to-Face-Kontakt mit Kunden.</h3>
+            <p class="meta">Alexander Tiffert, 2. Auflage, Springer Gabler, 2021.</p>
+            <p>Ein Buch für Führungskräfte, die Mitarbeitende im Verkauf durch Coaching in ihrer Entwicklung unterstützen möchten.</p>
+            <p class="pending-link">Zum Buch (Verlagslink wird vor Veröffentlichung ergänzt)</p>
+          </li>
+          <li>
+            <h3><i>Führung von Vertriebsorganisationen.</i> Strategie – Koordination – Umsetzung.</h3>
+            <p class="meta">Herausgegeben von Lars Binckebanck, Ann-Kristin Hölter und Alexander Tiffert, 2. Auflage, Springer Gabler, 2020.</p>
+            <p>Beiträge aus Forschung, Beratung und Unternehmenspraxis.</p>
+            <p class="pending-link">Zum Buch (Verlagslink wird vor Veröffentlichung ergänzt)</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="h-foto">
+    <div class="wrap content-grid">
+      <div class="col-head"><h2 id="h-foto">Fotobücher</h2></div>
+      <div class="col-body measure">
+        <p>Zu meinen bisherigen Fotobüchern gehören <i>Urban Silence</i> und <i>lettera d’amore</i>.</p>
+        <p class="pending-link">Zur Übersicht meiner Fotobücher (Link wird vor Veröffentlichung ergänzt)</p>
+        <p>Mehr zum aktuellen Fotobuchprojekt <i>Spuren der Suche</i> auf der Seite <a href={u('fotografie/')}>Künstlerische Fotografie</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="h-wp">
+    <div class="wrap content-grid">
+      <div class="col-head"><h2 id="h-wp">Fotografische Whitepaper</h2></div>
+      <div class="col-body">
+        <ul class="pubs">
+          <li>
+            <h3><i>Wahrnehmungsmodi in der Fotografie.</i> Ein Prozessmodell des künstlerischen Fotografierens.</h3>
+            <p>Wie wechseln Aufmerksamkeit, Wahrnehmung und Handeln beim Fotografieren?</p>
+          </li>
+          <li>
+            <h3><i>Personen im Bild.</i></h3>
+            <p>Wie verändert die Anwesenheit einer Person im Bild die Wahrnehmung des Raums und das Verhältnis zu den Betrachtenden?</p>
+          </li>
+          <li>
+            <h3><i>Strukturierte Analyse von Fotografien.</i></h3>
+            <p>Wie lässt sich die Wirkung eines Bildes präzise beschreiben? Der Text bietet Kriterien für die Reflexion und Auswahl von Bildern.</p>
+          </li>
+        </ul>
+        <p class="cta-row">
+          <a class="btn" href={`mailto:${MAIL}?subject=${encodeURIComponent('Interesse an den fotografischen Whitepapern')}`}>Bei Interesse an den Whitepapern schreiben</a>
+        </p>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .pubs { list-style: none; margin: 0; padding: 0; max-width: var(--measure); }
+  .pubs li { padding-block: var(--space-3); border-top: 1px solid var(--rule); }
+  .pubs li:first-child { padding-top: 0; border-top: 0; }
+  .pubs h3 { font-weight: 500; font-size: clamp(1.15rem, 1.05rem + 0.4vw, 1.3rem); margin-bottom: 0.5rem; }
+  .pubs h3 i { font-weight: 600; }
+  .meta { color: var(--ink-2); margin-bottom: 0.5rem; }
+  .pubs p:last-child { margin-bottom: 0; }
+  .pending-link { color: var(--ink-2); font-size: 0.95rem; font-style: italic; }
+</style>

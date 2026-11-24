@@ -1,0 +1,29 @@
+---
+import { u } from '../lib/site';
+interface Props {
+  name: string;        // Dateistamm in public/bilder/
+  w: number; h: number; // Originalmaße (für Seitenverhältnis)
+  alt: string;
+  sizes: string;
+  eager?: boolean;
+  maxWidth?: number;
+}
+const { name, w, h, alt, sizes, eager = false, maxWidth = 2200 } = Astro.props;
+const widths = [640, 1024, 1600, 2200].filter((x) => x <= Math.min(w, maxWidth));
+const set = (ext: string) => widths.map((x) => `${u(`bilder/${name}-${x}.${ext}`)} ${x}w`).join(', ');
+const fallbackW = widths.includes(1600) ? 1600 : widths[widths.length - 1];
+---
+<picture>
+  <source type="image/webp" srcset={set('webp')} sizes={sizes} />
+  <img
+    src={u(`bilder/${name}-${fallbackW}.jpg`)}
+    srcset={set('jpg')}
+    sizes={sizes}
+    width={w}
+    height={h}
+    alt={alt}
+    loading={eager ? 'eager' : 'lazy'}
+    decoding="async"
+    fetchpriority={eager ? 'high' : undefined}
+  />
+</picture>

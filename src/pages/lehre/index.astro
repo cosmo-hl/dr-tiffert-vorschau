@@ -1,0 +1,46 @@
+---
+import Base from '../../layouts/Base.astro';
+import { u } from '../../lib/site';
+---
+<Base
+  title="Lehre"
+  active="lehre/"
+  description="Lehre von Dr. Alexander Tiffert in Organisationsberatung und künstlerischer Fotografie: Hochschulfach Methoden und Konzepte der Organisationsberatung und ein Kurs an der Kunstschule Lübeck."
+>
+  <div class="wrap page-intro">
+    <p class="eyebrow">Lehre</p>
+    <h1>Lehre in Organisationsberatung und künstlerischer Fotografie</h1>
+    <div class="measure">
+      <p>In beiden Arbeitsfeldern interessiert mich, wie Menschen genauer beobachten und aus ihren Beobachtungen eigene Schlüsse ziehen. In der Organisationsberatung gehen wir von konkreten Fällen aus. In der Fotografie arbeiten wir mit Bildern, die die Teilnehmenden selbst machen.</p>
+    </div>
+  </div>
+
+  <section class="section" aria-labelledby="h-ob">
+    <div class="wrap content-grid">
+      <div class="col-head"><h2 id="h-ob">Methoden und Konzepte der Organisationsberatung</h2></div>
+      <div class="col-body measure">
+        <p>An der Hochschule Fresenius in Hamburg habe ich im Studienschwerpunkt Organisationsmanagement das Fach „Methoden und Konzepte der Organisationsberatung“ unterrichtet. An konkreten Fällen lässt sich zeigen, wie stark die Wahl einer Methode davon abhängt, was wir tatsächlich beobachtet haben, welche Annahmen wir treffen und wer über den nächsten Schritt entscheidet.</p>
+        <p>Weitere Lehraufträge führten mich an die FOM in Hamburg, an die NORDAKADEMIE in Elmshorn und in ein Weiterbildungsprogramm der Universität Rostock.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="h-kf">
+    <div class="wrap content-grid">
+      <div class="col-head"><h2 id="h-kf">Künstlerische Fotografie an der Kunstschule Lübeck</h2></div>
+      <div class="col-body measure">
+        <p>Für das Frühjahr 2027 ist an der Kunstschule Lübeck der Kurs „Künstlerische Fotografie – den eigenen Blick entwickeln“ geplant. Er richtet sich an Erwachsene mit und ohne fotografische Vorerfahrung. Zwischen den Treffen ist Zeit zum Fotografieren. Wir besprechen die entstandenen Bilder gemeinsam: Was trägt ein Bild? Was verändert der Ausschnitt? Und wie wirkt das Bild neben einem anderen? Im Laufe des Kurses entwickeln die Teilnehmenden eine eigene kleine Serie.</p>
+        <p class="further">
+          <span>Weiterführend:</span>
+          <a class="arrow-link" href={u('publikationen/')}>Zu den Publikationen</a>
+          <a class="arrow-link" href={u('fotografie/')}>Zu meiner fotografischen Arbeit</a>
+        </p>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .further { display: flex; flex-wrap: wrap; align-items: center; gap: 0 1.5rem; margin-top: var(--space-3); }
+  .further a { display: inline-flex; align-items: center; min-height: 44px; }
+</style>

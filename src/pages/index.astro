@@ -1,0 +1,147 @@
+---
+import Base from '../layouts/Base.astro';
+import { u } from '../lib/site';
+---
+<Base
+  title="Startseite"
+  description="Dr. Alexander Tiffert begleitet Führungskräfte, Managementteams, Unternehmerfamilien und Beratungsteams, wenn keine Option einfach ist: Organisationsentwicklung, Executive Coaching, Nachfolge und Supervision."
+>
+  <section class="hero" aria-labelledby="claim">
+    <div class="wrap hero-grid">
+      <h1 id="claim" class="hero-claim">Komplexität klären. Verantwortlich entscheiden.</h1>
+      <p class="lead hero-lead">Ich begleite Menschen und Teams in Verantwortung, wenn keine Option einfach ist und mehrere Systeme zugleich unter Druck geraten.</p>
+      <p class="hero-p1">Ich helfe Führungskräften und Managementteams in Verantwortung auch in schwierigen Situationen und unter hoher Unsicherheit entscheidungsfähig zu sein. Das ist besonders relevant, wenn keine Option wirklich gut ist und einfache Lösungen nicht erkennbar sind.</p>
+      <p class="hero-cta"><a class="btn" href={u('kontakt/')}>Persönliches Gespräch anfragen</a></p>
+      <figure class="hero-portrait">
+        <div class="portrait-placeholder" role="img" aria-label="Platzhalter für das Porträt von Dr. Alexander Tiffert">
+          <span>Porträt<br />Platzhalter nur in der Vorschau</span>
+        </div>
+      </figure>
+      <div class="hero-rest">
+        <p>Seit fast 20 Jahren begleite ich komplexe Organisationsentwicklungsprojekte, auch im internationalen Kontext. Diese Erfahrung bringe ich in die Supervision von Organisationsberatungen und ihren Teams ein. Gemeinsam reflektieren wir die Dynamiken im Kundenunternehmen und im Beratungsteam, damit die Beratenden den Prozess klarer einschätzen und ihre nächsten Schritte bewusst gestalten können.</p>
+        <p>In der Organisationsentwicklung und in meiner künstlerischen Fotografie beschäftigt mich dieselbe Frage: Was geschieht zwischen Menschen?</p>
+        <p>Meine Praxiserfahrung vertiefe ich durch Forschung und gebe sie in Lehrveranstaltungen und eigenen Publikationen weiter.</p>
+        <p>Vor welcher Entscheidung stehen Sie gerade? Wenn Sie sich ein unabhängiges Gegenüber wünschen, lade ich Sie zu einem persönlichen Gespräch ein.</p>
+        <p class="greeting">Ihr Dr. Alexander Tiffert</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="anlaesse">
+    <div class="wrap">
+      <h2 id="anlaesse">Wann ein Gespräch sinnvoll ist</h2>
+      <ul class="occasions">
+        <li>
+          <h3>Führen unter hoher Unsicherheit.</h3>
+          <p>Wichtige Kunden fallen weg, der Markt ist schwer einzuschätzen, und Ihr Team braucht Orientierung.</p>
+          <a class="arrow-link" href={u('organisationsentwicklung/#executive-coaching')}>Zum Executive Coaching</a>
+        </li>
+        <li>
+          <h3>Nachfolge mit unklaren Zuständigkeiten.</h3>
+          <p>Zwei Geschwister übernehmen gemeinsam die Führung. Wer entscheidet künftig was?</p>
+          <a class="arrow-link" href={u('organisationsentwicklung/#nachfolge')}>Zur Nachfolgebegleitung</a>
+        </li>
+        <li>
+          <h3>Ein Beratungsmandat ist festgefahren.</h3>
+          <p>Was beim Kunden nicht geklärt ist, beschäftigt inzwischen auch Ihr Team.</p>
+          <a class="arrow-link" href={u('supervision/')}>Zur Supervision</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="zugaenge">
+    <div class="wrap">
+      <h2 id="zugaenge">Drei Zugänge zu meiner Arbeit</h2>
+      <ul class="cards">
+        <li class="card">
+          <h3>Organisationsentwicklung</h3>
+          <p>Ich begleite Unternehmen in Veränderung, Führungskräfte im Executive Coaching und Unternehmerfamilien bei der Nachfolge.</p>
+          <a class="arrow-link" href={u('organisationsentwicklung/')}>Zur Organisationsentwicklung</a>
+        </li>
+        <li class="card">
+          <h3>Supervision</h3>
+          <p>Wenn sich Schwierigkeiten aus dem Kundensystem im Beratungsteam wiederholen, lohnt es sich, genauer hinzusehen. Ich unterstütze Teams bei der Reflexion laufender Mandate.</p>
+          <a class="arrow-link" href={u('supervision/')}>Zur Supervision</a>
+        </li>
+        <li class="card">
+          <h3>Künstlerische Fotografie</h3>
+          <p>In meiner Straßenfotografie suche ich nach Momenten, in denen vertraute Situationen ihre Eindeutigkeit verlieren.</p>
+          <a class="arrow-link" href={u('fotografie/')}>Zur künstlerischen Fotografie</a>
+        </li>
+      </ul>
+
+      <div class="profile-note">
+        <h3>Lehre und Publikationen</h3>
+        <p>Ich unterrichte Organisationsberatung und künstlerische Fotografie und vertiefe Fragen aus beiden Feldern in meinen Texten.</p>
+        <p class="profile-links">
+          <a class="arrow-link" href={u('lehre/')}>Zur Lehre</a>
+          <a class="arrow-link" href={u('publikationen/')}>Zu den Publikationen</a>
+        </p>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .hero { padding-block: clamp(2rem, 5vw, 4.5rem) var(--space-5); }
+  .hero-grid { display: grid; gap: 0; }
+  .hero-claim { max-width: 16ch; margin-bottom: var(--space-3); }
+  .hero-lead { max-width: 40ch; margin-bottom: var(--space-3); }
+  .hero-p1, .hero-rest { max-width: var(--measure); }
+  .hero-cta { margin: var(--space-1) 0 var(--space-4); }
+  .hero-portrait { margin: 0 0 var(--space-4); }
+  .portrait-placeholder {
+    aspect-ratio: 4 / 5;
+    width: 100%;
+    max-width: 460px;
+    background:
+      repeating-linear-gradient(135deg, transparent 0 14px, rgba(32, 40, 38, 0.04) 14px 15px),
+      #e6e3da;
+    border: 1px dashed var(--rule-strong);
+    display: grid;
+    place-items: center;
+    text-align: center;
+    color: var(--ink-2);
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+  .greeting { font-family: var(--serif); font-style: italic; font-size: 1.15em; margin-top: var(--space-3); }
+
+  @media (min-width: 1024px) {
+    .hero-grid {
+      grid-template-columns: 7fr 5fr;
+      column-gap: clamp(32px, 5vw, 80px);
+      grid-template-areas:
+        'claim portrait'
+        'lead portrait'
+        'p1 portrait'
+        'rest portrait'
+        'cta portrait';
+      grid-template-rows: auto auto auto auto 1fr;
+    }
+    .hero-claim { grid-area: claim; }
+    .hero-lead { grid-area: lead; }
+    .hero-p1 { grid-area: p1; }
+    .hero-rest { grid-area: rest; }
+    .hero-cta { grid-area: cta; margin: var(--space-2) 0 0; }
+    .hero-portrait { grid-area: portrait; margin: 0; align-self: start; position: sticky; top: 2rem; }
+    .portrait-placeholder { max-width: none; }
+  }
+
+  .occasions, .cards { list-style: none; margin: var(--space-3) 0 0; padding: 0; display: grid; gap: var(--space-3); }
+  .occasions li { border-top: 2px solid var(--accent); padding-top: var(--space-2); }
+  .occasions h3 { margin-bottom: 0.4rem; }
+  .occasions p { margin-bottom: 0.6rem; }
+  .occasions a, .card a, .profile-links a { display: inline-flex; align-items: center; min-height: 44px; }
+
+  .card { background: #fff; border: 1px solid var(--rule); padding: clamp(1.25rem, 2.5vw, 1.75rem); display: flex; flex-direction: column; }
+  .card p { flex: 1; }
+
+  .profile-note { margin-top: var(--space-4); padding-top: var(--space-3); border-top: 1px solid var(--rule); max-width: var(--measure); }
+  .profile-links { display: flex; flex-wrap: wrap; gap: 0 2rem; margin: 0; }
+
+  @media (min-width: 768px) {
+    .occasions, .cards { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+  }
+</style>

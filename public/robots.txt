@@ -1,0 +1,4 @@
+# Vorschau: Seiten bleiben crawlbar, damit Suchmaschinen das
+# <meta name="robots" content="noindex"> jeder Seite lesen koennen.
+User-agent: *
+Allow: /
