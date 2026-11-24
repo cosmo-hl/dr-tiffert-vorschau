@@ -1,10 +1,10 @@
-# dr-tiffert.de · Entwurf 3.1 (Vorschau)
+# dr-tiffert.de
 
-Klickbare Vorschau des Website-Entwurfs nach dem Website-Konzept v3.1 vom 24.11.2026.
-**Nicht zur Veröffentlichung freigegeben.** Jede Seite trägt `<meta name="robots" content="noindex">`;
-`robots.txt` erlaubt das Crawlen ausdrücklich, damit Suchmaschinen diese Anweisung lesen können.
+Website von Dr. Alexander Tiffert nach dem Website-Konzept v3.1. Am 24.11.2026 auf Wunsch von Alexander live geschaltet, weil das Squarespace-Abo der alten Seite an diesem Tag endete.
 
-- Vorschau: https://cosmo-hl.github.io/dr-tiffert-vorschau/
+- Live: https://www.dr-tiffert.de/ (GitHub Pages mit eigener Domain, `public/CNAME`; die frühere Vorschau-Adresse leitet dorthin weiter)
+- Domain und E-Mail liegen bei STRATO. DNS: `dr-tiffert.de` A-Record auf GitHub Pages (185.199.108.153 bis 185.199.111.153), `www` CNAME auf `cosmo-hl.github.io`. MX bleibt bei STRATO.
+- Öffentliche Seiten haben ein Canonical auf www.dr-tiffert.de und kein noindex; `sitemap.xml` und `robots.txt` werden mitgebaut. Weiterleitungen von Adressen der alten Squarespace-Seite (`/home`, `/kontakt-3`, `/familienberatung` usw.) liegen in `src/pages/[alt].astro`, dazu eine 404-Seite.
 - Technik: [Astro](https://astro.build) (statisch), npm, selbst gehostete Schriften (Cormorant Garamond, Inter), keine externen Requests, kein Tracking.
 
 ## Entwickeln
@@ -12,7 +12,7 @@ Klickbare Vorschau des Website-Entwurfs nach dem Website-Konzept v3.1 vom 24.11.
 ```sh
 npm ci
 npm run dev      # lokale Entwicklung
-npm run build    # Produktionsbuild nach dist/ inkl. Prüfung (noindex, eine H1, lang="de")
+npm run build    # Produktionsbuild nach dist/ inkl. Prüfung (kein noindex auf öffentlichen Seiten, Canonical, eine H1, lang="de", CNAME, Sitemap)
 ```
 
 Deployment: Inhalt von `dist/` liegt im Branch `gh-pages` (GitHub Pages, Quelle `gh-pages` / root).
@@ -28,6 +28,8 @@ Deployment: Inhalt von `dist/` liegt im Branch `gh-pages` (GitHub Pages, Quelle 
 | `/lehre/` | Lehre |
 | `/publikationen/` | Fachbücher, Fotobücher, Whitepaper (getrennt) |
 | `/kontakt/` | Kontaktwege (kein Formular) |
+| `/impressum/` | Impressum nach § 5 DDG, übernommen aus der alten Seite (Stand 19.08.2026) und angepasst |
+| `/datenschutz/` | Datenschutzerklärung für GitHub Pages, ohne Cookies, Tracking oder Inhalte Dritter |
 
 ## Gestaltung
 
@@ -42,13 +44,16 @@ Bildlogik der Unterseiten: Überschrift und Einstieg zuerst, dann das Bild in vo
 | Datei (Original) | Seite | Zuschnitt |
 | --- | --- | --- |
 | `site-terrasse` (Alexander-1357.jpg, 3543 px) | Startseite | Desktop vollflächig hinter dem Einstieg, Fokus rechts; mobil eigener 4:3-Ausschnitt `site-terrasse-mobil` nach Claim und Button |
-| `site-sessel-sw` (Alex_9327_sw.jpg) | Organisationsentwicklung | 2:1, Fokus 50 % / 22 %; mobil 4:3 |
+| `site-sessel` (Alex_9327.jpg, Farbe) | Organisationsentwicklung | 2:1, Fokus 50 % / 22 %; mobil 4:3 |
 | `site-gespraech` (Alexander-1975.jpg) | Supervision | Gesprächsrunde von der Seite; 2:1, Fokus 50 % / 30 %; mobil 4:3 mittig. |
 | `site-lehre` (Alexander-1626.jpg) | Lehre | 2:1, Fokus unten (Pult und Projektionsfläche); mobil 4:3 |
 | `site-kontakt` (Alex_8864.jpg) | Kontakt | Hochformat 4:5 rechts; mobil 1:1 |
 | `buch-cx`, `buch-coaching`, `buch-vertrieb` (AT-Buch-*.png) | Publikationen | Cover unbeschnitten, gleiche Höhe und Abstände |
 | `7Y5A3906-2` | Fotografie | Werkbild, ungeschnitten, gleiche linke Kante, mit Bildnotiz |
 | `7Y5A0358`, `7Y5A4542`, `7Y5A2602` | Fotografie | Galerie, ungeschnitten, höchstens 86 % der Bildschirmhöhe |
+| `fotobuch-lettera`, `fotobuch-dance`, `fotobuch-listen` (7Y5A6918, 7Y5A6910, 7Y5A6897) | Publikationen | Fotobuch-Aufnahmen 3:2, verlinkt auf die Buchseiten von alextiffert.com; *Urban Silence* noch ohne Foto |
+
+Portfolio 2026 „Who Owns Reality?“ als PDF unter `public/downloads/`. Je Seite steht vor der Fußzeile ein Kundenzitat von der alten Seite (`src/lib/stimmen.ts`, `Stimme.astro`); Fotografie, Publikationen und Kontakt haben keins.
 
 Vorher/Nachher der ersten Bildschirmansicht (1440, 390, 320 px) liegt im Projektordner unter `website-vorschau/`.
 
@@ -57,7 +62,7 @@ Vorher/Nachher der ersten Bildschirmansicht (1440, 390, 320 px) liegt im Projekt
 - Kurztexte der sechs Felder auf der Startseite: Organisationsentwicklung, Executive Coaching, Lehre und Publikationen sind aus freigegebenen Sätzen abgeleitet und brauchen eine Freigabe; ebenso die Abschnittsüberschrift „Zugänge zu meiner Arbeit“ (vorher „Drei Zugänge …“).
 - Kundenstimmen: je eine auf Organisationsentwicklung (Nachfolge) und Lehre, von dr-tiffert.de übernommen; Freigabe prüfen.
 - Porträt mit Kamera für die Fotografie-Seite: kein passendes Original gefunden.
-- Verlagslinks „Zum Buch“ und Link „Zur Übersicht meiner Fotobücher“ noch nicht verifiziert, daher nicht verlinkt.
-- Portfolio-Adresse bestätigen (Vorschau nutzt `https://www.alextiffert.com/portfolio`).
-- Impressum und Datenschutz vor Veröffentlichung freigeben.
+- Verlagslinks zu den Fachbüchern fehlen noch.
+- Foto für das Fotobuch *Urban Silence*.
+- „Enforce HTTPS“ in den Pages-Einstellungen einschalten, sobald GitHub das Zertifikat ausgestellt hat.
 - Kurstermine, Whitepaper-Downloads und Druckstatus von *Spuren der Suche* werden nicht als bestätigt ausgegeben.
