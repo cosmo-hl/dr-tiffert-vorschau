@@ -1,0 +1,72 @@
+---
+import Base from '../../layouts/Base.astro';
+import SubHero from '../../components/SubHero.astro';
+import Stimme from '../../components/Stimme.astro';
+import { u } from '../../lib/site';
+import { STIMMEN } from '../../lib/stimmen';
+---
+<Base
+  title="Entscheidungsbegleitung"
+  active="entscheidungsbegleitung/"
+  description="Entscheidungsbegleitung und Executive Coaching mit Dr. Alexander Tiffert: für Unternehmer, Geschäftsführer und Führungskräfte bei Entscheidungen, die sich nicht delegieren lassen."
+>
+  <SubHero
+    eyebrow="Entscheidungsbegleitung"
+    title="Entscheidungen, die sich nicht delegieren lassen"
+    lead="Ich begleite Unternehmer, Geschäftsführer und Führungskräfte, wenn Interessen sich widersprechen und Gewissheit nicht erreichbar ist."
+    name="site-fenster" w={3543} h={2372} pos="80% 50%" posM="78% 50%"
+    alt="Dr. Alexander Tiffert sitzt in einem Sessel an einer großen Fensterfront und blickt über die Stadt."
+  >
+    <div class="cta-row">
+      <a class="btn btn--gold" href={u('kontakt/')}>Vertrauliches Erstgespräch anfragen <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+  </SubHero>
+
+  <section class="page-intro" aria-label="Einführung">
+    <div class="wrap page-intro-text reveal">
+      <p>Manche Entscheidungen kann Ihnen niemand abnehmen. Die Informationen bleiben unvollständig, die Folgen reichen über Ihre eigene Rolle hinaus, und intern lässt sich nicht alles frei besprechen. Gemeinsam klären wir, was tatsächlich beobachtbar ist, welche Interessen und Rollen wirken, welche Folgen Sie verantworten können und welcher nächste Schritt trägt.</p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="h-anlaesse">
+    <div class="wrap split">
+      <div class="split-head reveal">
+        <p class="eyebrow"><span class="num">01</span> Ausgangslage</p>
+        <h2 id="h-anlaesse">Wenn der Druck die Sicht verengt</h2>
+      </div>
+      <div class="split-body measure reveal">
+        <p class="lead">Wenn die Marktlage schwer einzuschätzen ist und wichtige Kunden wegbrechen, müssen Führungskräfte oft mehrere Entwicklungen zugleich bewältigen. Eine Richtung kann wirtschaftlich sinnvoll sein und zugleich Ihr Team überfordern. Eine Entscheidung kann fachlich naheliegen und dennoch die eigene Rolle infrage stellen.</p>
+        <ul class="plain-list">
+          <li>Zu viele Informationen und widersprüchliche Erwartungen: Wir trennen Beobachtungen, Annahmen, Interessen und Zielkonflikte.</li>
+          <li>Druck verengt die Wahrnehmung: Das Gespräch schafft Abstand und macht übersehene Optionen und Grenzen wieder sichtbar.</li>
+          <li>Rollen und Beziehungen beeinflussen die Sache: Wir betrachten formale Zuständigkeiten und informelle Dynamiken gemeinsam.</li>
+          <li>Die Umsetzung ist noch unklar: Wir übersetzen die Entscheidung in einen konkreten nächsten Schritt und eine passende Kommunikation.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section paper" aria-labelledby="h-arbeit">
+    <div class="wrap split">
+      <div class="split-head reveal">
+        <p class="eyebrow"><span class="num">02</span> Vorgehen</p>
+        <h2 id="h-arbeit">Wie wir arbeiten</h2>
+      </div>
+      <div class="split-body measure reveal">
+        <p class="lead">Wir arbeiten an einer konkreten Situation. Wir unterscheiden Beobachtungen von Deutungen, prüfen Annahmen und machen sichtbar, welche Rollen, Interessen und Erwartungen auf Ihre Entscheidung wirken.</p>
+        <p>Daraus entwickeln Sie Kriterien, mit denen Sie die Folgen abwägen und den nächsten Schritt bewusst vertreten können. Ich bringe Erfahrung, Hypothesen und Widerspruch ein. Die Verantwortung für die Entscheidung bleibt bei Ihnen.</p>
+        <p class="pull">Handlungsfähigkeit entsteht nicht aus vorgetäuschter Gewissheit, sondern aus einer bewussten Abwägung.</p>
+        <p>Das Gespräch kann einzeln stattfinden oder, wenn eine Frage gemeinsam entschieden werden muss, im Managementteam. Möglich sind ein fokussiertes Einzelgespräch, eine Begleitung über einen vereinbarten Zeitraum oder die Reflexion einer gemeinsamen Managemententscheidung. Viele kennen diese Form der Arbeit als Executive Coaching.</p>
+        <div class="cta-row"><a class="btn" href={u('kontakt/')}>Erstgespräch anfragen <span class="arrow" aria-hidden="true">→</span></a></div>
+      </div>
+    </div>
+  </section>
+
+  <Stimme {...STIMMEN.simonis} />
+</Base>
+
+<style>
+  .plain-list { margin: var(--s3) 0 0; padding: 0; list-style: none; display: grid; gap: 1rem; }
+  .plain-list li { padding-left: 1.4rem; position: relative; }
+  .plain-list li::before { content: ''; position: absolute; left: 0; top: 0.72em; width: 0.6rem; height: 1px; background: var(--gold-ink); }
+</style>

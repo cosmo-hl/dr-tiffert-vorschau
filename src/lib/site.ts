@@ -3,9 +3,10 @@ const BASE = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 export const u = (path = '') => BASE + path.replace(/^\//, '');
 export const MAIL = 'kontakt@dr-tiffert.de';
 export const NAV = [
-  { href: 'organisationsentwicklung/', label: 'Organisationsentwicklung' },
+  { href: 'entscheidungsbegleitung/', label: 'Entscheidungsbegleitung' },
+  { href: 'nachfolge/', label: 'Nachfolge' },
   { href: 'supervision/', label: 'Supervision' },
-  { href: 'fotografie/', label: 'Künstlerische Fotografie' },
-  { href: 'lehre/', label: 'Lehre' },
-  { href: 'publikationen/', label: 'Publikationen' },
+  { href: 'fotografie/', label: 'Fotografie' },
+  { href: 'profil/', label: 'Profil' },
+  { href: 'kontakt/', label: 'Kontakt', cta: true },
 ];
