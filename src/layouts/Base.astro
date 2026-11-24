@@ -10,6 +10,92 @@ interface Props {
 }
 const { title, description, active, noindex = false } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const SITE = new URL(Astro.site!).origin + '/';
+const ogImage = new URL('og-bild.jpg', SITE).href;
+const ld = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Person',
+      '@id': SITE + '#person',
+      name: 'Dr. Alexander Tiffert',
+      honorificPrefix: 'Dr.',
+      givenName: 'Alexander',
+      familyName: 'Tiffert',
+      jobTitle: 'Systemischer Berater, Executive Coach und Fotograf',
+      description: 'Systemischer Berater und Executive Coach in Lübeck. Begleitet Führungskräfte, Managementteams, Unternehmerfamilien und Beratungsteams in komplexen Entscheidungssituationen; verbindet Beratung mit künstlerischer Fotografie.',
+      url: SITE,
+      image: ogImage,
+      email: 'mailto:kontakt@dr-tiffert.de',
+      address: { '@type': 'PostalAddress', addressLocality: 'Lübeck', postalCode: '23552', addressCountry: 'DE' },
+      alumniOf: { '@type': 'CollegeOrUniversity', name: 'Universität Rostock' },
+      hasCredential: [
+        { '@type': 'EducationalOccupationalCredential', credentialCategory: 'degree', name: 'Promotion (Dr.)' },
+        { '@type': 'EducationalOccupationalCredential', credentialCategory: 'degree', name: 'Diplom-Wirtschaftsingenieur' },
+      ],
+      knowsAbout: ['Executive Coaching', 'Systemische Beratung', 'Organisationsberatung', 'Nachfolge in Familienunternehmen', 'Supervision', 'Kunstanaloges Coaching', 'Emotionsmanagement', 'Gruppendynamik', 'Führung von Vertriebsorganisationen', 'Customer Experience Management', 'Künstlerische Fotografie'],
+      sameAs: ['https://alextiffert.com/'],
+    },
+    {
+      '@type': 'ProfessionalService',
+      '@id': SITE + '#praxis',
+      name: 'Dr. Alexander Tiffert · Systemische Beratung',
+      slogan: 'Komplexität bewältigen. Unsicherheit aushalten. Verantwortlich entscheiden.',
+      url: SITE,
+      image: ogImage,
+      logo: new URL('wortmarke_dunkel.svg', SITE).href,
+      email: 'kontakt@dr-tiffert.de',
+      founder: { '@id': SITE + '#person' },
+      address: { '@type': 'PostalAddress', addressLocality: 'Lübeck', postalCode: '23552', addressCountry: 'DE' },
+      areaServed: { '@type': 'Country', name: 'Deutschland' },
+      knowsLanguage: 'de',
+      hasOfferCatalog: {
+        '@type': 'OfferCatalog',
+        name: 'Leistungen',
+        itemListElement: [
+          ['Executive Coaching', 'executive-coaching/', 'Begleitung von Führungskräften und Managementteams bei Entscheidungen, die sich nicht delegieren lassen.'],
+          ['Nachfolge', 'nachfolge/', 'Nachfolgebegleitung für Familienunternehmen: Familie, Eigentum und Unternehmen auseinanderhalten und Entscheidungswege klären.'],
+          ['Supervision', 'supervision/', 'Supervision für interne Beratungsteams und externe Organisationsberatungen.'],
+          ['Kunstanaloges Coaching', 'kunstanaloges-coaching/', 'Coaching mit Fotografie: Eigene Bilder machen sichtbar, was sich noch nicht in Worte fassen lässt.'],
+        ].map(([name, pfad, beschreibung]) => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name, description: beschreibung, url: SITE + pfad, provider: { '@id': SITE + '#person' } } })),
+      },
+    },
+    ...[
+      ['Customer Experience Management in der Praxis. Grundlagen – Zusammenhänge – Umsetzung', '2019', null],
+      ['Coaching von Mitarbeitern im persönlichen Verkauf. Nachhaltige Kompetenzentwicklung für den Face-to-Face-Kontakt mit Kunden', '2021', '2. Auflage'],
+      ['Führung von Vertriebsorganisationen. Strategie – Koordination – Umsetzung', '2020', '2. Auflage'],
+    ].map(([name, jahr, auflage], i) => ({
+      '@type': 'Book',
+      '@id': SITE + 'hintergrund/#buch-' + (i + 1),
+      name,
+      datePublished: jahr,
+      ...(auflage ? { bookEdition: auflage } : {}),
+      inLanguage: 'de',
+      publisher: { '@type': 'Organization', name: 'Springer Gabler' },
+      [i === 2 ? 'editor' : 'author']: i === 2
+        ? [{ '@type': 'Person', name: 'Lars Binckebanck' }, { '@type': 'Person', name: 'Ann-Kristin Hölter' }, { '@id': SITE + '#person' }]
+        : { '@id': SITE + '#person' },
+    })),
+    {
+      '@type': 'WebSite',
+      '@id': SITE + '#website',
+      url: SITE,
+      name: 'Dr. Alexander Tiffert',
+      inLanguage: 'de-DE',
+      publisher: { '@id': SITE + '#person' },
+    },
+    {
+      '@type': 'WebPage',
+      '@id': canonical + '#seite',
+      url: canonical,
+      name: title === 'Startseite' ? 'Dr. Alexander Tiffert' : title,
+      description,
+      inLanguage: 'de-DE',
+      isPartOf: { '@id': SITE + '#website' },
+      about: { '@id': SITE + '#person' },
+    },
+  ],
+};
 const fullTitle = title === 'Startseite'
   ? 'Dr. Alexander Tiffert · Komplexität bewältigen. Unsicherheit aushalten. Verantwortlich entscheiden.'
   : `${title} · Dr. Alexander Tiffert`;
@@ -23,6 +109,19 @@ const fullTitle = title === 'Startseite'
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
     <meta name="theme-color" content="#1f3832" />
+    <meta name="author" content="Dr. Alexander Tiffert" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="de_DE" />
+    <meta property="og:site_name" content="Dr. Alexander Tiffert" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Dr. Alexander Tiffert an der geöffneten Glastür einer Dachterrasse" />
+    <meta name="twitter:card" content="summary_large_image" />
+    {!noindex && <script type="application/ld+json" set:html={JSON.stringify(ld)} />}
     <link rel="icon" type="image/svg+xml" href={u('favicon.svg')} />
     <link rel="icon" type="image/png" sizes="32x32" href={u('favicon-32.png')} />
     <link rel="apple-touch-icon" href={u('apple-touch-icon-180.png')} />
