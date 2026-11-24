@@ -69,9 +69,10 @@ import { u } from '../../lib/site';
 </Base>
 
 <style>
-  .places { list-style: none; margin: var(--s4) 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2px; background: var(--rule); border: 1px solid var(--rule); }
+  .places { list-style: none; margin: var(--s4) 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2px; background: var(--rule); border: 1px solid var(--rule); }
+  @media (max-width: 560px) { .places { grid-template-columns: minmax(0, 1fr); } }
   .places li { background: var(--white); padding: 1.1rem 1.25rem; font-family: var(--display); font-size: 1.45rem; font-weight: 600; line-height: 1.15; color: var(--navy); }
-  .places span { display: block; font-family: var(--sans); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold-ink); margin-top: 0.35rem; }
+  .places span { display: block; font-family: var(--sans); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-ink); margin-top: 0.35rem; hyphens: auto; -webkit-hyphens: auto; }
   .further-label { margin: var(--s4) 0 0; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-2); }
   .further { display: flex; flex-wrap: wrap; gap: 0 2rem; }
 </style>

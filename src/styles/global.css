@@ -332,6 +332,8 @@ a:hover { text-decoration-thickness: 2px; }
 }
 
 @media (min-width: 700px) { h1, h2 { hyphens: manual; -webkit-hyphens: manual; } }
+/* Schmale Überschriftenspalte: lange Komposita dürfen sauber getrennt werden, statt mitten im Wort umzubrechen */
+@media (min-width: 1024px) { .split-head h2 { font-size: clamp(2rem, 1.2rem + 1.9vw, 3rem); hyphens: auto; -webkit-hyphens: auto; hyphenate-limit-chars: 14 6 6; } }
 
 /* ============================================================
    Unterseiten: eine Bildlogik
