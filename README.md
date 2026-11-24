@@ -35,7 +35,7 @@ Dunkelgrün (#1F3832 / Markengrün #30534A), Sand (#C8BB9E) und Papier (#F6F4EF)
 
 ## Bildliste
 
-Originale liegen nicht im Repository (`originals/` ist ausgeschlossen); `scripts/prepare_images.py` erzeugt responsive Größen (JPEG + WebP, Metadaten entfernt). Quelle der Originale: Marketing-Ordner von Alexander (Serien Albert Raven 2017 und 2019). Alle Website-Fotos sind **Kandidaten**, Nutzungsfreigabe offen.
+Originale liegen nicht im Repository (`originals/` ist ausgeschlossen); `scripts/prepare_images.py` erzeugt responsive Größen (JPEG + WebP, Metadaten entfernt). Quelle der Originale: Marketing-Ordner von Alexander (Serien Albert Raven 2017 und 2019). Alexander hat am 24.11.2026 bestätigt, dass er die Rechte an allen verwendeten Bildern hat.
 
 Bildlogik der Unterseiten: Überschrift und Einstieg zuerst, dann das Bild in voller Inhaltsbreite an der linken Textkante, Desktop 2:1, mobil 4:3 mit eigenem Ausschnitt (`pos` / `posM` in `PageFigure`). Ausnahmen: Werkbilder der Fotografie (ungeschnitten 3:2) und Buchcover.
 
@@ -43,7 +43,7 @@ Bildlogik der Unterseiten: Überschrift und Einstieg zuerst, dann das Bild in vo
 | --- | --- | --- |
 | `site-terrasse` (Alexander-1357.jpg, 3543 px) | Startseite | Desktop vollflächig hinter dem Einstieg, Fokus rechts; mobil eigener 4:3-Ausschnitt `site-terrasse-mobil` nach Claim und Button |
 | `site-sessel-sw` (Alex_9327_sw.jpg) | Organisationsentwicklung | 2:1, Fokus 50 % / 22 %; mobil 4:3 |
-| `site-gespraech` (Alexander-1975.jpg) | Supervision | Gesprächsrunde von der Seite; 2:1, Fokus 50 % / 30 %; mobil 4:3 mittig. Abgebildete Personen: Einwilligung prüfen |
+| `site-gespraech` (Alexander-1975.jpg) | Supervision | Gesprächsrunde von der Seite; 2:1, Fokus 50 % / 30 %; mobil 4:3 mittig. |
 | `site-lehre` (Alexander-1626.jpg) | Lehre | 2:1, Fokus unten (Pult und Projektionsfläche); mobil 4:3 |
 | `site-kontakt` (Alex_8864.jpg) | Kontakt | Hochformat 4:5 rechts; mobil 1:1 |
 | `buch-cx`, `buch-coaching`, `buch-vertrieb` (AT-Buch-*.png) | Publikationen | Cover unbeschnitten, gleiche Höhe und Abstände |
@@ -54,12 +54,10 @@ Vorher/Nachher der ersten Bildschirmansicht (1440, 390, 320 px) liegt im Projekt
 
 ## Offene Freigaben
 
-- Nutzungsrechte der Fotos von Albert Raven (2017, 2019) für die neue Seite; Aktualität der Porträts.
 - Kurztexte der sechs Felder auf der Startseite: Organisationsentwicklung, Executive Coaching, Lehre und Publikationen sind aus freigegebenen Sätzen abgeleitet und brauchen eine Freigabe; ebenso die Abschnittsüberschrift „Zugänge zu meiner Arbeit“ (vorher „Drei Zugänge …“).
 - Kundenstimmen: je eine auf Organisationsentwicklung (Nachfolge) und Lehre, von dr-tiffert.de übernommen; Freigabe prüfen.
 - Porträt mit Kamera für die Fotografie-Seite: kein passendes Original gefunden.
 - Verlagslinks „Zum Buch“ und Link „Zur Übersicht meiner Fotobücher“ noch nicht verifiziert, daher nicht verlinkt.
 - Portfolio-Adresse bestätigen (Vorschau nutzt `https://www.alextiffert.com/portfolio`).
 - Impressum und Datenschutz vor Veröffentlichung freigeben.
-- Bildrechte der Straßenfotografien (abgebildete Personen) prüfen.
 - Kurstermine, Whitepaper-Downloads und Druckstatus von *Spuren der Suche* werden nicht als bestätigt ausgegeben.
