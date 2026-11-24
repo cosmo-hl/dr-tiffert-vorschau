@@ -24,7 +24,8 @@ const PORTFOLIO_PDF = u('downloads/Alexander-Tiffert_Who-Owns-Reality_Portfolio-
         <h2 id="h-methode">Sehen, bevor man es sagen kann</h2>
       </div>
       <div class="split-body reveal">
-        <p class="lead measure">Wer gewohnt ist, analytisch zu denken, kommt mit Worten oft nur bis zu einem bestimmten Punkt. Bilder öffnen einen anderen Zugang: zu Mustern, Haltungen und dem, was man ahnt, aber noch nicht benennen kann.</p>
+        <p class="lead measure">Fotografie schult die Wahrnehmung. Sie macht erfahrbar, dass dieselbe Situation ganz verschiedene Wirklichkeiten enthält, je nachdem, wie wir hinschauen. Das macht den eigenen Blick beweglicher und öffnet neue Einsichten.</p>
+        <p class="measure">Im kunstanalogen Coaching nutzen wir das ganz konkret: Wir arbeiten an Ihrer Frage und finden Lösungen auch jenseits rationaler Erklärungen.</p>
         <ul class="tiles method-steps" aria-label="Ablauf in vier Schritten">
           <li><span class="tile-num" aria-hidden="true">I</span><strong>Frage klären</strong>Wir legen gemeinsam fest, worum es Ihnen geht.</li>
           <li><span class="tile-num" aria-hidden="true">II</span><strong>Fotografieren</strong>Mit dieser Frage im Kopf fotografieren Sie, in der Sitzung oder dazwischen.</li>
@@ -32,6 +33,8 @@ const PORTFOLIO_PDF = u('downloads/Alexander-Tiffert_Who-Owns-Reality_Portfolio-
           <li><span class="tile-num" aria-hidden="true">IV</span><strong>Übertragen</strong>Aus dem Gesehenen werden konkrete Schritte für Ihre Führung.</li>
         </ul>
         <p class="measure">Einzeln oder im Managementteam. Fotografische Vorkenntnisse brauchen Sie nicht, es geht nicht um schöne Bilder, sondern um ihre Wirkung.</p>
+        <h3 class="ebenen-h">Ebenen auseinanderhalten</h3>
+        <p class="measure">In der Fotografie lernt man, Ebenen auseinanderzuhalten: Vordergrund und Hintergrund, Licht und Motiv, das Sichtbare und das, was es auslöst. Und man lernt, Wirkungen erst einmal wahrzunehmen, bevor man sie deutet. Das habe ich selbst so gelernt, und genau das hilft auch in Organisationen. In Familienunternehmen etwa lassen sich Familie, Eigentum und Unternehmen getrennt betrachten und die Wechselwirkungen zwischen ihnen sichtbar machen.</p>
         <div class="cta-row"><a class="btn" href={u('kontakt/')}>Kunstanaloges Coaching anfragen <span class="arrow" aria-hidden="true">→</span></a></div>
       </div>
     </div>
@@ -125,6 +128,7 @@ const PORTFOLIO_PDF = u('downloads/Alexander-Tiffert_Who-Owns-Reality_Portfolio-
         <p class="lead">In meinem Fotobuchprojekt <i>Spuren der Suche</i> bringe ich solche Momente in eine Folge. Mich interessiert, was ein Bild offenlässt und wie ein anderes den Blick darauf verändert. Im Zusammenspiel der Bilder kann etwas sichtbar werden, das keines für sich allein erzählt.</p>
         <p class="books-line">Bisherige Fotobücher: <i>lettera d’amore</i> und <i>Urban Silence</i> (2025), <i>Dance with the White Rabbit</i> und <i>Listen to the White Rabbit</i> (2024), jeweils in kleiner Auflage.</p>
         <div class="cta-row"><a class="btn btn--gold" href={PORTFOLIO_PDF} download>Portfolio 2026 als PDF <span class="arrow" aria-hidden="true">↓</span><span class="visually-hidden"> (Who Owns Reality?, 2,5 MB)</span></a></div>
+        <p class="artist-link"><a class="more" href="https://alextiffert.com/" target="_blank" rel="noopener">Mehr zu meiner künstlerischen Arbeit auf alextiffert.com <span class="small">(öffnet in neuem Tab)</span> <span class="arrow" aria-hidden="true">↗</span></a></p>
       </div>
     </div>
   </section>
@@ -139,6 +143,10 @@ const PORTFOLIO_PDF = u('downloads/Alexander-Tiffert_Who-Owns-Reality_Portfolio-
   @media (min-width: 700px) { .method-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
   @media (min-width: 1100px) { .method-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
   .books-line { color: #d6ded9; font-size: 0.98rem; }
+  .ebenen-h { font-family: var(--display); font-size: clamp(1.5rem, 1.3rem + 0.7vw, 1.9rem); font-weight: 500; color: var(--navy); margin: var(--s3) 0 0.5rem; }
+  .artist-link { margin: var(--s3) 0 0; }
+  .artist-link .more { color: #fff; }
+  .artist-link .small { font-size: 0.8em; color: #a3b0a8; text-transform: none; letter-spacing: 0; font-weight: 400; }
   .feature figure { margin: var(--s4) 0 0; }
   .feature-img { background: #0a0d0c; }
   .feature-img :global(img) { width: 100%; }

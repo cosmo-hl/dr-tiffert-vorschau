@@ -16,8 +16,8 @@ import { STIMMEN } from '../lib/stimmen';
       <Photo name="site-terrasse" w={3543} h={1730} alt="" sizes="100vw" position="70% 30%" />
     </div>
     <div class="wrap hero-inner">
-      <h1 id="claim">Komplexität klären. <span>Verantwortlich entscheiden.</span></h1>
-      <p class="lead">Ich begleite Menschen und Teams in Verantwortung, wenn keine Option einfach ist und mehrere Systeme zugleich unter Druck geraten.</p>
+      <h1 id="claim"><span>Komplexität bewältigen.</span> <span>Unsicherheit aushalten.</span> <span>Verantwortlich entscheiden.</span></h1>
+      <p class="lead">Ich begleite Menschen und Teams in komplexen Situationen. Auch wenn die Richtung noch unklar ist, helfe ich, die Unsicherheit auszuhalten und entscheidungsfähig zu bleiben.</p>
       <div class="hero-cta">
         <a class="btn btn--gold" href={u('kontakt/')}>Persönliches Gespräch anfragen <span class="arrow" aria-hidden="true">→</span></a>
       </div>
@@ -32,7 +32,7 @@ import { STIMMEN } from '../lib/stimmen';
     <div class="wrap intro-grid">
       <div class="intro-main reveal">
         <h2 id="h-einstieg" class="visually-hidden">Mein Mehrwert</h2>
-        <p class="statement">Ich kann Komplexität aushalten und sie bewältigbar machen. Auch wenn Unsicherheit bleibt, entsteht so Entscheidungsfähigkeit.</p>
+        <p class="statement">Darin liegt meine Kraft: mit Ihnen auszuhalten, was noch offen ist, und trotzdem handlungs- und entscheidungsfähig zu bleiben.</p>
       </div>
       <aside class="intro-contact reveal reveal-d1" aria-labelledby="h-kontaktangebot">
         <h3 id="h-kontaktangebot">Vor welcher Entscheidung stehen Sie gerade?</h3>
@@ -81,6 +81,19 @@ import { STIMMEN } from '../lib/stimmen';
     </div>
   </section>
 
+  <!-- HALTUNG -->
+  <section class="section haltung-start" aria-labelledby="h-haltung">
+    <div class="wrap split">
+      <div class="split-head reveal">
+        <p class="eyebrow"><span class="num">02</span> Haltung</p>
+        <h2 id="h-haltung">Wirklichkeit als Konstruktion</h2>
+      </div>
+      <div class="split-body measure reveal">
+        <p class="lead">Ob in der Beratung, im Coaching oder in der Fotografie: Ich verstehe Wirklichkeit als Konstruktion. Dieselbe Situation sieht je nach Blickwinkel anders aus. Wer das erfährt, sieht beweglicher, nimmt genauer wahr und findet neue Möglichkeiten.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- FOTOGRAFIE IM COACHING -->
   <section class="section art dark" aria-labelledby="h-foto">
     <div class="wrap art-grid">
@@ -90,7 +103,7 @@ import { STIMMEN } from '../lib/stimmen';
       <div class="art-text reveal reveal-d1">
         <p class="eyebrow">Besondere Methode · Kunstanaloges Coaching</p>
         <h2 id="h-foto">Bilder als Spiegel</h2>
-        <p>Wenn Worte nicht weiterkommen, arbeite ich mit Fotografie. Sie fotografieren zu Ihrer Frage, und Ihre eigenen Bilder machen sichtbar, was vorher diffus war.</p>
+        <p>Fotografie schult die Wahrnehmung und macht den eigenen Blick beweglicher. Im kunstanalogen Coaching finden wir so Lösungen auch jenseits rationaler Erklärungen.</p>
         <a class="more" href={u('kunstanaloges-coaching/')}>Zum kunstanalogen Coaching <span class="arrow" aria-hidden="true">→</span></a>
       </div>
     </div>
@@ -123,9 +136,10 @@ import { STIMMEN } from '../lib/stimmen';
     }
     .hero-photo-mobile { display: none; }
     .hero-inner { display: flex; flex-direction: column; align-items: flex-start; padding-block: clamp(3.5rem, 6vw, 5rem); min-height: min(68vh, 620px); justify-content: center; }
-    .hero h1, .hero .lead, .hero-p1 { max-width: 640px; }
+    .hero h1, .hero .lead { max-width: 640px; }
+    .hero h1 { max-width: none; font-size: clamp(2.4rem, 1.2rem + 2.9vw, 3.7rem); }
+    .hero h1 span { white-space: nowrap; }
     .hero .lead { max-width: 520px; }
-    .hero-p1 { order: 1; margin-bottom: var(--s3); }
     .hero-cta { order: 2; margin: var(--s1) 0 0; }
   }
 

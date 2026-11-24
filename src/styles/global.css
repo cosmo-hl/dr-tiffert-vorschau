@@ -182,7 +182,11 @@ a:hover { text-decoration-thickness: 2px; }
 .main-nav a {
   position: relative; display: inline-flex; align-items: center; min-height: 44px;
   font-size: 0.8rem; font-weight: 600; letter-spacing: 0.11em; text-transform: uppercase;
-  color: var(--navy); text-decoration: none;
+  color: var(--navy); text-decoration: none; white-space: nowrap;
+}
+@media (min-width: 1100px) and (max-width: 1319px) {
+  .main-nav ul { gap: 0.25rem 1.1rem; }
+  .main-nav a { font-size: 0.74rem; letter-spacing: 0.08em; }
 }
 .main-nav a::after {
   content: ''; position: absolute; left: 0; right: 0; bottom: 6px; height: 2px;
