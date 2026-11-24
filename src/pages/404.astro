@@ -1,0 +1,22 @@
+---
+import Base from '../layouts/Base.astro';
+import { u, NAV } from '../lib/site';
+---
+<Base title="Seite nicht gefunden" description="Diese Seite gibt es nicht oder nicht mehr." noindex>
+  <header class="page-hero dark legal-hero">
+    <div class="wrap">
+      <p class="eyebrow">Seite nicht gefunden</p>
+      <h1>Diese Seite gibt es hier nicht mehr</h1>
+    </div>
+  </header>
+  <section class="section legal">
+    <div class="wrap">
+      <p>Die Website ist neu aufgebaut. Vielleicht finden Sie, was Sie suchen, auf einer dieser Seiten:</p>
+      <ul>
+        <li><a href={u()}>Startseite</a></li>
+        {NAV.map((item) => <li><a href={u(item.href)}>{item.label}</a></li>)}
+        <li><a href={u('kontakt/')}>Kontakt</a></li>
+      </ul>
+    </div>
+  </section>
+</Base>

@@ -6,8 +6,10 @@ interface Props {
   title: string;
   description: string;
   active?: string;
+  noindex?: boolean;
 }
-const { title, description, active } = Astro.props;
+const { title, description, active, noindex = false } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
 const fullTitle = title === 'Startseite'
   ? 'Dr. Alexander Tiffert · Komplexität klären. Verantwortlich entscheiden.'
   : `${title} · Dr. Alexander Tiffert`;
@@ -17,7 +19,7 @@ const fullTitle = title === 'Startseite'
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="robots" content="noindex" />
+    {noindex ? <meta name="robots" content="noindex" /> : <link rel="canonical" href={canonical} />}
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
     <meta name="theme-color" content="#1f3832" />
@@ -28,10 +30,6 @@ const fullTitle = title === 'Startseite'
   </head>
   <body>
     <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
-
-    <div class="preview-bar" role="note">
-      <div class="wrap">Entwurf 3.1 · nicht öffentliche Vorschau, nicht zur Veröffentlichung freigegeben</div>
-    </div>
 
     <header class="site-header">
       <div class="wrap">
@@ -73,7 +71,6 @@ const fullTitle = title === 'Startseite'
         <div class="footer-bottom">
           <span>© Dr. Alexander Tiffert · Lübeck</span>
           <span class="footer-legal"><a href={u('impressum/')}>Impressum</a> · <a href={u('datenschutz/')}>Datenschutz</a></span>
-          <span>Vorschau, nicht indexiert</span>
         </div>
       </div>
     </footer>

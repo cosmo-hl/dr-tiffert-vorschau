@@ -1,10 +1,10 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 
-// Vorschau auf GitHub Pages unter https://cosmo-hl.github.io/dr-tiffert-vorschau/
+// Live unter https://www.dr-tiffert.de (GitHub Pages mit eigener Domain, siehe public/CNAME)
 export default defineConfig({
-  site: 'https://cosmo-hl.github.io',
-  base: '/dr-tiffert-vorschau/',
+  site: 'https://www.dr-tiffert.de',
+  base: '/',
   trailingSlash: 'always',
   build: { format: 'directory' },
 });

@@ -1,0 +1,33 @@
+---
+// Weiterleitungen von Adressen der früheren Squarespace-Seite auf die neuen Seiten
+export function getStaticPaths() {
+  const ALT = {
+    home: '',
+    'kontakt-3': 'kontakt/',
+    familienberatung: 'organisationsentwicklung/#nachfolge',
+    praxis: 'organisationsentwicklung/#executive-coaching',
+    team: 'supervision/',
+    weiterbildung: 'lehre/',
+    'weiterbildung-1': 'lehre/',
+    forschung: 'publikationen/',
+    'aus-der-praxis-1': 'publikationen/',
+    ablagen: '',
+  };
+  return Object.entries(ALT).map(([alt, ziel]) => ({ params: { alt }, props: { ziel } }));
+}
+const ziel = new URL(Astro.props.ziel, Astro.site).href;
+---
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex" />
+    <meta http-equiv="refresh" content={`0; url=${ziel}`} />
+    <link rel="canonical" href={ziel} />
+    <title>Weiterleitung · Dr. Alexander Tiffert</title>
+  </head>
+  <body>
+    <h1>Diese Seite ist umgezogen</h1>
+    <p><a href={ziel}>Weiter zur neuen Seite</a></p>
+  </body>
+</html>
