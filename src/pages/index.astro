@@ -88,7 +88,41 @@ import { STIMMEN } from '../lib/stimmen';
     </div>
   </section>
 
+  <!-- HINTERGRUND -->
+  <section class="section" aria-labelledby="h-hintergrund">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow"><span class="num">03</span> Hintergrund</p>
+        <h2 id="h-hintergrund">Was mich qualifiziert</h2>
+      </div>
+      <ul class="bg-grid">
+        <li class="reveal"><strong>20+</strong><span>Jahre Managementberatung. Zahlreiche Topmanagementteams beraten, große Organisations- und Veränderungsprozesse begleitet, eigenes Beratungsunternehmen.</span></li>
+        <li class="reveal reveal-d1"><strong>Dr.</strong><span>Diplom-Wirtschaftsingenieur mit Schwerpunkt Vertriebsführung und Verkaufspsychologie, Promotion an der Universität Rostock.</span></li>
+        <li class="reveal reveal-d2"><strong>4</strong><span>Mehrjährige Ausbildungen: Gruppendynamik, Familien- und Organisationsaufstellung, Coaching, systemische Organisationsentwicklung.</span></li>
+        <li class="reveal"><strong>10</strong><span>Jahre Lehre als Honorardozent, u. a. an der Hochschule Fresenius, der FOM, der NORDAKADEMIE und der Universität Rostock.</span></li>
+        <li class="reveal reveal-d1"><strong>4</strong><span>Bücher, darunter drei Fachbücher bei Springer Gabler zu Vertriebsführung, Coaching und Customer Experience Management.</span></li>
+        <li class="reveal reveal-d2"><strong>6</strong><span>Perspektiven in einer Urteilskraft: Wirtschaft, Organisation, Führung, Psychologie, Familienunternehmen, Wissenschaft.</span></li>
+      </ul>
+    </div>
+  </section>
+
   <Stimme {...STIMMEN.meyer} />
+
+  <!-- FOTOGRAFIE IM COACHING -->
+  <section class="section art dark" aria-labelledby="h-foto">
+    <div class="wrap art-grid">
+      <figure class="art-img reveal">
+        <Photo name="7Y5A0358" w={5359} h={3573} alt="Straßenfotografie von Alexander Tiffert." sizes="(min-width: 1024px) 58vw, 100vw" />
+      </figure>
+      <div class="art-text reveal reveal-d1">
+        <p class="eyebrow"><span class="num">04</span> Kunstanaloges Coaching</p>
+        <h2 id="h-foto">Bilder als Spiegel</h2>
+        <p>Wenn Sprache und Analyse an Grenzen stoßen, arbeite ich mit Fotografie. Sie fotografieren zu Ihrer Frage, wir betrachten die Bilder gemeinsam, und oft wird sichtbar, was vorher diffus war: Muster, Haltungen, neue Perspektiven. Die Bilder bleiben als Anker für den nächsten Schritt.</p>
+        <p class="small">Für Einzelne und Führungsteams. Ohne fotografische Vorkenntnisse.</p>
+        <a class="more" href={u('fotografie/')}>Zu meiner Fotografie <span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </section>
 </Base>
 
 <style>
@@ -157,4 +191,19 @@ import { STIMMEN } from '../lib/stimmen';
   .value { list-style: none; margin: var(--s3) 0 0; padding: 0; border-top: 1px solid var(--rule); font-size: 1.05rem; }
   .value li { padding: 1rem 0; border-bottom: 1px solid var(--rule); color: var(--ink-2); }
   .value strong { display: block; font-family: var(--display); font-size: 1.5rem; font-weight: 600; line-height: 1.2; color: var(--navy); margin-bottom: 0.2rem; }
+  /* Hintergrund */
+  .bg-grid { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s3); }
+  .bg-grid li { border-top: 1px solid var(--navy); padding-top: var(--s2); }
+  .bg-grid strong { display: block; font-family: var(--display); font-size: clamp(2.6rem, 2rem + 2vw, 3.6rem); font-weight: 500; line-height: 1; color: var(--gold-ink); margin-bottom: 0.6rem; }
+  .bg-grid span { color: var(--ink-2); }
+  @media (min-width: 700px) { .bg-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1024px) { .bg-grid { grid-template-columns: repeat(3, 1fr); gap: var(--s4); } }
+  /* Fotografie */
+  .art-grid { display: grid; gap: var(--s4); align-items: center; }
+  .art-img { margin: 0; }
+  .art-img :global(img) { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+  .art-text p:not(.eyebrow) { color: #d6ded9; max-width: 48ch; }
+  .art-text .small { font-size: 0.95rem; color: var(--gold); }
+  .art-text .more { color: #fff; }
+  @media (min-width: 1024px) { .art-grid { grid-template-columns: 7fr 5fr; gap: clamp(3rem, 5vw, 5rem); } }
 </style>
