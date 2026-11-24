@@ -8,44 +8,30 @@ import { STIMMEN } from '../../lib/stimmen';
 <Base
   title="Executive Coaching"
   active="executive-coaching/"
-  description="Executive Coaching mit Dr. Alexander Tiffert: Begleitung von Führungskräften und Managementteams in schwierigen Entscheidungssituationen."
+  description="Executive Coaching mit Dr. Alexander Tiffert: Begleitung von Führungskräften und Managementteams bei Entscheidungen, die sich nicht delegieren lassen."
 >
   <SubHero
     eyebrow="Executive Coaching"
-    title="Klar bleiben, wenn es schwierig wird"
-    lead="Ich begleite Führungskräfte und Managementteams in Situationen, in denen keine Option einfach ist."
+    title="Entscheidungen, die Sie nicht delegieren können"
+    lead="Ich begleite Führungskräfte und Managementteams, wenn keine Option einfach ist."
     name="site-fenster" w={3543} h={2372} pos="80% 50%" posM="78% 50%"
-    alt="Dr. Alexander Tiffert sitzt in einem Sessel an einer großen Fensterfront und blickt über die Stadt."
-  >
-    <div class="cta-row">
-      <a class="btn btn--gold" href={u('kontakt/')}>Erstgespräch anfragen <span class="arrow" aria-hidden="true">→</span></a>
-    </div>
-  </SubHero>
+    alt="Dr. Alexander Tiffert sitzt in einem Sessel an einer großen Fensterfront und blickt über die Stadt." />
 
-  <section class="section" aria-label="Zwei Formen">
-    <div class="wrap">
-      <ul class="duo">
-        <li class="reveal">
-          <p class="eyebrow"><span class="num">01</span> Einzeln</p>
-          <h2>Für Führungskräfte</h2>
-          <p>Eine Entscheidung, die Sie nicht delegieren können. Wir sortieren, was Sie wissen, was Sie annehmen und was auf dem Spiel steht. Die Entscheidung bleibt bei Ihnen.</p>
-        </li>
-        <li class="reveal reveal-d1">
-          <p class="eyebrow"><span class="num">02</span> Im Team</p>
-          <h2>Für Managementteams</h2>
-          <p>Eine Frage, die Sie gemeinsam entscheiden müssen. Wir klären Rollen, Interessen und Zielkonflikte, damit das Team handlungsfähig bleibt.</p>
-        </li>
-      </ul>
+  <section class="section" aria-labelledby="h-ec">
+    <div class="wrap split">
+      <div class="split-head reveal">
+        <p class="eyebrow"><span class="num">01</span> Angebot</p>
+        <h2 id="h-ec">Einzeln oder im Managementteam</h2>
+      </div>
+      <div class="split-body measure reveal">
+        <p class="lead">Wenn die Marktlage schwer einzuschätzen ist und wichtige Kunden wegbrechen, müssen Führungskräfte oft mehrere Entwicklungen zugleich bewältigen. Das kann sie auch persönlich an Grenzen bringen. Ich begleite sie dabei, dem Druck standzuhalten, handlungsfähig zu bleiben und ihrem Team Orientierung zu geben, auch wenn sie selbst noch nicht klar sehen, wohin die Reise geht.</p>
+        <p>Wenn diese Belastung anhält, können auch persönliche Fragen in die Führungsrolle hineinwirken. Im Coaching klären wir, was die Situation verlangt und wo Sie für sich eine Grenze ziehen müssen.</p>
+        <p>Eine Richtung kann wirtschaftlich sinnvoll sein und zugleich Ihr Team überfordern. Eine Entscheidung kann fachlich naheliegen und dennoch die eigene Rolle infrage stellen. Im Executive Coaching arbeiten wir an einer konkreten Situation. Wir klären, welche Erwartungen an Sie herangetragen werden, nach welchen Maßstäben Sie urteilen und welche Folgen Sie in Kauf nehmen können.</p>
+        <p>Ich bin ein vertrauliches Gegenüber, das auch Unbequemes anspricht. Die Entscheidung bleibt bei Ihnen. Das Gespräch kann einzeln oder, wenn die Frage gemeinsam entschieden werden muss, im Managementteam stattfinden.</p>
+        <div class="cta-row"><a class="btn" href={u('kontakt/')}>Executive Coaching anfragen <span class="arrow" aria-hidden="true">→</span></a></div>
+      </div>
     </div>
   </section>
 
   <Stimme {...STIMMEN.simonis} />
 </Base>
-
-<style>
-  .duo { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s4); }
-  .duo li { border-top: 2px solid var(--gold-ink); padding-top: var(--s3); }
-  .duo h2 { font-size: clamp(1.8rem, 1.3rem + 1.4vw, 2.5rem); }
-  .duo p:not(.eyebrow) { max-width: 46ch; color: var(--ink-2); }
-  @media (min-width: 900px) { .duo { grid-template-columns: 1fr 1fr; gap: clamp(3rem, 6vw, 6rem); } }
-</style>

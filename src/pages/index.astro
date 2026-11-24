@@ -2,13 +2,13 @@
 import Base from '../layouts/Base.astro';
 import Photo from '../components/Photo.astro';
 import Stimme from '../components/Stimme.astro';
-import { u } from '../lib/site';
+import { u, MAIL } from '../lib/site';
 import { STIMMEN } from '../lib/stimmen';
 
 ---
 <Base
   title="Startseite"
-  description="Dr. Alexander Tiffert, Lübeck: Entscheidungsbegleitung für Unternehmer, Geschäftsführer und Führungskräfte, Nachfolgebegleitung für Familienunternehmen und Supervision für Beratungsteams."
+  description="Dr. Alexander Tiffert begleitet Führungskräfte, Managementteams, Unternehmerfamilien und Beratungsteams, wenn keine Option einfach ist: Executive Coaching, Nachfolge und Supervision."
 >
   <!-- HERO: freigegebener Einstieg, wortgetreu -->
   <section class="hero dark" aria-labelledby="claim">
@@ -17,74 +17,78 @@ import { STIMMEN } from '../lib/stimmen';
     </div>
     <div class="wrap hero-inner">
       <h1 id="claim">Komplexität klären. <span>Verantwortlich entscheiden.</span></h1>
-      <p class="lead">Ich bin Ihr Gegenüber, wenn Sie schwierige Entscheidungen verantworten. Einzeln oder im Managementteam.</p>
+      <p class="lead">Ich begleite Menschen und Teams in Verantwortung, wenn keine Option einfach ist und mehrere Systeme zugleich unter Druck geraten.</p>
       <div class="hero-cta">
-        <a class="btn btn--gold" href={u('kontakt/')}>Erstgespräch anfragen <span class="arrow" aria-hidden="true">→</span></a>
+        <a class="btn btn--gold" href={u('kontakt/')}>Persönliches Gespräch anfragen <span class="arrow" aria-hidden="true">→</span></a>
       </div>
       <figure class="hero-photo-mobile">
         <Photo name="site-terrasse-mobil" w={2306} h={1730} alt="Dr. Alexander Tiffert steht an einer geöffneten Glastür einer Dachterrasse und blickt über die Stadt." sizes="100vw" eager />
       </figure>
+      <p class="hero-p1">Ich helfe Führungskräften und Managementteams in Verantwortung auch in schwierigen Situationen und unter hoher Unsicherheit entscheidungsfähig zu sein. Das ist besonders relevant, wenn keine Option wirklich gut ist und einfache Lösungen nicht erkennbar sind.</p>
     </div>
   </section>
 
-  <!-- THEMENFELDER -->
-  <section class="section paper" aria-labelledby="h-felder">
+  <!-- EINSTIEG: freigegebener Absatz, in drei Absätze gegliedert (Wortlaut unverändert); rechts das Kontaktangebot -->
+  <section class="section intro" aria-labelledby="h-einstieg">
+    <div class="wrap intro-grid">
+      <div class="intro-main reveal">
+        <p class="eyebrow"><span class="num">01</span> Mein Mehrwert</p>
+        <h2 id="h-einstieg" class="value-h">Komplexität aushalten. Entscheidungsfähigkeit schaffen.</h2>
+        <ul class="value">
+          <li><strong>Komplexität aushalten.</strong> Ich reduziere schwierige Lagen nicht vorschnell auf eine Ursache oder eine einfache Lösung.</li>
+          <li><strong>Komplexität bewältigbar machen.</strong> Ich übersetze sie in relevante Ebenen, Widersprüche und Entscheidungspunkte.</li>
+          <li><strong>Unsicherheit aushalten.</strong> Ich bleibe ruhig, wenn Gewissheit nicht erreichbar ist, und halte den Raum für Lösungen offen.</li>
+          <li><strong>Entscheidungsfähigkeit schaffen.</strong> Am Ende steht ein nächster Schritt, den Sie bewusst verantworten können.</li>
+        </ul>
+      </div>
+      <aside class="intro-contact reveal reveal-d1" aria-labelledby="h-kontaktangebot">
+        <h3 id="h-kontaktangebot">Vor welcher Entscheidung stehen Sie gerade?</h3>
+        <p>Wenn Sie sich ein unabhängiges Gegenüber wünschen, lade ich Sie zu einem persönlichen Gespräch ein.</p>
+        <ul class="contact-lines" aria-label="Direkte Kontaktwege">
+          <li><span>E-Mail</span><a href={`mailto:${MAIL}`}>{MAIL}</a></li>
+        </ul>
+        <p class="signature">Ihr Dr. Alexander Tiffert</p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- DREI FELDER -->
+  <section class="section paper" id="felder" aria-labelledby="h-felder">
     <div class="wrap">
       <div class="section-head reveal">
-        <p class="eyebrow"><span class="num">01</span> Themenfelder</p>
+        <p class="eyebrow"><span class="num">02</span> Themenfelder</p>
         <h2 id="h-felder">Wobei ich begleite</h2>
       </div>
-      <ol class="occasions four">
-        {[
-          ['I', 'Executive Coaching', 'Für Führungskräfte, die eine Entscheidung allein verantworten.', 'executive-coaching/'],
-          ['II', 'Managementteams', 'Für Teams, die gemeinsam entscheiden müssen.', 'executive-coaching/'],
-          ['III', 'Nachfolge', 'Für Familienunternehmen im Übergang.', 'nachfolge/'],
-          ['IV', 'Supervision', 'Für interne und externe Beratungsteams.', 'supervision/'],
-        ].map(([n, t, x, h], i) => (
-          <li class={`reveal reveal-d${i % 3}`}>
-            <a href={u(h)}>
-              <span class="roman" aria-hidden="true">{n}</span>
-              <h3>{t}</h3>
-              <p>{x}</p>
-              <span class="more">Mehr <span class="arrow" aria-hidden="true">→</span></span>
-            </a>
-          </li>
-        ))}
+      <ol class="occasions">
+        <li class="reveal">
+          <a href={u('executive-coaching/')}>
+            <span class="roman" aria-hidden="true">I</span>
+            <h3>Executive Coaching</h3>
+            <p>Für Führungskräfte und Managementteams, die Entscheidungen treffen müssen, die sich nicht delegieren lassen.</p>
+            <span class="more">Zum Executive Coaching <span class="arrow" aria-hidden="true">→</span></span>
+          </a>
+        </li>
+        <li class="reveal reveal-d1">
+          <a href={u('nachfolge/')}>
+            <span class="roman" aria-hidden="true">II</span>
+            <h3>Nachfolge</h3>
+            <p>Für Familienunternehmen, wenn Familie, Eigentum und Unternehmen gleichzeitig in Bewegung sind.</p>
+            <span class="more">Zur Nachfolgebegleitung <span class="arrow" aria-hidden="true">→</span></span>
+          </a>
+        </li>
+        <li class="reveal reveal-d2">
+          <a href={u('supervision/')}>
+            <span class="roman" aria-hidden="true">III</span>
+            <h3>Supervision</h3>
+            <p>Für interne und externe Beratungsteams, deren Mandate ins Stocken geraten.</p>
+            <span class="more">Zur Supervision <span class="arrow" aria-hidden="true">→</span></span>
+          </a>
+        </li>
       </ol>
     </div>
   </section>
 
-  <!-- HINTERGRUND -->
-  <section class="section" aria-labelledby="h-hintergrund">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <p class="eyebrow"><span class="num">02</span> Hintergrund</p>
-        <h2 id="h-hintergrund">Was mich qualifiziert</h2>
-      </div>
-      <ul class="proof reveal">
-        <li><strong>20</strong> Jahre Beratung in Organisationen. Ich kenne Rollen, Macht und Dynamiken von innen.</li>
-        <li><strong>Dr.</strong> Diplom-Wirtschaftsingenieur, Promotion an der Universität Rostock</li>
-        <li><strong>10</strong> Jahre Lehre an Hochschulen und drei Fachbücher</li>
-      </ul>
-      <a class="more" href={u('profil/')}>Zum Profil <span class="arrow" aria-hidden="true">→</span></a>
-    </div>
-  </section>
-
   <Stimme {...STIMMEN.meyer} />
-
-  <!-- FOTOGRAFIE -->
-  <section class="section art dark" aria-labelledby="h-foto">
-    <div class="wrap art-grid">
-      <figure class="art-img reveal">
-        <Photo name="7Y5A0358" w={5359} h={3573} alt="Straßenfotografie von Alexander Tiffert." sizes="(min-width: 1024px) 58vw, 100vw" />
-      </figure>
-      <div class="art-text reveal reveal-d1">
-        <p class="eyebrow">Künstlerische Fotografie</p>
-        <h2 id="h-foto">Genau hinsehen</h2>
-        <a class="more" href={u('fotografie/')}>Zur Fotografie <span class="arrow" aria-hidden="true">→</span></a>
-      </div>
-    </div>
-  </section>
 </Base>
 
 <style>
@@ -117,6 +121,24 @@ import { STIMMEN } from '../lib/stimmen';
     .hero-cta { order: 2; margin: var(--s1) 0 0; }
   }
 
+  /* Einstieg */
+  .intro-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--s4); }
+  .intro-main { font-size: clamp(1.15rem, 1.05rem + 0.45vw, 1.35rem); line-height: 1.6; color: var(--ink); }
+  .intro-main p { margin: 0 0 1.1em; }
+  .intro-main .intro-question { margin: 1.4em 0 0; font-family: var(--display); font-size: clamp(1.6rem, 1.3rem + 1.1vw, 2.2rem); line-height: 1.22; color: var(--navy); }
+  .intro-contact { background: var(--paper); border-top: 2px solid var(--gold-ink); padding: clamp(1.5rem, 2.6vw, 2.25rem); }
+  .intro-contact h3 { font-family: var(--display); font-size: clamp(1.6rem, 1.35rem + 0.8vw, 2rem); font-weight: 500; line-height: 1.12; color: var(--navy); margin-bottom: 0.75rem; }
+  .intro-contact p { color: var(--ink-2); }
+  .contact-lines { list-style: none; margin: var(--s2) 0; padding: 0; }
+  .contact-lines li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 0.9rem; }
+  .contact-lines span { font-size: 0.74rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-ink); min-width: 4.6rem; }
+  .contact-lines a { display: inline-flex; align-items: center; min-height: 44px; font-size: 1.08rem; color: var(--navy); text-decoration: none; border-bottom: 1px solid var(--gold); white-space: nowrap; }
+  .contact-lines a:hover { border-bottom-color: var(--navy); }
+  .intro-contact .signature { font-family: var(--display); font-style: italic; font-size: 1.35rem; color: var(--gold-ink); margin: 0; }
+  @media (min-width: 1024px) {
+    .intro-grid { grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); gap: clamp(3rem, 6vw, 6rem); align-items: start; }
+  }
+
   /* Anlässe */
   .occasions { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: minmax(0, 1fr); gap: 2px; background: var(--rule); border: 1px solid var(--rule); }
   .occasions a { display: flex; flex-direction: column; height: 100%; padding: clamp(1.5rem, 2.6vw, 2.25rem); background: var(--white); text-decoration: none; color: var(--ink); transition: background 0.35s var(--ease), color 0.35s var(--ease); }
@@ -130,23 +152,9 @@ import { STIMMEN } from '../lib/stimmen';
   .occasions a:hover .more .arrow { transform: translateX(5px); }
   @media (min-width: 900px) { .occasions { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 
-  .hero-kicker { color: var(--gold); margin-bottom: var(--s2); }
-
-  /* Belege */
-  .proof { list-style: none; margin: 0 0 var(--s3); padding: 0; display: grid; gap: var(--s3); }
-  .proof li { color: var(--ink-2); max-width: 30ch; }
-  .proof strong { display: block; font-family: var(--display); font-size: clamp(2.6rem, 2rem + 2vw, 3.6rem); font-weight: 500; line-height: 1; color: var(--navy); margin-bottom: 0.4rem; }
-  @media (min-width: 900px) { .proof { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s4); } }
-  .occasions.four h3 { hyphens: manual; -webkit-hyphens: manual; font-size: clamp(1.35rem, 1.1rem + 0.6vw, 1.7rem); }
-  @media (min-width: 900px) { .occasions.four { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
-  @media (min-width: 600px) and (max-width: 899px) { .occasions.four { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-
-  /* Fotografie */
-  .art-grid { display: grid; gap: var(--s4); align-items: center; }
-  .art-img { margin: 0; }
-  .art-img :global(img) { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
-  .art-text p:not(.eyebrow) { color: #d6ded9; max-width: 46ch; }
-  .art-text .more { color: #fff; }
-  @media (min-width: 1024px) { .art-grid { grid-template-columns: 7fr 5fr; gap: clamp(3rem, 5vw, 5rem); } }
-
+  /* Mehrwert */
+  .value-h { font-size: clamp(1.9rem, 1.3rem + 1.8vw, 2.8rem); color: var(--navy); }
+  .value { list-style: none; margin: var(--s3) 0 0; padding: 0; border-top: 1px solid var(--rule); font-size: 1.05rem; }
+  .value li { padding: 1rem 0; border-bottom: 1px solid var(--rule); color: var(--ink-2); }
+  .value strong { display: block; font-family: var(--display); font-size: 1.5rem; font-weight: 600; line-height: 1.2; color: var(--navy); margin-bottom: 0.2rem; }
 </style>
