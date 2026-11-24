@@ -117,11 +117,14 @@ const PORTFOLIO_PDF = u('downloads/Alexander-Tiffert_Who-Owns-Reality_Portfolio-
     </section>
   </div>
 
-  <section class="section dark" aria-labelledby="h-spuren">
+  <section class="section dark spuren" aria-labelledby="h-spuren">
     <div class="wrap split">
       <div class="split-head reveal">
         <p class="eyebrow"><span class="num">04</span> Fotobuchprojekt</p>
         <h2 id="h-spuren"><i>Spuren der Suche</i></h2>
+        <figure class="buch">
+          <Photo name="spuren-buch" w={680} h={660} alt="Fotobuch Spuren der Suche: Cover mit einer verschneiten Düne bei Nacht, eine Laterne und eine Gestalt im Lichtkegel." sizes="240px" />
+        </figure>
       </div>
       <div class="split-body measure reveal">
         <p class="lead">In meinem Fotobuchprojekt <i>Spuren der Suche</i> bringe ich solche Momente in eine Folge. Mich interessiert, was ein Bild offenlässt und wie ein anderes den Blick darauf verändert. Im Zusammenspiel der Bilder kann etwas sichtbar werden, das keines für sich allein erzählt.</p>
@@ -142,6 +145,9 @@ const PORTFOLIO_PDF = u('downloads/Alexander-Tiffert_Who-Owns-Reality_Portfolio-
   @media (min-width: 700px) { .method-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
   @media (min-width: 1100px) { .method-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
   .books-line { color: #d6ded9; font-size: 0.98rem; }
+  .spuren { background: #0f1312; }
+  .buch { margin: var(--s3) 0 0; max-width: 240px; }
+  .buch :global(img) { width: 100%; height: auto; }
   .ebenen-h { font-family: var(--display); font-size: clamp(1.5rem, 1.3rem + 0.7vw, 1.9rem); font-weight: 500; color: var(--navy); margin: var(--s3) 0 0.5rem; }
   .artist-link { margin: var(--s3) 0 0; }
   .artist-link .more { color: #fff; }
