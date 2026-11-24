@@ -6,26 +6,44 @@ import { u } from '../../lib/site';
 const PORTFOLIO_PDF = u('downloads/Alexander-Tiffert_Who-Owns-Reality_Portfolio-2026.pdf');
 ---
 <Base
-  title="Künstlerische Fotografie"
-  active="fotografie/"
-  description="Künstlerische Straßenfotografie von Alexander Tiffert: flüchtige Konstellationen zwischen Klarheit und Andeutung und das Fotobuchprojekt Spuren der Suche."
+  title="Kunstanaloges Coaching"
+  active="kunstanaloges-coaching/"
+  description="Kunstanaloges Coaching mit Fotografie bei Dr. Alexander Tiffert: Führungskräfte und Teams fotografieren zu ihrer Frage, und die eigenen Bilder machen sichtbar, was vorher diffus war."
 >
   <SubHero
-    eyebrow="Künstlerische Fotografie"
-    title="Was geschieht zwischen Menschen?"
-    lead="In der Fotografie arbeite ich mit dem, was sich im Bild zeigt und was offenbleibt."
+    eyebrow="Kunstanaloges Coaching"
+    title="Bilder als Spiegel"
+    lead="Wenn Worte nicht weiterkommen, arbeite ich mit Fotografie. Ihre eigenen Bilder machen sichtbar, was vorher diffus war."
     name="site-fotograf" w={768} h={512} pos="100% 40%" posM="78% 30%"
-    alt="Alexander Tiffert fotografiert nachts auf der Straße, die Kamera vor dem Gesicht.">
-    <div class="cta-row portfolio-links">
-      <a class="btn btn--gold" href={PORTFOLIO_PDF} download>Portfolio 2026 als PDF <span class="arrow" aria-hidden="true">↓</span><span class="visually-hidden"> (Who Owns Reality?, 2,5 MB)</span></a>
+    alt="Alexander Tiffert fotografiert nachts auf der Straße, die Kamera vor dem Gesicht." />
+
+  <section class="section" aria-labelledby="h-methode">
+    <div class="wrap split">
+      <div class="split-head reveal">
+        <p class="eyebrow"><span class="num">01</span> Methode</p>
+        <h2 id="h-methode">Sehen, bevor man es sagen kann</h2>
+      </div>
+      <div class="split-body reveal">
+        <p class="lead measure">Wer gewohnt ist, analytisch zu denken, kommt mit Worten oft nur bis zu einem bestimmten Punkt. Bilder öffnen einen anderen Zugang: zu Mustern, Haltungen und dem, was man ahnt, aber noch nicht benennen kann.</p>
+        <ul class="tiles method-steps" aria-label="Ablauf in vier Schritten">
+          <li><span class="tile-num" aria-hidden="true">I</span><strong>Frage klären</strong>Wir legen gemeinsam fest, worum es Ihnen geht.</li>
+          <li><span class="tile-num" aria-hidden="true">II</span><strong>Fotografieren</strong>Mit dieser Frage im Kopf fotografieren Sie, in der Sitzung oder dazwischen.</li>
+          <li><span class="tile-num" aria-hidden="true">III</span><strong>Bilder betrachten</strong>Wir schauen, was die Bilder zeigen und was sie in Ihnen auslösen.</li>
+          <li><span class="tile-num" aria-hidden="true">IV</span><strong>Übertragen</strong>Aus dem Gesehenen werden konkrete Schritte für Ihre Führung.</li>
+        </ul>
+        <p class="measure">Einzeln oder im Managementteam. Fotografische Vorkenntnisse brauchen Sie nicht, es geht nicht um schöne Bilder, sondern um ihre Wirkung.</p>
+        <div class="cta-row"><a class="btn" href={u('kontakt/')}>Kunstanaloges Coaching anfragen <span class="arrow" aria-hidden="true">→</span></a></div>
+      </div>
     </div>
-  </SubHero>
+  </section>
 
   <!-- GALERIE: dunkler Raum, ein Bild pro Bildschirm, unbeschnitten -->
   <div class="room dark">
-    <section class="page-intro" aria-label="Einführung">
+    <section class="page-intro" aria-labelledby="h-praxis">
       <div class="wrap page-intro-text reveal">
-        <p>In der Organisationsentwicklung und in meiner künstlerischen Fotografie beschäftigt mich dieselbe Frage: Welche Dynamiken lassen sich in sozialen Systemen beobachten? In der Beratung untersuche ich sie gemeinsam mit den Beteiligten, in der Fotografie mit künstlerischen und gestalterischen Mitteln.</p>
+        <p class="eyebrow"><span class="num">02</span> Eigene Praxis</p>
+        <h2 id="h-praxis" class="praxis-h">Meine künstlerische Fotografie</h2>
+        <p>Die Methode kommt aus meiner eigenen Arbeit. In der Beratung und in meiner Straßenfotografie beschäftigt mich dieselbe Frage: Was geschieht zwischen Menschen?</p>
       </div>
     </section>
     <section class="feature wrap" aria-labelledby="h-bildnotiz">
@@ -34,7 +52,7 @@ const PORTFOLIO_PDF = u('downloads/Alexander-Tiffert_Who-Owns-Reality_Portfolio-
           <Photo
             name="7Y5A3906-2" w={5305} h={3537}
             alt="Spiegelung auf einem Platz: Eine Person steht, andere sitzen auf Steinbänken; dahinter ein historisches Gebäude, überlagert von Glasflächen und Bewegungsunschärfe."
-            sizes="(min-width: 1296px) 1200px, calc(100vw - 2 * clamp(16px, 4.5vw, 48px))" eager
+            sizes="(min-width: 1296px) 1200px, calc(100vw - 2 * clamp(16px, 4.5vw, 48px))"
           />
         </div>
         <figcaption>
@@ -50,7 +68,7 @@ const PORTFOLIO_PDF = u('downloads/Alexander-Tiffert_Who-Owns-Reality_Portfolio-
     <section class="section haltung" aria-labelledby="h-strasse">
       <div class="wrap split">
         <div class="split-head reveal">
-          <p class="eyebrow"><span class="num">01</span> Haltung</p>
+          <p class="eyebrow"><span class="num">03</span> Haltung</p>
           <h2 id="h-strasse">Straßenfotografie zwischen Klarheit und Andeutung</h2>
         </div>
         <div class="split-body measure reveal">
@@ -100,11 +118,13 @@ const PORTFOLIO_PDF = u('downloads/Alexander-Tiffert_Who-Owns-Reality_Portfolio-
   <section class="section dark" aria-labelledby="h-spuren">
     <div class="wrap split">
       <div class="split-head reveal">
-        <p class="eyebrow"><span class="num">02</span> Fotobuchprojekt</p>
+        <p class="eyebrow"><span class="num">04</span> Fotobuchprojekt</p>
         <h2 id="h-spuren"><i>Spuren der Suche</i></h2>
       </div>
       <div class="split-body measure reveal">
         <p class="lead">In meinem Fotobuchprojekt <i>Spuren der Suche</i> bringe ich solche Momente in eine Folge. Mich interessiert, was ein Bild offenlässt und wie ein anderes den Blick darauf verändert. Im Zusammenspiel der Bilder kann etwas sichtbar werden, das keines für sich allein erzählt.</p>
+        <p class="books-line">Bisherige Fotobücher: <i>lettera d’amore</i> und <i>Urban Silence</i> (2025), <i>Dance with the White Rabbit</i> und <i>Listen to the White Rabbit</i> (2024), jeweils in kleiner Auflage.</p>
+        <div class="cta-row"><a class="btn btn--gold" href={PORTFOLIO_PDF} download>Portfolio 2026 als PDF <span class="arrow" aria-hidden="true">↓</span><span class="visually-hidden"> (Who Owns Reality?, 2,5 MB)</span></a></div>
       </div>
     </div>
   </section>
@@ -113,6 +133,12 @@ const PORTFOLIO_PDF = u('downloads/Alexander-Tiffert_Who-Owns-Reality_Portfolio-
 <style>
   /* Ein eigener Raum: neutrales Fast-Schwarz, damit die Farben der Bilder nicht eingefärbt wirken */
   .room { background: #0f1312; }
+  .room .page-intro-text p:not(.eyebrow) { color: #d6ded9; }
+  .praxis-h { color: #fff; font-size: clamp(2rem, 1.5rem + 1.6vw, 2.8rem); margin-bottom: var(--s2); }
+  .method-steps { margin: var(--s3) 0; }
+  @media (min-width: 700px) { .method-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (min-width: 1100px) { .method-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  .books-line { color: #d6ded9; font-size: 0.98rem; }
   .feature figure { margin: var(--s4) 0 0; }
   .feature-img { background: #0a0d0c; }
   .feature-img :global(img) { width: 100%; }

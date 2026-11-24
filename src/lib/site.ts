@@ -6,7 +6,6 @@ export const NAV = [
   { href: 'executive-coaching/', label: 'Executive Coaching' },
   { href: 'nachfolge/', label: 'Nachfolge' },
   { href: 'supervision/', label: 'Supervision' },
-  { href: 'fotografie/', label: 'Künstlerische Fotografie' },
-  { href: 'lehre/', label: 'Lehre' },
-  { href: 'publikationen/', label: 'Publikationen' },
+  { href: 'kunstanaloges-coaching/', label: 'Kunstanaloges Coaching' },
+  { href: 'qualifikation/', label: 'Qualifikation' },
 ];

@@ -81,21 +81,6 @@ import { STIMMEN } from '../lib/stimmen';
     </div>
   </section>
 
-  <!-- HINTERGRUND -->
-  <section class="section" aria-labelledby="h-hintergrund">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <p class="eyebrow"><span class="num">02</span> Hintergrund</p>
-        <h2 id="h-hintergrund">Was mich qualifiziert</h2>
-      </div>
-      <ul class="bg-grid">
-        <li class="reveal"><strong>20+</strong><span>Jahre Managementberatung mit Topmanagementteams</span></li>
-        <li class="reveal reveal-d1"><strong>Dr.</strong><span>Wirtschaftsingenieur, Coach und systemischer Organisationsentwickler</span></li>
-        <li class="reveal reveal-d2"><strong>10</strong><span>Jahre Lehre an Hochschulen, drei Fachbücher</span></li>
-      </ul>
-    </div>
-  </section>
-
   <!-- FOTOGRAFIE IM COACHING -->
   <section class="section art dark" aria-labelledby="h-foto">
     <div class="wrap art-grid">
@@ -103,10 +88,10 @@ import { STIMMEN } from '../lib/stimmen';
         <Photo name="7Y5A0358" w={5359} h={3573} alt="Straßenfotografie von Alexander Tiffert." sizes="(min-width: 1024px) 58vw, 100vw" />
       </figure>
       <div class="art-text reveal reveal-d1">
-        <p class="eyebrow">Kunstanaloges Coaching</p>
+        <p class="eyebrow">Besondere Methode · Kunstanaloges Coaching</p>
         <h2 id="h-foto">Bilder als Spiegel</h2>
-        <p>Wenn Worte nicht weiterkommen, arbeite ich mit Fotografie. Ihre eigenen Bilder machen sichtbar, was vorher diffus war.</p>
-        <a class="more" href={u('fotografie/')}>Zu meiner Fotografie <span class="arrow" aria-hidden="true">→</span></a>
+        <p>Wenn Worte nicht weiterkommen, arbeite ich mit Fotografie. Sie fotografieren zu Ihrer Frage, und Ihre eigenen Bilder machen sichtbar, was vorher diffus war.</p>
+        <a class="more" href={u('kunstanaloges-coaching/')}>Zum kunstanalogen Coaching <span class="arrow" aria-hidden="true">→</span></a>
       </div>
     </div>
   </section>
@@ -124,7 +109,6 @@ import { STIMMEN } from '../lib/stimmen';
   .hero h1 span { display: block; }
   .hero .lead { color: #fff; max-width: 36ch; margin-bottom: var(--s3); }
   .hero-cta { margin-bottom: var(--s3); }
-  .hero-p1 { color: #d6ded9; max-width: 58ch; margin: 0; }
   .hero-photo-mobile { margin: 0 calc(-1 * var(--gutter)) var(--s3); }
   .hero-photo-mobile :global(img) { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
   @media (max-width: 420px) { .hero-cta .btn { width: 100%; } }
@@ -178,17 +162,6 @@ import { STIMMEN } from '../lib/stimmen';
 
   /* Mehrwert */
   .statement { font-family: var(--display); font-size: clamp(1.9rem, 1.3rem + 1.9vw, 2.9rem); line-height: 1.2; color: var(--navy); margin: 0; max-width: 22ch; }
-  .value-h { font-size: clamp(1.9rem, 1.3rem + 1.8vw, 2.8rem); color: var(--navy); }
-  .value { list-style: none; margin: var(--s3) 0 0; padding: 0; border-top: 1px solid var(--rule); font-size: 1.05rem; }
-  .value li { padding: 1rem 0; border-bottom: 1px solid var(--rule); color: var(--ink-2); }
-  .value strong { display: block; font-family: var(--display); font-size: 1.5rem; font-weight: 600; line-height: 1.2; color: var(--navy); margin-bottom: 0.2rem; }
-  /* Hintergrund */
-  .bg-grid { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s3); }
-  .bg-grid li { border-top: 1px solid var(--navy); padding-top: var(--s2); }
-  .bg-grid strong { display: block; font-family: var(--display); font-size: clamp(2.6rem, 2rem + 2vw, 3.6rem); font-weight: 500; line-height: 1; color: var(--gold-ink); margin-bottom: 0.6rem; }
-  .bg-grid span { color: var(--ink-2); }
-  
-  @media (min-width: 900px) { .bg-grid { grid-template-columns: repeat(3, 1fr); gap: var(--s4); } }
   /* Fotografie */
   .art-grid { display: grid; gap: var(--s4); align-items: center; }
   .art-img { margin: 0; }
