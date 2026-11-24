@@ -26,15 +26,12 @@ const PORTFOLIO_PDF = u('downloads/Alexander-Tiffert_Who-Owns-Reality_Portfolio-
       <div class="split-body reveal">
         <p class="lead measure">Fotografie schult die Wahrnehmung. Sie macht erfahrbar, dass dieselbe Situation ganz verschiedene Wirklichkeiten enthält, je nachdem, wie wir hinschauen. Das macht den eigenen Blick beweglicher und öffnet neue Einsichten.</p>
         <p class="measure">Im kunstanalogen Coaching nutzen wir das ganz konkret: Wir arbeiten an Ihrer Frage und finden Lösungen auch jenseits rationaler Erklärungen.</p>
-        <figure class="steps-photo">
-          <Photo name="7Y5A4474-Enhanced-NR" w={2200} h={1467} alt="Eine Person hinter einer Fensterscheibe, in der sich Bäume, ein Feuer und der Abendhimmel spiegeln." sizes="(min-width: 1024px) 640px, 92vw" />
-        </figure>
-        <ol class="schritte" aria-label="Ablauf in vier Schritten">
-          <li><span aria-hidden="true">01</span><h3>Frage klären</h3><p>Wir legen gemeinsam fest, worum es Ihnen geht.</p></li>
-          <li><span aria-hidden="true">02</span><h3>Fotografieren</h3><p>Mit dieser Frage im Kopf fotografieren Sie, in der Sitzung oder dazwischen.</p></li>
-          <li><span aria-hidden="true">03</span><h3>Bilder betrachten</h3><p>Wir schauen, was die Bilder zeigen und was sie in Ihnen auslösen.</p></li>
-          <li><span aria-hidden="true">04</span><h3>Übertragen</h3><p>Aus dem Gesehenen werden konkrete Schritte für Ihre Führung. Oft entsteht daraus die nächste Frage.</p></li>
-        </ol>
+        <ul class="tiles method-steps" aria-label="Ablauf in vier Schritten">
+          <li><span class="tile-num" aria-hidden="true">I</span><strong>Frage klären</strong>Wir legen gemeinsam fest, worum es Ihnen geht.</li>
+          <li><span class="tile-num" aria-hidden="true">II</span><strong>Fotografieren</strong>Mit dieser Frage im Kopf fotografieren Sie, in der Sitzung oder dazwischen.</li>
+          <li><span class="tile-num" aria-hidden="true">III</span><strong>Bilder betrachten</strong>Wir schauen, was die Bilder zeigen und was sie in Ihnen auslösen.</li>
+          <li><span class="tile-num" aria-hidden="true">IV</span><strong>Übertragen</strong>Aus dem Gesehenen werden konkrete Schritte für Ihre Führung.</li>
+        </ul>
         <p class="measure">Einzeln oder im Managementteam. Fotografische Vorkenntnisse brauchen Sie nicht, es geht nicht um schöne Bilder, sondern um ihre Wirkung.</p>
         <h3 class="ebenen-h">Ebenen auseinanderhalten</h3>
         <p class="measure">In der Fotografie lernt man, Ebenen auseinanderzuhalten: Vordergrund und Hintergrund, Licht und Motiv, das Sichtbare und das, was es auslöst. Und man lernt, Wirkungen erst einmal wahrzunehmen, bevor man sie deutet. Das habe ich selbst so gelernt, und genau das hilft auch in Organisationen. In Familienunternehmen etwa lassen sich Familie, Eigentum und Unternehmen getrennt betrachten und die Wechselwirkungen zwischen ihnen sichtbar machen.</p>
@@ -144,18 +141,13 @@ const PORTFOLIO_PDF = u('downloads/Alexander-Tiffert_Who-Owns-Reality_Portfolio-
   .room { background: #0f1312; }
   .room .page-intro-text p:not(.eyebrow) { color: #d6ded9; }
   .praxis-h { color: #fff; font-size: clamp(2rem, 1.5rem + 1.6vw, 2.8rem); margin-bottom: var(--s2); }
+  .method-steps { margin: var(--s3) 0; }
+  @media (min-width: 700px) { .method-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (min-width: 1100px) { .method-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
   .books-line { color: #d6ded9; font-size: 0.98rem; }
   .spuren { background: #0f1312; }
   .buch { margin: var(--s3) 0 0; max-width: 240px; }
   .buch :global(img) { width: 100%; height: auto; }
-  .steps-photo { margin: var(--s4) 0 var(--s3); }
-  .steps-photo :global(img) { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
-  .schritte { list-style: none; margin: 0 0 var(--s3); padding: 0; display: grid; gap: var(--s3) var(--s4); }
-  @media (min-width: 640px) { .schritte { grid-template-columns: 1fr 1fr; } }
-  .schritte li { border-top: 1px solid var(--rule); padding-top: var(--s2); }
-  .schritte span { display: block; font-family: var(--display); font-size: 1.4rem; line-height: 1; color: var(--gold-ink); margin-bottom: 0.4rem; }
-  .schritte h3 { font-family: var(--display); font-size: 1.5rem; font-weight: 500; color: var(--navy); margin: 0 0 0.3rem; }
-  .schritte p { margin: 0; color: var(--ink-2); }
   .ebenen-h { font-family: var(--display); font-size: clamp(1.5rem, 1.3rem + 0.7vw, 1.9rem); font-weight: 500; color: var(--navy); margin: var(--s3) 0 0.5rem; }
   .artist-link { margin: var(--s3) 0 0; }
   .artist-link .more { color: #fff; }
