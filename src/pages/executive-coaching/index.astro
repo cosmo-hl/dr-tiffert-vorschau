@@ -34,16 +34,18 @@ import { STIMMEN } from '../../lib/stimmen';
     <div class="wrap split">
       <div class="split-head reveal">
         <p class="eyebrow"><span class="num">02</span> Haltung</p>
-        <h2 id="h-ec-haltung">Wahlmöglichkeiten erhöhen</h2>
+        <h2 id="h-ec-haltung">Innere Klarheit, tragfähige Prämissen</h2>
       </div>
-      <div class="split-body measure reveal">
-        <p class="lead">Mein Grundsatz: Entscheidungen so treffen, dass sie die Wahlmöglichkeiten erhöhen.</p>
-        <p>Manchmal ist das nicht möglich. Dann scheint alles festgefahren, und aus heutiger Sicht lässt sich keine Zukunft erkennen. Wenn Zukunftsbilder keine Orientierung mehr geben, braucht es wirksame Prämissen für das Hier und Jetzt.</p>
-        <figure class="quote premisse">
-          <blockquote><p lang="en">Good enough for now, safe enough to try.</p></blockquote>
-          <figcaption>Meine Lieblingsprämisse</figcaption>
-        </figure>
-        <p>Solche praktischen Ansätze entwickeln wir gemeinsam. Ebenso gehört der Umgang mit innerem Druck und Unsicherheit zu unserer Arbeit.</p>
+      <div class="split-body reveal">
+        <div class="measure">
+          <p class="lead">Gute Entscheidungen erweitern die Wahlmöglichkeiten. Manchmal ist das nicht möglich. Dann scheint alles festgefahren, und aus heutiger Sicht lässt sich keine Zukunft erkennen.</p>
+          <p>Dann arbeiten wir an zwei Dingen, die zusammengehören:</p>
+        </div>
+        <ul class="tiles tiles--two" aria-label="Zwei Seiten der Arbeit">
+          <li><span class="tile-num" aria-hidden="true">I</span><strong>Innere Klarheit</strong>Was setzt Sie unter Druck, was verunsichert Sie, worauf können Sie sich verlassen? Wer das sortiert hat, entscheidet ruhiger.</li>
+          <li><span class="tile-num" aria-hidden="true">II</span><strong>Entscheidungsprämissen</strong>Darauf aufbauend legen wir griffige Prämissen für das Hier und Jetzt fest. Sie tragen auch dann, wenn die Zukunft offen bleibt.</li>
+        </ul>
+        <p class="measure">Eine Prämisse, die sich oft bewährt: <em lang="en">good enough for now, safe enough to try</em>. Sie erlaubt den nächsten Schritt, ohne dass schon alles geklärt sein muss.</p>
       </div>
     </div>
   </section>
@@ -82,7 +84,7 @@ import { STIMMEN } from '../../lib/stimmen';
 </Base>
 
 <style>
-  .premisse { margin: var(--s4) 0; padding-left: var(--s3); border-left: 2px solid var(--gold-ink); }
+  @media (min-width: 1100px) { .tiles--two { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
   .mail-line { font-family: var(--display); font-size: clamp(1.4rem, 1.2rem + 0.8vw, 1.9rem); margin-top: var(--s3); }
   .mail-line a { display: inline-flex; min-height: 44px; align-items: center; }
 </style>
