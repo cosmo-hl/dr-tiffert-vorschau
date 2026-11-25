@@ -1,7 +1,9 @@
 ---
 import Base from '../../layouts/Base.astro';
 import SubHero from '../../components/SubHero.astro';
+import Stimme from '../../components/Stimme.astro';
 import { u, MAIL } from '../../lib/site';
+import { STIMMEN } from '../../lib/stimmen';
 const IHK_PDF = u('downloads/Alexander-Tiffert_Interview-IHK-Luebeck-2019.pdf');
 ---
 <Base
@@ -23,8 +25,8 @@ const IHK_PDF = u('downloads/Alexander-Tiffert_Interview-IHK-Luebeck-2019.pdf');
         <h2 id="h-nf-lage">Kennen Sie das?</h2>
       </div>
       <div class="split-body measure reveal">
-        <p>Immer wieder geraten Sie mit Ihrem Mitgesellschafter in Konflikt. Und er ist nicht irgendwer, sondern Ihr Bruder, Ihre Schwester oder ein anderes Familienmitglied. Alte Konflikte von früher kommen wieder hoch, und Sie finden nicht heraus.</p>
-        <p>Oder Sie müssen die Nachfolge in Ihrem Unternehmen regeln und wissen nicht, wie Sie sich zwischen Ihren Kindern entscheiden sollen. Oder die Entscheidungswege sind unklar, und dieselben Fragen landen immer wieder auf dem Tisch.</p>
+        <p>Ihr Mitgesellschafter ist zugleich Ihr Bruder, Ihre Schwester oder ein anderes Familienmitglied, und immer wieder geraten Sie aneinander. Im Streit um das Unternehmen tauchen alte Muster von früher auf, und Sie finden keinen Weg hinaus.</p>
+        <p>Oder Sie müssen die Nachfolge regeln und wissen nicht, wie Sie zwischen Ihren Kindern entscheiden sollen. Oder niemand weiß genau, wer was entscheidet, und dieselben Fragen kehren immer wieder zurück.</p>
       </div>
     </div>
   </section>
@@ -36,8 +38,8 @@ const IHK_PDF = u('downloads/Alexander-Tiffert_Interview-IHK-Luebeck-2019.pdf');
         <h2 id="h-nf-weise">Struktur und Beziehung zusammen sehen</h2>
       </div>
       <div class="split-body measure reveal">
-        <p>Ich bringe ein fundiertes Verständnis von Organisationsentwicklung mit und zugleich die Fähigkeit, auf der psychologischen Ebene auch schwierige Themen gemeinsam anzusprechen. So halten wir Familie, Eigentum und Unternehmen auseinander, ohne ihre Zusammenhänge aus dem Blick zu verlieren.</p>
-        <p>Meine Kunden schätzen nach eigenen Worten vor allem dreierlei: meinen bedingungslos ressourcenorientierten Blick; die Fähigkeit, strukturell bedingte Konflikte als solche zu erkennen und damit das ganze Familiensystem zu entlasten; und die Bereitschaft, auch schwere Konflikte offen anzusprechen und gemeinsam zu lösen.</p>
+        <p>Ich verbinde ein fundiertes Verständnis von Organisationsentwicklung mit der Fähigkeit, auch schwierige persönliche Themen gemeinsam anzusprechen. So trennen wir Familie, Eigentum und Unternehmen, ohne ihre Zusammenhänge aus dem Blick zu verlieren.</p>
+        <p>Meine Kunden schätzen nach eigenen Worten vor allem dreierlei: meinen bedingungslos ressourcenorientierten Blick; die Fähigkeit, Konflikte zu erkennen, die in der Struktur liegen und nicht in den Personen, und so die ganze Familie zu entlasten; und den Mut, auch schwere Konflikte offen anzusprechen und gemeinsam zu lösen.</p>
       </div>
     </div>
   </section>
@@ -51,10 +53,6 @@ const IHK_PDF = u('downloads/Alexander-Tiffert_Interview-IHK-Luebeck-2019.pdf');
       <div class="split-body measure reveal">
         <p>In einem Unternehmen im technischen Anlagenbau fiel der Gründer unerwartet aus. Seine beiden Kinder sollten gemeinsam die Führung übernehmen. Die Organisation war bis dahin auf ihren Vater ausgerichtet.</p>
         <p>Wir machten sichtbar, wie die Abläufe bis dahin funktionierten, ordneten die Entscheidungswege neu und legten Verantwortungsbereiche fest. Zugleich arbeiteten wir an einem alten Konflikt, der die Verständigung der Geschwister belastete.</p>
-        <figure class="quote quote--small" style="margin-top:var(--s4)">
-          <blockquote><p>Durch die Zusammenarbeit mit Dr. Tiffert haben mein Bruder und ich endlich wieder zueinander gefunden. Heute führen wir das Unternehmen als Team!</p></blockquote>
-          <figcaption>Geschäftsführerin <span>eines Maschinenbauunternehmens, Lübeck</span></figcaption>
-        </figure>
         <p class="ihk-line"><a href={IHK_PDF} download>Interview zu strukturell bedingten Konflikten in Familienunternehmen (PDF, 0,1 MB)</a></p>
       </div>
     </div>
@@ -72,6 +70,8 @@ const IHK_PDF = u('downloads/Alexander-Tiffert_Interview-IHK-Luebeck-2019.pdf');
       </div>
     </div>
   </section>
+
+  <Stimme {...STIMMEN.geschwister} />
 
   <section class="section" aria-labelledby="h-nf-kontakt">
     <div class="wrap split">

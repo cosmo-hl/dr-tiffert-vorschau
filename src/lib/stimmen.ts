@@ -20,4 +20,9 @@ export const STIMMEN = {
     name: 'Prof. Dr. habil. Nicole Richter',
     role: 'Studiengangsleiterin Marketing und Salesmanagement, NORDAKADEMIE',
   },
+  geschwister: {
+    text: 'Durch die Zusammenarbeit mit Dr. Tiffert haben mein Bruder und ich endlich wieder zueinander gefunden. Heute führen wir das Unternehmen als Team!',
+    name: 'Geschäftsführerin',
+    role: 'eines Maschinenbauunternehmens, Lübeck',
+  },
 };
