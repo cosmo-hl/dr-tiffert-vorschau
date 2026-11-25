@@ -2,6 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import SubHero from '../../components/SubHero.astro';
 import { u } from '../../lib/site';
+const IHK_PDF = u('downloads/Alexander-Tiffert_Interview-IHK-Luebeck-2019.pdf');
 ---
 <Base
   title="Nachfolge"
@@ -38,12 +39,6 @@ import { u } from '../../lib/site';
           <p>Wenn Geschwister über Zuständigkeiten streiten, kann es um Führung gehen, um Anerkennung oder um beides. Ich helfe, die Ebenen auseinanderzuhalten, ohne ihre Zusammenhänge aus dem Blick zu verlieren. So wird klarer, welches Gespräch in die Familie gehört, welche Vereinbarung die Gesellschafter treffen müssen und welche Entscheidung im Unternehmen ansteht.</p>
         </div>
 
-        <div class="measure ihk">
-          <p class="eyebrow">Aus einem Interview mit der IHK zu Lübeck</p>
-          <p>Spannend ist die Wechselbeziehung zwischen Familie und Unternehmen. Oft ist nicht klar, auf welcher Ebene ein Gespräch gerade läuft: Das Weihnachtsessen wird zur Gesellschafterversammlung. In der Familie gilt meist „alle bekommen das Gleiche“, im Unternehmen ist Lohn an Leistung geknüpft. Wichtig ist, solche Konflikte als strukturell bedingt zu erkennen, statt einander böse Absicht zu unterstellen.</p>
-          <p class="ihk-quelle">Wirtschaft, IHK zu Lübeck, 11/2019</p>
-        </div>
-
         <aside class="case" aria-labelledby="h-fall">
           <p class="eyebrow">Fall aus der Praxis</p>
           <h3 id="h-fall">Zwei Geschwister übernehmen</h3>
@@ -52,6 +47,7 @@ import { u } from '../../lib/site';
           <p>Das Beispiel zeigt, warum beides nötig sein kann: die Führung so zu organisieren, dass Verantwortung nicht mehr bei einer Person zusammenläuft, und die Zusammenarbeit der Menschen zu bearbeiten, die diese Verantwortung übernehmen.</p>
         </aside>
 
+        <p class="measure ihk-line">Mehr zu Familienunternehmen und diesem Fall im Interview mit der IHK zu Lübeck: <a href={IHK_PDF} download>„Das Spannende ist die Wechselbeziehung“ (PDF, 0,1 MB)</a>.</p>
 
         <figure class="quote quote--small" style="margin-top:var(--s4)">
           <blockquote><p>Durch die Zusammenarbeit mit Dr. Tiffert haben mein Bruder und ich endlich wieder zueinander gefunden. Heute führen wir das Unternehmen als Team!</p></blockquote>
@@ -65,6 +61,5 @@ import { u } from '../../lib/site';
 </Base>
 
 <style>
-  .ihk { margin-top: var(--s4); padding-top: var(--s3); border-top: 1px solid var(--rule); }
-  .ihk-quelle { font-size: 0.85rem; color: var(--ink-2); margin-bottom: 0; }
+  .ihk-line { margin-top: var(--s3); }
 </style>
