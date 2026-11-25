@@ -446,3 +446,11 @@ main > section:last-child:not(.closing):not(.contact) { padding-bottom: calc(var
 .sub-hero .cta-row { margin-top: var(--s3); }
 .dark .page-intro-text { color: #d6ded9; }
 .footer-legal a { display: inline-flex; align-items: center; min-height: 44px; }
+
+/* Typografie-Feinschliff (25.11.2026) */
+@media (min-width: 1024px) { body { font-size: 1.1875rem; } }
+h1, h2, .display { font-weight: 600; }
+.section .split-body .lead { font-size: inherit; line-height: inherit; }
+.eyebrow { font-size: 0.85rem; letter-spacing: 0.12em; }
+.eyebrow .num { display: none; }
+p, li { hyphens: auto; -webkit-hyphens: auto; hyphenate-limit-chars: 10 4 4; }
