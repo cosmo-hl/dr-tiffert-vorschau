@@ -39,13 +39,19 @@ import { STIMMEN } from '../../lib/stimmen';
       <div class="split-body reveal">
         <div class="measure">
           <p class="lead">Gute Entscheidungen erweitern die Wahlmöglichkeiten. Manchmal ist das nicht möglich. Dann scheint alles festgefahren, und aus heutiger Sicht lässt sich keine Zukunft erkennen.</p>
-          <p>Dann arbeiten wir an zwei Dingen, die zusammengehören:</p>
+          <p>Dann arbeiten wir an zwei Dingen, die zusammengehören.</p>
         </div>
-        <ul class="tiles tiles--two" aria-label="Zwei Seiten der Arbeit">
-          <li><span class="tile-num" aria-hidden="true">I</span><strong>Innere Klarheit</strong>Was setzt Sie unter Druck, was verunsichert Sie, worauf können Sie sich verlassen? Wer das sortiert hat, entscheidet ruhiger.</li>
-          <li><span class="tile-num" aria-hidden="true">II</span><strong>Entscheidungsprämissen</strong>Darauf aufbauend legen wir griffige Prämissen für das Hier und Jetzt fest. Sie tragen auch dann, wenn die Zukunft offen bleibt.</li>
-        </ul>
-        <p class="measure">Eine Prämisse, die sich oft bewährt: <em lang="en">good enough for now, safe enough to try</em>. Sie erlaubt den nächsten Schritt, ohne dass schon alles geklärt sein muss.</p>
+        <div class="zwei">
+          <div>
+            <h3>Innere Klarheit</h3>
+            <p>Zuerst geht es um Sie: Was setzt Sie unter Druck, was gibt Ihnen Halt? Wer bei sich sortiert ist, bleibt auch im Ungewissen ruhig.</p>
+          </div>
+          <div>
+            <h3>Leitplanken für das Hier und Jetzt</h3>
+            <p>Daraus entstehen Prämissen für die nächsten Schritte. Sie müssen nicht die ganze Zukunft erklären. Es reicht, dass sie heute tragen.</p>
+          </div>
+        </div>
+        <p class="measure ausklang">Oder, wie ich gern sage: <em lang="en">good enough for now, safe enough to try.</em></p>
       </div>
     </div>
   </section>
@@ -84,7 +90,12 @@ import { STIMMEN } from '../../lib/stimmen';
 </Base>
 
 <style>
-  @media (min-width: 1100px) { .tiles--two { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  .zwei { display: grid; gap: var(--s3) var(--s4); margin: var(--s4) 0; }
+  @media (min-width: 900px) { .zwei { grid-template-columns: 1fr 1fr; } }
+  .zwei > div { padding-top: var(--s2); border-top: 1px solid var(--rule); }
+  .zwei h3 { font-family: var(--display); font-weight: 500; font-size: clamp(1.4rem, 1.2rem + 0.6vw, 1.75rem); line-height: 1.2; margin: 0 0 var(--s1); }
+  .zwei p { margin: 0; }
+  .ausklang { font-family: var(--display); font-size: clamp(1.25rem, 1.1rem + 0.5vw, 1.5rem); color: var(--ink-2); }
   .mail-line { font-family: var(--display); font-size: clamp(1.4rem, 1.2rem + 0.8vw, 1.9rem); margin-top: var(--s3); }
   .mail-line a { display: inline-flex; min-height: 44px; align-items: center; }
 </style>
